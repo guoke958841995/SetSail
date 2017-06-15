@@ -1,0 +1,29 @@
+<html>
+
+<body>
+<title>调用Android组件测试</title>
+
+<script language="javascript">
+function javaCallJsFunction(isHide) {
+  document.getElementById("shows").innerHTML = isHide;
+}
+
+function js2java() {
+ JSInterface.javaFunction("我是JS，正在调用Android");
+}
+
+</script>
+<style type="text/css">
+    .hide {
+       display:none;
+    }
+</style>
+
+<input type="button" onClick="js2java()" value="Call Java Fn">
+
+<hr  color="#99FF00"/>
+<br />
+<textarea id= "shows"  cols="20" rows="10"> 暂无记录 </textarea>
+<br />
+</body>
+

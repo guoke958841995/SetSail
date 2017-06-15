@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/sxhalo/amoldzhang/bluetoothprinter/action/BluetoothAction.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/sxhalo/amoldzhang/bluetoothprinter/action/PrintDataAction.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/sxhalo/amoldzhang/bluetoothprinter/service/BluetoothService.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/sxhalo/amoldzhang/bluetoothprinter/service/PrintDataService.java" charset="UTF-8" />
+  </component>
+</project>

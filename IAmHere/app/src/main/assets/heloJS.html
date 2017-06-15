@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>调用Android组件测试</title>
+    <script src="./jquery.min.js"></script>
+    <script>
+       $(function)(){
+         $get('',function(data){
+
+         })
+       }
+        $get
+    </script>
+    <script  type="text/javascript">
+     var callbackfunction = function(data) {
+           console.log('界面初始化联网-->' + data.name);
+           $("#shows").html(data.name);
+       };
+
+    function androidCallJS(info){
+         $("#shows").html(info);
+    }
+
+    function javaCallJsFunction(isHide) {
+      if(isHide == 1){
+         var script = document.createElement('script'),
+       body = document.getElementsByTagName('body');
+         script.src = './js/test.js?callback=callbackview';
+         body[0].appendChild(script);
+
+        <!--var url= './js/test.js?callback=callbackfunction';-->
+        <!--$(function(){-->
+<!--         $.get(url,function(data){-->
+<!--            console.log('按钮点击联网&ndash;&gt;' + data.code);-->
+                <!--$("#shows").html(data.code);-->
+<!--         })-->
+        <!--})-->
+      }else{
+        document.getElementById("shows").innerHTML = "我认识你";
+      }
+
+    }
+
+    function js2java() {
+      JSObject.javaMethod("我是JS，正在调用Android");
+    }
+    </script>
+    <script src="./js/test.js?callback=callbackfunction"></script>
+</head>
+
+<body>
+<b>测试</b>
+<br />
+<button onClick="js2java()">启动hello world Activity</button>
+<br />
+<hr  color="#99FF00"/>
+<button onClick="window.JSObject.showAndroid()">显示android内容</button>
+<br />
+<textarea id= "shows"  cols="20" rows="10"> 暂无记录 </textarea>
+<br />
+
+</body>
+</html>
