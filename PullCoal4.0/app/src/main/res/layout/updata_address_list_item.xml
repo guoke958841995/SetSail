@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:background="@drawable/item_bt_bg"
+        android:paddingRight="@dimen/dip15"
+        android:paddingBottom="@dimen/dip10"
+        android:paddingLeft="@dimen/dip15"
+        android:paddingTop="@dimen/dip10"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:textSize="@dimen/font16"
+                    android:text="陕西省西安市曲江池北路"
+                    android:id="@+id/tv_region_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/tv_address_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dip10"
+                    android:layout_marginTop="@dimen/dip2"
+                    android:layout_toRightOf="@+id/tv_region_name"
+                    android:background="@drawable/shape_address_corners"
+                    android:paddingTop="@dimen/dip1"
+                    android:paddingBottom="@dimen/dip1"
+                    android:paddingLeft="@dimen/dip3"
+                    android:paddingRight="@dimen/dip3"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/dip10" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:text="曲江池北路********"
+                android:layout_marginTop="@dimen/dip5"
+                android:textColor="@color/gray"
+                android:id="@+id/tv_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <RelativeLayout
+                android:layout_marginTop="@dimen/dip3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:textColor="@color/gray"
+                    android:text="田先生："
+                    android:id="@+id/tv_contact_person"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:textColor="@color/gray"
+                    android:text="15202420490"
+                    android:layout_toRightOf="@+id/tv_contact_person"
+                    android:id="@+id/tv_contact_phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_updata_address"
+            android:gravity="center"
+            android:layout_weight="5"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:textSize="@dimen/font16"
+                android:textColor="@color/notify_count_text"
+                android:text="编辑"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:background="@color/line_color"/>
+
+</LinearLayout>

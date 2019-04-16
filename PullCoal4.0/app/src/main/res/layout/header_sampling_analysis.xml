@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:background="@color/white"
+        android:paddingTop="@dimen/dip10"
+        android:paddingBottom="@dimen/dip10"
+        android:paddingLeft="@dimen/dip15"
+        android:paddingRight="@dimen/dip15"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:textColor="@color/app_title_text_color_normal"
+            android:id="@+id/sampling_test_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:textColor="@color/app_title_text_color_normal"
+            android:layout_toRightOf="@+id/sampling_test_name"
+            android:id="@+id/sampling_test_value"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:textColor="@color/app_title_text_color_normal"
+            android:layout_marginTop="@dimen/dip5"
+            android:layout_below="@+id/sampling_test_name"
+            android:id="@+id/sampling_test_coal_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:textColor="@color/app_title_text_color_normal"
+            android:layout_marginTop="@dimen/dip5"
+            android:layout_below="@+id/sampling_test_value"
+            android:layout_toRightOf="@+id/sampling_test_coal_name"
+            android:id="@+id/sampling_test_coal_value"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:textColor="@color/app_title_text_color_normal"
+            android:id="@+id/sampling_test_cost"
+            android:layout_marginTop="@dimen/dip5"
+            android:layout_below="@+id/sampling_test_coal_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:textColor="@color/app_title_text_color_normal"
+            android:id="@+id/sampling_test_cost_value"
+            android:layout_marginTop="@dimen/dip5"
+            android:layout_below="@+id/sampling_test_coal_value"
+            android:layout_toRightOf="@+id/sampling_test_cost"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:textColor="@color/app_title_text_color_normal"
+            android:id="@+id/sampling_test_cost_type"
+            android:layout_marginTop="@dimen/dip5"
+            android:layout_below="@+id/sampling_test_cost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:textColor="@color/app_title_text_color_normal"
+            android:id="@+id/sampling_test_cost_type_value"
+            android:layout_marginTop="@dimen/dip5"
+            android:layout_below="@+id/sampling_test_cost_value"
+            android:layout_toRightOf="@+id/sampling_test_cost"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:textColor="@color/app_title_text_color_normal"
+            android:id="@+id/sampling_test_recipient"
+            android:layout_marginTop="@dimen/dip5"
+            android:layout_below="@+id/sampling_test_cost_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:textColor="@color/app_title_text_color_normal"
+            android:id="@+id/sampling_test_recipient_value"
+            android:layout_marginTop="@dimen/dip5"
+            android:layout_below="@+id/sampling_test_cost_type_value"
+            android:layout_toRightOf="@+id/sampling_test_recipient"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:textColor="@color/app_title_text_color_normal"
+            android:id="@+id/sampling_test_address"
+            android:layout_marginTop="@dimen/dip5"
+            android:layout_below="@+id/sampling_test_recipient"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:maxLines="2"
+            android:textColor="@color/app_title_text_color_normal"
+            android:id="@+id/sampling_test_address_value"
+            android:layout_marginTop="@dimen/dip5"
+            android:layout_below="@+id/sampling_test_recipient_value"
+            android:layout_toRightOf="@+id/sampling_test_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px_line"
+        android:background="@color/line_color"/>
+
+    <LinearLayout
+        android:id="@+id/layout_express"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <View
+            android:layout_marginTop="@dimen/dip10"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px_line"
+            android:background="@color/line_color"/>
+
+        <RelativeLayout
+            android:paddingLeft="@dimen/dip15"
+            android:paddingTop="@dimen/dip10"
+            android:paddingBottom="@dimen/dip10"
+            android:paddingRight="@dimen/dip15"
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:textColor="@color/app_title_text_color_normal"
+                android:text="承运快递："
+                android:id="@+id/express_name_v"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textColor="@color/button_light"
+                android:layout_toRightOf="@+id/express_name_v"
+                android:id="@+id/express_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textColor="@color/app_title_text_color_normal"
+                android:text="货运单号："
+                android:layout_marginTop="@dimen/dip5"
+                android:layout_below="@+id/express_name_v"
+                android:id="@+id/express_num_v"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginTop="@dimen/dip5"
+                android:textColor="@color/gray"
+                android:layout_below="@+id/express_name_v"
+                android:layout_toRightOf="@+id/express_num_v"
+                android:id="@+id/express_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px_line"
+            android:background="@color/line_color"/>
+
+    </LinearLayout>
+
+</LinearLayout>

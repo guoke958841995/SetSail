@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_main_header" />
+
+    <LinearLayout
+        android:paddingLeft="@dimen/dip10"
+        android:paddingRight="@dimen/dip10"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/layout_select_area"
+            android:paddingRight="@dimen/dip10"
+            android:gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dip50">
+
+            <TextView
+                android:id="@+id/tv_select_area"
+                android:textColor="@color/app_title_text_color"
+                android:text="全国"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <ImageView
+                android:id="@+id/iv_select_area"
+                android:layout_marginLeft="@dimen/dip10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/nice_spiner_arrow" />
+
+        </LinearLayout>
+
+        <com.sxhalo.PullCoal.ui.SearchView
+            android:id="@+id/search_layout"
+            app:queryHint="请输入矿口关键字"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:focusable="true"
+            android:focusableInTouchMode="true"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px_line"
+        android:background="@color/line_color"
+        android:id="@+id/anchor_view"/>
+
+    <com.sxhalo.amoldzhang.library.extras.recyclerview.PullToRefreshRecyclerView
+        android:id="@+id/pull_to_refresh_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <include layout="@layout/layout_no_data" />
+
+</LinearLayout>

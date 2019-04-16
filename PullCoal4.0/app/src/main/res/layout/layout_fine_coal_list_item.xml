@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/item_bt_bg"
+        android:orientation="vertical"
+        android:paddingRight="@dimen/dip5"
+        android:paddingLeft="@dimen/dip5">
+
+        <ImageView
+            android:id="@+id/iv_com_head"
+            android:layout_width="155dp"
+            android:layout_height="80dp"
+            android:scaleType="centerCrop" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:paddingBottom="@dimen/dip10"
+            android:paddingLeft="@dimen/dip5"
+            android:paddingRight="@dimen/dip10"
+            android:paddingTop="@dimen/dip6">
+
+            <TextView
+                android:id="@+id/coal_item_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-1dp"
+                android:text="快煤"
+                android:maxLines="1"
+                android:maxEms="5"
+                android:ellipsize="end"
+                android:textColor="@color/app_title_text_color_normal"
+                android:textSize="@dimen/font13" />
+
+            <ImageView
+                android:id="@+id/iv_test"
+                android:layout_width="wrap_content"
+                android:layout_height="13dp"
+                android:layout_marginLeft="@dimen/dip2"
+                android:layout_marginTop="@dimen/dip2"
+                android:layout_toRightOf="@+id/coal_item_name"
+                android:src="@mipmap/icon_test"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/coal_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="-1dp"
+                android:textColor="@color/actionsheet_red"
+                android:textSize="@dimen/font13" />
+
+            <TextView
+                android:id="@+id/coal_price_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/coal_price"
+                android:layout_marginBottom="@dimen/dip2"
+                android:layout_marginTop="-1dp"
+                android:layout_toLeftOf="@+id/coal_price"
+                android:layout_toStartOf="@+id/coal_price"
+                android:drawableLeft="@mipmap/icon_rmb" />
+
+
+            <TextView
+                android:id="@+id/tv_com_calorificvalue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:drawableLeft="@mipmap/info_depart_coal_hot"
+                android:drawablePadding="@dimen/dip2"
+                android:textColor="@color/first_fargment_text_gray"
+                android:textSize="10sp" />
+
+            <!--<TextView-->
+                <!--android:visibility="gone"-->
+                <!--android:id="@+id/tv_com_storagerate"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_alignParentBottom="true"-->
+                <!--android:layout_alignParentRight="true"-->
+                <!--android:drawableLeft="@mipmap/info_depart_coal_s"-->
+                <!--android:drawablePadding="@dimen/dip2"-->
+                <!--android:textColor="@color/first_fargment_text_gray"-->
+                <!--android:textSize="10sp" />-->
+
+            <TextView
+                android:id="@+id/contrast_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/bull_send_car"
+                android:textColor="@color/actionsheet_blue"
+                android:textSize="@dimen/font10"
+                android:paddingLeft="@dimen/dip5"
+                android:paddingRight="@dimen/dip5"
+                android:paddingTop="@dimen/dip2"
+                android:paddingBottom="@dimen/dip2"
+                android:text="+对比" />
+
+            <View
+                android:id="@+id/coal_line"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:background="@color/line_color" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,624 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_main_header"/>
+
+    <ScrollView
+        android:layout_weight="1"
+        android:fadingEdge="none"
+        android:scrollbars="none"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!--用户名-->
+            <LinearLayout
+                android:background="@color/white"
+                android:padding="@dimen/dip15"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:textColor="@color/app_title_text_color_normal"
+                    android:textSize="16sp"
+                    android:text="用  户  名"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <EditText
+                    android:textCursorDrawable="@drawable/shape_textcursor"
+                    android:id="@+id/et_customer_name"
+                    android:inputType="text"
+                    android:background="@null"
+                    android:hint="请输入用户名"
+                    android:textColor="@color/text_subtitle"
+                    android:textColorHint="@color/first_fargment_text_gray"
+                    android:textSize="16sp"
+                    android:layout_marginLeft="@dimen/dip15"
+                    android:layout_marginRight="@dimen/dip5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/line_color" />
+
+            <!--联系方式-->
+            <LinearLayout
+                android:background="@color/white"
+                android:padding="@dimen/dip15"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:textColor="@color/app_title_text_color_normal"
+                    android:textSize="16sp"
+                    android:text="联系方式"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <EditText
+                    android:textCursorDrawable="@drawable/shape_textcursor"
+                    android:id="@+id/et_contact_number"
+                    android:inputType="number"
+                    android:ems="11"
+                    android:background="@null"
+                    android:hint="请输入联系方式"
+                    android:textColor="@color/text_subtitle"
+                    android:textColorHint="@color/first_fargment_text_gray"
+                    android:textSize="16sp"
+                    android:layout_marginLeft="@dimen/dip15"
+                    android:layout_marginRight="@dimen/dip5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/line_color" />
+
+            <!--出发地区-->
+            <LinearLayout
+                android:id="@+id/layout_from_area"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/item_bt_bg"
+                android:padding="@dimen/dip15">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="出发地区"
+                    android:textColor="@color/app_title_text_color_normal"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:lines="1"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="@dimen/dip15"
+                    android:id="@+id/tv_from_area"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/first_fargment_text_gray"
+                    android:text="请选择出发地" />
+
+                <ImageView
+                    android:layout_width="@dimen/dip15"
+                    android:layout_height="@dimen/dip22"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="@dimen/dip10"
+                    android:rotation="90"
+                    android:src="@drawable/sort_common_up" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/line_color" />
+
+            <!--送达地区-->
+            <LinearLayout
+                android:id="@+id/layout_to_area"
+                android:background="@drawable/item_bt_bg"
+                android:padding="@dimen/dip15"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:textColor="@color/app_title_text_color_normal"
+                    android:textSize="16sp"
+                    android:text="送达地区"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:lines="1"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="@dimen/dip15"
+                    android:id="@+id/tv_to_area"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/first_fargment_text_gray"
+                    android:text="请选择出发地" />
+
+                <ImageView
+                    android:layout_width="@dimen/dip15"
+                    android:layout_height="@dimen/dip22"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="@dimen/dip10"
+                    android:rotation="90"
+                    android:src="@drawable/sort_common_up" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/line_color" />
+
+            <!--进度-->
+            <LinearLayout
+                android:id="@+id/layout_register_type"
+                android:background="@drawable/item_bt_bg"
+                android:padding="@dimen/dip15"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:textColor="@color/app_title_text_color_normal"
+                    android:textSize="16sp"
+                    android:text="需求类型"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+
+                <TextView
+                    android:gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="@dimen/dip15"
+                    android:id="@+id/tv_register_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/first_fargment_text_gray"
+                    android:text="请选择类型" />
+
+                <ImageView
+                    android:id="@+id/iv_register_type"
+                    android:layout_width="@dimen/dip10"
+                    android:layout_height="@dimen/dip10"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="@dimen/dip10"
+                    android:rotation="90"
+                    android:src="@mipmap/icon_arrow_up" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/line_color" />
+
+            <View
+                android:layout_marginTop="@dimen/dip10"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/line_color" />
+
+            <!--需求量-->
+            <LinearLayout
+                android:background="@color/white"
+                android:padding="@dimen/dip15"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:textColor="@color/app_title_text_color_normal"
+                    android:textSize="16sp"
+                    android:text="需  求  量"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <EditText
+                    android:textCursorDrawable="@drawable/shape_textcursor"
+                    android:id="@+id/et_quantity"
+                    android:background="@null"
+                    android:hint="请输入需求量"
+                    android:inputType="number"
+                    android:textColor="@color/text_subtitle"
+                    android:textColorHint="@color/first_fargment_text_gray"
+                    android:textSize="16sp"
+                    android:layout_marginLeft="@dimen/dip15"
+                    android:layout_marginRight="@dimen/dip5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/line_color" />
+
+            <!--运费-->
+            <LinearLayout
+                android:background="@color/white"
+                android:padding="@dimen/dip15"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:textColor="@color/app_title_text_color_normal"
+                    android:textSize="16sp"
+                    android:text="运        费"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <EditText
+                    android:textCursorDrawable="@drawable/shape_textcursor"
+                    android:id="@+id/et_cost"
+                    android:inputType="number"
+                    android:background="@null"
+                    android:hint="请输入运费"
+                    android:textColor="@color/text_subtitle"
+                    android:textColorHint="@color/first_fargment_text_gray"
+                    android:textSize="16sp"
+                    android:layout_marginLeft="@dimen/dip15"
+                    android:layout_marginRight="@dimen/dip5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/line_color" />
+
+            <!--装卸费用-->
+            <LinearLayout
+                android:background="@color/white"
+                android:padding="@dimen/dip15"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:textColor="@color/app_title_text_color_normal"
+                    android:textSize="16sp"
+                    android:text="装卸费用"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <EditText
+                    android:textCursorDrawable="@drawable/shape_textcursor"
+                    android:id="@+id/et_loading_charge"
+                    android:inputType="number"
+                    android:background="@null"
+                    android:hint="请输入装卸费"
+                    android:textColor="@color/text_subtitle"
+                    android:textColorHint="@color/first_fargment_text_gray"
+                    android:textSize="16sp"
+                    android:layout_marginLeft="@dimen/dip15"
+                    android:layout_marginRight="@dimen/dip5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/line_color" />
+
+            <!--煤种-->
+            <LinearLayout
+                android:background="@color/white"
+                android:id="@+id/layout_dict_value"
+                android:padding="@dimen/dip15"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:textColor="@color/app_title_text_color_normal"
+                    android:textSize="16sp"
+                    android:text="煤        种"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="@dimen/dip15"
+                    android:id="@+id/tv_dict_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/first_fargment_text_gray" />
+
+                <ImageView
+                    android:visibility="gone"
+                    android:layout_width="@dimen/dip15"
+                    android:layout_height="@dimen/dip22"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="@dimen/dip10"
+                    android:rotation="90"
+                    android:src="@drawable/sort_common_up" />
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/line_color" />
+
+            <!--热量-->
+            <LinearLayout
+                android:background="@color/white"
+                android:padding="@dimen/dip15"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:textColor="@color/app_title_text_color_normal"
+                    android:textSize="16sp"
+                    android:text="热        量"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <EditText
+                    android:textCursorDrawable="@drawable/shape_textcursor"
+                    android:id="@+id/et_calorific_value"
+                    android:inputType="number"
+                    android:background="@null"
+                    android:hint="请输入热量"
+                    android:textColor="@color/text_subtitle"
+                    android:textColorHint="@color/first_fargment_text_gray"
+                    android:textSize="16sp"
+                    android:layout_marginLeft="@dimen/dip15"
+                    android:layout_marginRight="@dimen/dip5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/line_color" />
+
+            <View
+                android:layout_marginTop="@dimen/dip10"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/line_color" />
+
+            <!--其他需求-->
+            <LinearLayout
+                android:background="@color/white"
+                android:padding="@dimen/dip15"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:textColor="@color/app_title_text_color_normal"
+                    android:textSize="16sp"
+                    android:text="其他需求"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <EditText
+                    android:textCursorDrawable="@drawable/shape_textcursor"
+                    android:id="@+id/et_other_needs"
+                    android:inputType="text"
+                    android:background="@null"
+                    android:hint="请输入其他需求"
+                    android:textColor="@color/text_subtitle"
+                    android:textColorHint="@color/first_fargment_text_gray"
+                    android:textSize="16sp"
+                    android:layout_marginLeft="@dimen/dip15"
+                    android:layout_marginRight="@dimen/dip5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/line_color" />
+
+            <!--进度-->
+            <LinearLayout
+                android:id="@+id/layout_status"
+                android:background="@drawable/item_bt_bg"
+                android:padding="@dimen/dip15"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:textColor="@color/app_title_text_color_normal"
+                    android:textSize="16sp"
+                    android:text="进        度"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+
+                <TextView
+                    android:gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="@dimen/dip15"
+                    android:id="@+id/tv_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/first_fargment_text_gray"
+                    android:text="请选择进度" />
+
+                <ImageView
+                    android:id="@+id/iv_status"
+                    android:layout_width="@dimen/dip10"
+                    android:layout_height="@dimen/dip10"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="@dimen/dip10"
+                    android:rotation="90"
+                    android:src="@mipmap/icon_arrow_up" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/line_color" />
+
+            <!--备注-->
+            <LinearLayout
+                android:background="@color/white"
+                android:padding="@dimen/dip15"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:textColor="@color/app_title_text_color_normal"
+                    android:textSize="16sp"
+                    android:text="备        注"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <EditText
+                    android:textCursorDrawable="@drawable/shape_textcursor"
+                    android:id="@+id/et_remark"
+                    android:inputType="text"
+                    android:background="@null"
+                    android:hint="请输入备注"
+                    android:textColor="@color/text_subtitle"
+                    android:textColorHint="@color/first_fargment_text_gray"
+                    android:textSize="16sp"
+                    android:layout_marginLeft="@dimen/dip15"
+                    android:layout_marginRight="@dimen/dip5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/line_color" />
+
+            <!--跟单人-->
+            <LinearLayout
+                android:id="@+id/layout_follow"
+                android:background="@color/white"
+                android:padding="@dimen/dip15"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:textColor="@color/app_title_text_color_normal"
+                    android:textSize="16sp"
+                    android:text="跟  单  人"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="@dimen/dip15"
+                    android:id="@+id/tv_follow_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/first_fargment_text_gray"
+                    android:text="请选择煤种" />
+
+                <ImageView
+                    android:id="@+id/iv_follow"
+                    android:layout_width="@dimen/dip10"
+                    android:layout_height="@dimen/dip10"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="@dimen/dip10"
+                    android:rotation="90"
+                    android:src="@mipmap/icon_arrow_up" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/line_color" />
+
+            <View
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/line_color" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:padding="@dimen/dip10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_cancel"
+            android:textColor="@color/white"
+            android:background="@drawable/button_shape"
+            android:gravity="center"
+            android:layout_marginLeft="@dimen/dip10"
+            android:layout_marginRight="@dimen/dip10"
+            android:layout_weight="1"
+            android:text="取消"
+            android:textSize="@dimen/font16"
+            android:layout_width="@dimen/dip0"
+            android:layout_height="@dimen/dip40" />
+
+        <TextView
+            android:id="@+id/tv_save"
+            android:textColor="@color/white"
+            android:background="@drawable/button_shape"
+            android:gravity="center"
+            android:layout_marginRight="@dimen/dip10"
+            android:layout_marginLeft="@dimen/dip10"
+            android:layout_weight="1"
+            android:text="保存"
+            android:textSize="@dimen/font16"
+            android:layout_width="@dimen/dip0"
+            android:layout_height="@dimen/dip40" />
+
+    </LinearLayout>
+
+</LinearLayout>

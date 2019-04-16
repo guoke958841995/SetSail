@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/layout_main_header" android:id="@+id/title_layout"/>
+
+    <ScrollView
+        android:fadingEdge="none"
+        android:layout_marginBottom="2px"
+        android:layout_below="@+id/title_layout"
+        android:layout_above="@+id/rl_bottom_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fadeScrollbars="true"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ListView
+                android:id="@+id/complaint_listview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/transparent"
+                android:cacheColorHint="#00000000"
+                android:divider="@null"
+                android:dividerHeight="0dp"
+                android:fadingEdge="none"
+                android:listSelector="#00000000"
+                android:overScrollMode="never"
+                android:scrollbars="none" />
+        </LinearLayout>
+    </ScrollView>
+
+    <View
+        android:layout_above="@+id/rl_bottom_view"
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:background="@color/line_color"/>
+
+    <LinearLayout
+        android:background="@color/background_color"
+        android:padding="@dimen/dip10"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/rl_bottom_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/complaint_editText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="@dimen/dip5"
+            android:layout_marginRight="@dimen/dip15"
+            android:padding="@dimen/dip5"
+            android:layout_weight="1"
+            android:background="@drawable/dialog_bg" />
+
+        <Button
+            android:layout_marginRight="@dimen/dip5"
+            android:id="@+id/send_complaint"
+            android:textColor="@color/white"
+            android:background="@drawable/button_shape"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:gravity="center"
+            android:padding="@dimen/dip5"
+            android:text="发送" />
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activity_bg_color">
+
+    <include android:id="@+id/title_bar" layout="@layout/layout_main_header" />
+
+   <ScrollView
+       android:scrollbars="none"
+       android:fadingEdge="none"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content">
+
+       <LinearLayout
+           android:orientation="vertical"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content">
+
+           <LinearLayout
+               android:paddingLeft="@dimen/dip15"
+               android:background="@color/white"
+               android:layout_width="match_parent"
+               android:layout_height="@dimen/dip50">
+
+               <ImageView
+                   android:id="@+id/image_authentication_prompt"
+                   android:layout_width="wrap_content"
+                   android:layout_height="match_parent"
+                   android:src="@mipmap/icon_authentication_prompt"
+                   android:gravity="center_vertical" />
+
+               <TextView
+                   android:layout_marginLeft="@dimen/dip5"
+                   android:id="@+id/completion_degree"
+                   android:gravity="center_vertical"
+                   android:text="司机认证尚未通过，资料完善度 60 %"
+                   android:layout_width="wrap_content"
+                   android:layout_height="match_parent" />
+
+           </LinearLayout>
+
+           <View
+               android:layout_width="match_parent"
+               android:layout_height="2px"
+               android:background="@color/line_color"/>
+
+           <View
+               android:layout_marginTop="@dimen/dip10"
+               android:layout_width="match_parent"
+               android:layout_height="2px"
+               android:background="@color/line_color"/>
+
+           <TextView
+               android:paddingLeft="@dimen/dip15"
+               android:background="@color/white"
+               android:layout_width="match_parent"
+               android:layout_height="@dimen/dip50"
+               android:drawablePadding="@dimen/dip5"
+               android:gravity="center_vertical"
+               android:text="驾驶员信息" />
+
+           <View
+               android:layout_width="match_parent"
+               android:layout_height="2px"
+               android:background="@color/line_color"/>
+
+           <LinearLayout
+               android:orientation="vertical"
+               android:paddingLeft="@dimen/dip15"
+               android:paddingRight="@dimen/dip15"
+               android:paddingTop="@dimen/dip10"
+               android:paddingBottom="@dimen/dip10"
+               android:background="@color/white"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content">
+
+               <ImageView
+                   android:scaleType="centerCrop"
+                   android:id="@+id/driver_license_image"
+                   android:layout_width="match_parent"
+                   android:layout_height="@dimen/dip150"
+                   android:layout_marginLeft="@dimen/dip30"
+                   android:layout_marginRight="@dimen/dip30"
+                   android:src="@mipmap/default_image" />
+
+               <LinearLayout
+                   android:layout_marginTop="@dimen/dip10"
+                   android:orientation="horizontal"
+                   android:background="@color/white"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content">
+
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="match_parent"
+                       android:drawablePadding="@dimen/dip5"
+                       android:textColor="@color/app_title_text_color_normal"
+                       android:gravity="center_vertical"
+                       android:text="真实姓名：" />
+
+                   <TextView
+                       android:id="@+id/real_name"
+                       android:gravity="center_vertical"
+                       android:layout_width="wrap_content"
+                       android:layout_height="match_parent" />
+
+               </LinearLayout>
+               <LinearLayout
+                   android:layout_marginTop="@dimen/dip5"
+                   android:orientation="horizontal"
+                   android:background="@color/white"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content">
+
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="match_parent"
+                       android:drawablePadding="@dimen/dip5"
+                       android:textColor="@color/app_title_text_color_normal"
+                       android:gravity="center_vertical"
+                       android:text="身份证号：" />
+
+                   <TextView
+                       android:id="@+id/driver_license_id"
+                       android:gravity="center_vertical"
+                       android:layout_width="wrap_content"
+                       android:layout_height="match_parent" />
+
+               </LinearLayout>
+               <LinearLayout
+                   android:layout_marginTop="@dimen/dip5"
+                   android:orientation="horizontal"
+                   android:background="@color/white"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content">
+
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="match_parent"
+                       android:drawablePadding="@dimen/dip5"
+                       android:textColor="@color/app_title_text_color_normal"
+                       android:gravity="center_vertical"
+                       android:text="初次领证日期：" />
+
+                   <TextView
+                       android:id="@+id/issue_date"
+                       android:gravity="center_vertical"
+                       android:layout_width="wrap_content"
+                       android:layout_height="match_parent" />
+
+               </LinearLayout>
+
+           </LinearLayout>
+
+           <View
+               android:layout_width="match_parent"
+               android:layout_height="2px"
+               android:background="@color/line_color"/>
+
+           <View
+               android:layout_marginTop="@dimen/dip10"
+               android:layout_width="match_parent"
+               android:layout_height="2px"
+               android:background="@color/line_color"/>
+
+           <TextView
+               android:paddingLeft="@dimen/dip15"
+               android:background="@color/white"
+               android:layout_width="match_parent"
+               android:layout_height="@dimen/dip50"
+               android:drawablePadding="@dimen/dip5"
+               android:gravity="center_vertical"
+               android:text="车辆信息" />
+
+           <View
+               android:layout_width="match_parent"
+               android:layout_height="2px"
+               android:background="@color/line_color"/>
+
+           <LinearLayout
+               android:orientation="vertical"
+               android:paddingLeft="@dimen/dip15"
+               android:paddingRight="@dimen/dip15"
+               android:paddingTop="@dimen/dip10"
+               android:paddingBottom="@dimen/dip10"
+               android:background="@color/white"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content">
+
+               <ImageView
+                   android:scaleType="centerCrop"
+                   android:src="@mipmap/default_image"
+                   android:id="@+id/vehicle_license_attached"
+                   android:layout_marginRight="@dimen/dip30"
+                   android:layout_marginLeft="@dimen/dip30"
+                   android:layout_width="match_parent"
+                   android:layout_height="@dimen/dip150" />
+
+               <!--车牌号码-->
+               <LinearLayout
+                   android:layout_marginTop="@dimen/dip10"
+                   android:orientation="horizontal"
+                   android:background="@color/white"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content">
+
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="match_parent"
+                       android:drawablePadding="@dimen/dip5"
+                       android:textColor="@color/app_title_text_color_normal"
+                       android:gravity="center_vertical"
+                       android:text="车牌号码：" />
+
+                   <TextView
+                       android:id="@+id/plate_number"
+                       android:gravity="center_vertical"
+                       android:layout_width="wrap_content"
+                       android:layout_height="match_parent" />
+
+               </LinearLayout>
+
+               <!--车牌所有人-->
+               <LinearLayout
+                   android:layout_marginTop="@dimen/dip5"
+                   android:orientation="horizontal"
+                   android:background="@color/white"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content">
+
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="match_parent"
+                       android:drawablePadding="@dimen/dip5"
+                       android:textColor="@color/app_title_text_color_normal"
+                       android:gravity="center_vertical"
+                       android:text="车辆所有人：" />
+
+                   <TextView
+                       android:id="@+id/owner_of_vehicle"
+                       android:gravity="center_vertical"
+                       android:layout_width="wrap_content"
+                       android:layout_height="match_parent" />
+
+               </LinearLayout>
+
+               <!--车牌类型-->
+               <LinearLayout
+                   android:layout_marginTop="@dimen/dip5"
+                   android:orientation="horizontal"
+                   android:background="@color/white"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content">
+
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="match_parent"
+                       android:drawablePadding="@dimen/dip5"
+                       android:textColor="@color/app_title_text_color_normal"
+                       android:gravity="center_vertical"
+                       android:text="车辆类型：" />
+
+                   <TextView
+                       android:id="@+id/vehicle_mode"
+                       android:gravity="center_vertical"
+                       android:layout_width="wrap_content"
+                       android:layout_height="match_parent" />
+
+               </LinearLayout>
+
+               <!--车长和载重-->
+               <LinearLayout
+                   android:layout_marginTop="@dimen/dip5"
+                   android:orientation="horizontal"
+                   android:background="@color/white"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content">
+
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="match_parent"
+                       android:textColor="@color/app_title_text_color_normal"
+                       android:drawablePadding="@dimen/dip5"
+                       android:gravity="center_vertical"
+                       android:text="车长载重：" />
+
+                   <TextView
+                       android:id="@+id/tv_vehicle_length"
+                       android:gravity="center_vertical"
+                       android:layout_width="wrap_content"
+                       android:layout_height="match_parent" />
+
+                   <TextView
+                       android:id="@+id/tv_vehicle_load"
+                       android:gravity="center_vertical"
+                       android:layout_width="wrap_content"
+                       android:layout_height="match_parent" />
+
+               </LinearLayout>
+
+               <!--行驶证注册日期-->
+               <LinearLayout
+                   android:layout_marginTop="@dimen/dip5"
+                   android:orientation="horizontal"
+                   android:background="@color/white"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content">
+
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="match_parent"
+                       android:textColor="@color/app_title_text_color_normal"
+                       android:drawablePadding="@dimen/dip5"
+                       android:gravity="center_vertical"
+                       android:text="行驶证注册日期：" />
+
+                   <TextView
+                       android:id="@+id/registration_of_driving_license"
+                       android:gravity="center_vertical"
+                       android:layout_width="wrap_content"
+                       android:layout_height="match_parent" />
+
+               </LinearLayout>
+
+           </LinearLayout>
+
+           <View
+               android:layout_width="match_parent"
+               android:layout_height="2px"
+               android:background="@color/line_color"/>
+
+       </LinearLayout>
+   </ScrollView>
+
+</LinearLayout>

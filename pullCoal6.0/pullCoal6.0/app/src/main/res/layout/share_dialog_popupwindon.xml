@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:gravity="bottom">
+
+
+        <LinearLayout
+            android:id="@+id/pop_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_shape_white"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/dp_10"
+            android:paddingTop="@dimen/dp_10">
+
+            <TextView
+                android:gravity="center"
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp_10"
+                android:layout_marginLeft="@dimen/dp_12"
+                android:layout_marginRight="@dimen/dp_12"
+                android:textColor="@color/gray_font_dark"
+                android:text="分享" />
+
+            <LinearLayout
+                android:padding="@dimen/dp_10"
+                android:id="@+id/container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:orientation="horizontal" >
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:id="@+id/wechat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:src="@mipmap/wechat_highlight"
+                        android:layout_width="@dimen/dp_40"
+                        android:layout_height="@dimen/dp_40" />
+                    <TextView
+                        android:layout_marginTop="@dimen/dp_5"
+                        android:textSize="@dimen/dp_12"
+                        android:text="@string/wechat"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:id="@+id/moments"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:src="@mipmap/ic_share_moments"
+                        android:layout_width="@dimen/dp_40"
+                        android:layout_height="@dimen/dp_40" />
+                    <TextView
+                        android:layout_marginTop="@dimen/dp_5"
+                        android:textSize="@dimen/dp_12"
+                        android:text="@string/moments"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:id="@+id/qq"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:src="@mipmap/qq_highlight"
+                        android:layout_width="@dimen/dp_40"
+                        android:layout_height="@dimen/dp_40" />
+                    <TextView
+                        android:layout_marginTop="@dimen/dp_5"
+                        android:textSize="@dimen/dp_12"
+                        android:text="@string/qq"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:id="@+id/qzone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:src="@mipmap/ic_share_qzone"
+                        android:layout_width="@dimen/dp_40"
+                        android:layout_height="@dimen/dp_40" />
+                    <TextView
+                        android:layout_marginTop="@dimen/dp_5"
+                        android:textSize="@dimen/dp_12"
+                        android:text="@string/qzone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:layout_marginTop="@dimen/dp_10"
+            android:id="@+id/cancel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:background="@drawable/background_gray_unselected_shape"
+            android:textColor="@color/gray_font_dark"
+            android:text="@android:string/cancel"
+            android:textSize="@dimen/sp_14"
+            android:minHeight="@dimen/dp_10"
+            android:minWidth="@dimen/dp_10"
+            android:paddingTop="@dimen/dp_10"
+            android:paddingBottom="@dimen/dp_10"
+            android:clickable="true"/>
+
+</LinearLayout>

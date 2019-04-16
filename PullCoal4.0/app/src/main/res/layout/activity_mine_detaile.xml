@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include android:id="@+id/title_bar" layout="@layout/layout_main_header" />
+
+
+    <com.sxhalo.PullCoal.ui.smoothlistview.SmoothListView
+        android:id="@+id/details_mine_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@null"
+        android:dividerHeight="0dp"
+        android:fadingEdge="none"
+        android:overScrollMode="never"
+        android:scrollbars="none"
+        android:layout_below="@+id/title_bar"
+        android:layout_above="@+id/bottom_ll" />
+
+</LinearLayout>

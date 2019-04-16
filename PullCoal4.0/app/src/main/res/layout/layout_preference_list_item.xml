@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <View
+        android:background="@color/line_color"
+        android:id="@+id/view_line"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px_line"/>
+
+    <RelativeLayout
+        android:gravity="center_vertical"
+        android:padding="@dimen/dip10"
+        android:id="@+id/title_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dip40">
+
+        <View
+            android:layout_marginLeft="@dimen/dip5"
+            android:layout_width="@dimen/dip3"
+            android:layout_height="match_parent"
+            android:background="@color/app_title_text_color"/>
+
+        <TextView
+            android:layout_marginLeft="@dimen/dip13"
+            android:textSize="@dimen/dip14"
+            android:textColor="@color/app_title_text_color"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/coal_item_title" />
+
+        <TextView
+            android:layout_toRightOf="@+id/coal_item_title"
+            android:text="过的煤炭信息"
+            android:textSize="@dimen/dip14"
+            android:textColor="@color/app_title_text_color"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <LinearLayout
+            android:layout_marginRight="@dimen/dip5"
+            android:background="@drawable/item_bt_bg"
+            android:layout_gravity="right"
+            android:layout_alignParentRight="true"
+            android:id="@+id/right_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_marginRight="-7dp"
+                android:textSize="@dimen/dip14"
+                android:text="查看更多"
+                android:textColor="@color/gray" />
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="20dp"
+                android:layout_marginRight="-5dp"
+                android:src="@drawable/icon_right_arrow" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <View
+        android:background="@mipmap/coal_dashed"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="@dimen/dip15"
+        android:layout_marginRight="@dimen/dip15"/>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/item_bt_bg"
+        android:paddingBottom="@dimen/dip10"
+        android:paddingLeft="@dimen/dip15"
+        android:paddingRight="@dimen/dip15"
+        android:paddingTop="@dimen/dip10">
+
+        <ImageView
+            android:id="@+id/iv_com_head"
+            android:layout_width="@dimen/dip80"
+            android:layout_height="63dp"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/icon" />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="63dp"
+            android:layout_marginLeft="@dimen/dip20">
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-2dp"
+                android:textColor="@color/app_title_text_color_normal"
+                android:textSize="@dimen/font15" />
+
+            <ImageView
+                android:id="@+id/iv_test"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dip5"
+                android:layout_toRightOf="@+id/tv_name"
+                android:src="@mipmap/icon_test"
+                android:visibility="gone" />
+
+            <TextView
+                android:textSize="@dimen/font10"
+                android:id="@+id/tv_free_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dip5"
+                android:layout_toRightOf="@+id/iv_test"
+                android:visibility="gone" />
+
+
+            <TextView
+                android:id="@+id/tv_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:textColor="@color/actionsheet_red"
+                android:textSize="@dimen/font16" />
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/tv_price_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:textColor="@color/actionsheet_red"
+                android:textSize="@dimen/font14" />
+
+            <TextView
+                android:id="@+id/tv_price_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/tv_price"
+                android:layout_marginBottom="@dimen/dip2"
+                android:layout_toLeftOf="@+id/tv_price"
+                android:layout_toStartOf="@+id/tv_price"
+                android:drawableLeft="@mipmap/icon_rmb" />
+
+            <TextView
+                android:id="@+id/tv_com_calorificvalue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:drawableLeft="@mipmap/info_depart_coal_hot"
+                android:drawablePadding="@dimen/dip3"
+                android:textColor="@color/first_fargment_text_gray"
+                android:textSize="11sp" />
+
+            <TextView
+                android:id="@+id/tv_com_storagerate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignTop="@+id/tv_com_calorificvalue"
+                android:layout_marginLeft="@dimen/dip20"
+                android:layout_toRightOf="@+id/tv_com_calorificvalue"
+                android:drawableLeft="@mipmap/info_depart_coal_minerall"
+                android:drawablePadding="@dimen/dip3"
+                android:textColor="@color/first_fargment_text_gray"
+                android:textSize="11sp" />
+
+            <View
+                android:id="@+id/coal_line"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dip20" />
+
+
+            <TextView
+                android:id="@+id/tv_information_name"
+                android:textColor="@color/first_fargment_text_gray"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:textSize="11sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tv_updata_time"
+                android:textColor="@color/first_fargment_text_gray"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:textSize="11sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+    <View
+        android:background="@color/line_color"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px_line"/>
+
+
+</LinearLayout>

@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/scrollview_background">
+
+    <include
+        android:id="@+id/title_bar"
+        layout="@layout/layout_main_header" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/line_color"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingBottom="@dimen/dip10"
+        android:paddingLeft="@dimen/dip15"
+        android:paddingRight="@dimen/dip15"
+        android:paddingTop="@dimen/dip10">
+
+        <TextView
+            android:id="@+id/text_view1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="费用类别：" />
+
+        <TextView
+            android:textColor="@color/detail_title_text_color"
+            android:id="@+id/payment_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/text_view1" />
+
+        <LinearLayout
+            android:layout_marginTop="@dimen/dip10"
+            android:layout_below="@id/payment_type"
+            android:id="@+id/linearLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="费用名称：" />
+
+
+            <TextView
+                android:textColor="@color/detail_title_text_color"
+                android:id="@+id/payment_name"
+                android:maxLines="4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_marginTop="@dimen/dip5"
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/linearLayout1"
+            android:text="费用金额：" />
+
+        <TextView
+            android:layout_marginTop="@dimen/dip5"
+            android:id="@+id/payment_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/linearLayout1"
+            android:layout_toEndOf="@+id/textView6"
+            android:layout_toRightOf="@+id/textView6"
+            android:drawableLeft="@mipmap/icon_rmb"
+            android:drawablePadding="@dimen/dip5"
+            android:textColor="@color/text_color_red" />
+
+        <TextView
+            android:background="@color/line_color"
+            android:textSize="@dimen/dip12"
+            android:layout_marginTop="@dimen/dip5"
+            android:id="@+id/payment_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/linearLayout1"
+            android:layout_marginLeft="@dimen/dip15"
+            android:layout_toEndOf="@+id/payment_num"
+            android:layout_toRightOf="@+id/payment_num"
+            android:textColor="@color/detail_title_text_color" />
+
+    </RelativeLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/line_color"/>
+
+    <View
+        android:layout_marginTop="@dimen/dip15"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/line_color"/>
+
+    <!--我的可用代金券-->
+    <RelativeLayout
+        android:id="@+id/layout_my_coupons"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dip50"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/iv_my_coupons"
+            android:layout_width="@dimen/dip40"
+            android:layout_height="@dimen/dip40"
+            android:layout_margin="@dimen/dip10"
+            android:scaleType="centerInside"
+            android:src="@mipmap/icon_my_coupon" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/iv_my_coupons"
+            android:text="代金券抵用"
+            android:id="@+id/textView7" />
+
+
+        <TextView
+            android:id="@+id/available_number"
+            android:padding="@dimen/dip3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dip15"
+            android:layout_toEndOf="@+id/textView7"
+            android:layout_toRightOf="@+id/textView7"
+            android:background="@drawable/shape_yellow"
+            android:textColor="@color/text_color_red"
+            android:text="2张可用"
+            android:textSize="@dimen/dip9"/>
+
+        <TextView
+            android:id="@+id/deductible_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dip40"
+            android:drawablePadding="@dimen/dip8"
+            android:text="未使用"
+            android:textColor="@color/text_color_red" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/dip20"
+            android:src="@mipmap/arrow_listpage" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/line_color" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dip50"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/iv_my_balance"
+            android:layout_width="@dimen/dip40"
+            android:layout_height="@dimen/dip40"
+            android:layout_margin="@dimen/dip10"
+            android:scaleType="centerInside"
+            android:src="@mipmap/icon_balance" />
+
+        <TextView
+            android:id="@+id/balance_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@+id/iv_my_balance"
+            android:gravity="center"
+            android:text="账户余额" />
+
+        <TextView
+            android:textColor="@color/detail_title_text_color"
+            android:text="可用余额0.0元"
+            android:layout_alignParentRight="true"
+            android:id="@+id/balance_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="@dimen/dip20"
+            android:layout_toRightOf="@+id/balance_title"
+            android:gravity="right|center" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/line_color"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dip15"
+        android:layout_marginTop="@dimen/dip15"
+        android:drawableLeft="@mipmap/icon_insurance"
+        android:drawablePadding="@dimen/dip5"
+        android:text="该服务资金安全由光环科技提供全程担保"
+        android:textColor="@color/detail_title_text_color" />
+
+    <LinearLayout
+        android:layout_gravity="right"
+        android:layout_marginRight="@dimen/dip20"
+        android:layout_marginTop="@dimen/dip20"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:textColor="@color/app_title_text_color"
+            android:text="待支付金额："
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/amount_to_paid"
+            android:textColor="@color/app_title_text_color"
+            android:text="2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/goto_payment"
+        android:layout_marginTop="@dimen/dip40"
+        android:layout_marginRight="@dimen/dip35"
+        android:layout_marginLeft="@dimen/dip35"
+        android:padding="@dimen/dip5"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dip40"
+        android:textSize="@dimen/dip16"
+        android:background="@drawable/background_blue_shape"
+        android:text="前往支付" />
+    
+    <TextView
+        android:textSize="@dimen/dip12"
+        android:layout_marginTop="@dimen/dip10"
+        android:padding="@dimen/dip15"
+        android:text="特别说明：精品信息资讯费为信息发布者发布精品信息的附加收益，与信息发布者所收的信息费无关"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/detail_title_text_color"/>
+
+</LinearLayout>

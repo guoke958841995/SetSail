@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:textColor="@color/app_title_text_color_normal"
+        android:id="@+id/item_search_text"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_search_history_background"
+        android:gravity="center"
+        android:paddingRight="@dimen/dip10"
+        android:paddingLeft="@dimen/dip10"
+        android:paddingTop="@dimen/dip5"
+        android:paddingBottom="@dimen/dip5"
+        android:singleLine="true"
+        android:ems="4"
+        android:ellipsize="middle"/>
+
+</LinearLayout>

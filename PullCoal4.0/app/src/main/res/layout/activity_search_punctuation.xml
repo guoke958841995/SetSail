@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <!---->
+    <FrameLayout
+        android:layout_above="@+id/item_select"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.amap.api.maps.MapView
+            android:id="@+id/map"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/dip50">
+        </com.amap.api.maps.MapView>
+
+        <com.sxhalo.PullCoal.ui.scrolllayout.ScrollLayout
+            android:visibility="gone"
+            android:id="@+id/scroll_down_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/activity_bg_color">
+
+            <RelativeLayout
+                android:layout_marginTop="@dimen/dip50"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <FrameLayout
+                    android:layout_below="@+id/spinner_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <com.sxhalo.PullCoal.ui.scrolllayout.content.ContentListView
+                        android:id="@+id/list_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:listSelector="@color/transparent"
+                        android:background="@android:color/white">
+                    </com.sxhalo.PullCoal.ui.scrolllayout.content.ContentListView>
+
+                    <!--<TextView-->
+                        <!--android:id="@+id/text_data"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="match_parent"-->
+                        <!--android:background="@android:color/white"-->
+                        <!--android:gravity="center"-->
+                        <!--android:textColor="@color/app_title_text_color"-->
+                        <!--android:text="没有找到相关信息，建议更改搜索条件" />-->
+                </FrameLayout>
+
+                <TextView
+                    android:visibility="gone"
+                    android:id="@+id/text_foot"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@color/white"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:textColor="@color/app_title_text_color"
+                    android:text="点击展开更多结果" />
+
+                <LinearLayout
+                    android:padding="@dimen/dip1"
+                    android:id="@+id/spinner_view"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@color/line_color">
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:id="@+id/spinner_distance_ll"
+                        android:layout_marginRight="@dimen/dip1"
+                        android:background="@color/white"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:layout_marginLeft="@dimen/dip20"
+                            android:text="搜索范围 "
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                        <TextView
+                            android:layout_marginLeft="@dimen/dip10"
+                            android:text="800km"
+                            android:textColor="@color/app_title_text_color"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/spinner_distance_text"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:orientation="horizontal"
+                        android:id="@+id/spinner_condition_ll"
+                        android:layout_marginLeft="@dimen/dip1"
+                        android:background="@color/white"
+                        android:gravity="center_vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:layout_marginLeft="@dimen/dip20"
+                            android:layout_gravity="center_vertical|left"
+                            android:text="搜索条件 "
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                        <TextView
+                            android:layout_marginLeft="@dimen/dip10"
+                            android:text="全部"
+                            android:textColor="@color/app_title_text_color"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/spinner_condition_text"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </com.sxhalo.PullCoal.ui.scrolllayout.ScrollLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/back"
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:background="@null"
+                    android:gravity="center_vertical"
+                    android:src="@drawable/btn_back"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="5dp"
+                    android:paddingTop="5dp"
+                    android:visibility="visible" />
+
+                <com.sxhalo.PullCoal.ui.SearchView
+                    android:layout_marginRight="@dimen/dip50"
+                    android:background="@color/transparent"
+                    android:id="@+id/search_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp">
+                </com.sxhalo.PullCoal.ui.SearchView>
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <include
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:id="@+id/item_select"
+        layout="@layout/find_search_list_item" />
+
+</RelativeLayout>

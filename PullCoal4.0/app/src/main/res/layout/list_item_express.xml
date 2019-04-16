@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:gravity="center"
+        android:paddingRight="@dimen/dip15"
+        android:paddingLeft="@dimen/dip15"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+
+        <View
+            android:layout_marginLeft="4.5dp"
+            android:layout_above="@+id/dot_iv"
+            android:id="@+id/view_top"
+            android:layout_width="@dimen/dip1"
+            android:layout_height="40dp"
+            android:background="@color/text_chose"/>
+
+        <ImageView
+            android:layout_centerInParent="true"
+            android:id="@+id/dot_iv"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/bg_amount_blue_layout" />
+
+        <View
+            android:layout_marginLeft="4.5dp"
+            android:layout_below="@+id/dot_iv"
+            android:id="@+id/view_down"
+            android:layout_width="@dimen/dip1"
+            android:layout_height="40dp"
+            android:background="@color/text_chose"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:paddingTop="@dimen/dip10"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--快件接收站点-->
+        <TextView
+            android:id="@+id/accept_station_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#666666"
+            android:textSize="14sp"
+            tools:text="快件已从杭州中转部发出" />
+        <!--快件接收时间-->
+        <TextView
+            android:id="@+id/accept_time_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@id/accept_station_tv"
+            android:layout_below="@id/accept_station_tv"
+            android:layout_marginTop="10dp"
+            android:textColor="#999999"
+            android:textSize="12sp"
+            tools:text="2017-05-15 10:59:04"
+            android:layout_alignLeft="@id/accept_station_tv" />
+
+        <!--分割线-->
+        <View
+            android:layout_below="@+id/accept_time_tv"
+            android:id="@+id/divider_line_view"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px_line"
+            android:layout_marginTop="10dp"
+            android:background="#eeeeee"
+            android:layout_alignLeft="@id/accept_time_tv" />
+
+    </RelativeLayout>
+
+</LinearLayout>

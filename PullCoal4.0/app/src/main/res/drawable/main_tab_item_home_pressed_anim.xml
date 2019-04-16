@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android" 
+    android:oneshot="true">
+    <item android:drawable="@mipmap/icon_0000_29" android:duration="25"/>
+    <item android:drawable="@mipmap/icon_0028_1" android:duration="25"/>
+    <item android:drawable="@mipmap/icon_0027_2" android:duration="25"/>
+    <item android:drawable="@mipmap/icon_0026_3" android:duration="25"/>
+    <item android:drawable="@mipmap/icon_0025_4" android:duration="25"/>
+    <item android:drawable="@mipmap/icon_0024_5" android:duration="25"/>
+    <item android:drawable="@mipmap/icon_0023_6" android:duration="25"/>
+    <item android:drawable="@mipmap/icon_0022_7" android:duration="25"/>
+    <item android:drawable="@mipmap/icon_0021_8" android:duration="25"/>
+    <item android:drawable="@mipmap/icon_0021_8" android:duration="25"/>
+    <item android:drawable="@mipmap/icon_0021_8" android:duration="25"/>
+    <item android:drawable="@mipmap/icon_0020_9" android:duration="25"/>
+    <item android:drawable="@mipmap/icon_0019_10" android:duration="25"/>
+    <item android:drawable="@mipmap/icon_0018_11" android:duration="25"/>
+    <item android:drawable="@mipmap/icon_0017_12" android:duration="25"/>
+    <item android:drawable="@mipmap/icon_0016_13" android:duration="25"/>
+    <item android:drawable="@mipmap/icon_0015_14" android:duration="25"/>
+    <item android:drawable="@mipmap/icon_0014_15" android:duration="25"/>
+    <item android:drawable="@mipmap/icon_0013_16" android:duration="25"/>
+    <item android:drawable="@mipmap/icon_0012_17" android:duration="25"/>
+    <item android:drawable="@mipmap/icon_0011_18" android:duration="25"/>
+    <item android:drawable="@mipmap/icon_0010_19" android:duration="25"/>
+    <item android:drawable="@mipmap/icon_0009_20" android:duration="25"/>
+    <item android:drawable="@mipmap/icon_0008_21" android:duration="25"/>
+    <item android:drawable="@mipmap/icon_0007_22" android:duration="25"/>
+    <item android:drawable="@mipmap/icon_0006_23" android:duration="25"/>
+    <item android:drawable="@mipmap/icon_0005_24" android:duration="25"/>
+    <item android:drawable="@mipmap/icon_0004_25" android:duration="25"/>
+    <item android:drawable="@mipmap/icon_0003_26" android:duration="25"/>
+    <item android:drawable="@mipmap/icon_0002_27" android:duration="25"/>
+    <item android:drawable="@mipmap/icon_0001_28" android:duration="25"/>
+    <item android:drawable="@mipmap/icon_0000_29" android:duration="25"/>
+
+
+
+</animation-list>

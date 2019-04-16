@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/layout_divider_rough"
+        android:layout_width="match_parent"
+        android:layout_height="20px"
+        android:background="@color/background_color"
+        android:visibility="gone" />
+
+    <View
+        android:id="@+id/layout_divider_thin"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/line_color" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dip10">
+
+        <com.sxhalo.PullCoal.tools.image.CircleImageView
+            android:id="@+id/iv_head"
+            android:layout_width="@dimen/dip30"
+            android:layout_height="@dimen/dip30"
+            android:src="@mipmap/main_tab_item"
+            app:border_color="#ffffffff"
+            app:border_width="0dp" />
+
+        <TextView
+            android:layout_toRightOf="@+id/iv_head"
+            android:id="@+id/tv_name"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dip10"
+            android:textColor="@color/app_title_text_color" />
+
+        <TextView
+            android:layout_alignParentRight="true"
+            android:id="@+id/tv_time"
+            android:textSize="@dimen/font12"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/first_fargment_text_gray" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:paddingRight="@dimen/dip5"
+        android:layout_marginLeft="@dimen/dip40" />
+
+    <View
+        android:visibility="gone"
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_margin="@dimen/dip10"
+        android:background="@color/line_color" />
+
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/rl_reply"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_reply_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dip40"
+            android:paddingRight="@dimen/dip5" />
+
+        <TextView
+            android:id="@+id/tv_reply_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:textSize="@dimen/font12"
+            android:paddingRight="@dimen/dip10"
+            android:layout_below="@+id/tv_reply_content"
+            android:textColor="@color/first_fargment_text_gray" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_marginTop="@dimen/dip10"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/line_color" />
+
+</LinearLayout>

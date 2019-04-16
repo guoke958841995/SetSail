@@ -1,0 +1,474 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/scrollview_background"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_main_header" android:id="@+id/title_bar"/>
+
+    <ScrollView
+        android:layout_marginBottom="@dimen/dip1"
+        android:layout_above="@+id/bottom_bar"
+        android:layout_below="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:paddingLeft="@dimen/dip5"
+            android:paddingRight="@dimen/dip5"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <!--货运类型-->
+            <LinearLayout
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:padding="@dimen/dip10"
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+
+                <TextView
+                    android:textSize="@dimen/font16"
+                    android:textColor="@color/app_title_text_color_normal"
+                    android:text="货运类型"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+
+                <RelativeLayout
+                    android:id="@+id/transport_type_view"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/dip20"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/transport_type"
+                        android:layout_alignParentLeft="true"
+                        android:textSize="@dimen/font16"
+                        android:textColor="@color/text_subtitle"
+                        android:text="请选择货运类型"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <ImageView
+                        android:visibility="invisible"
+                        android:layout_alignParentRight="true"
+                        android:src="@mipmap/icon_arrow_down"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/line_color"/>
+
+            <!--出发地址-->
+            <LinearLayout
+                android:background="@color/white"
+                android:padding="@dimen/dip10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:text="出发地址"
+                    android:textSize="@dimen/font16"
+                    android:textColor="@color/app_title_text_color_normal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <RelativeLayout
+                    android:id="@+id/transport_from_pace_view"
+                    android:layout_marginLeft="@dimen/dip20"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:textColor="@color/text_subtitle"
+                        android:textSize="@dimen/font16"
+                        android:id="@+id/transport_from_pace"
+                        android:text="请选择出发地址"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:ellipsize="middle"/>
+
+                    <TextView
+                        android:visibility="gone"
+                        android:id="@+id/transport_from_address"
+                        android:textSize="@dimen/dip14"
+                        android:textColor="@color/gary"
+                        android:text="详细地址"
+                        android:layout_marginTop="@dimen/dip10"
+                        android:layout_below="@+id/transport_from_pace"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <ImageView
+                        android:visibility="gone"
+                        android:layout_alignParentRight="true"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:src="@mipmap/arrow_listpage"/>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/line_color"/>
+
+            <!--到达地址-->
+            <LinearLayout
+                android:background="@color/white"
+                android:padding="@dimen/dip10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:text="到达地址"
+                    android:textSize="@dimen/font16"
+                    android:textColor="@color/app_title_text_color_normal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <RelativeLayout
+                    android:id="@+id/transport_to_pace_view"
+                    android:layout_marginLeft="@dimen/dip20"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:textColor="@color/text_subtitle"
+                        android:textSize="@dimen/font16"
+                        android:id="@+id/transport_to_pace"
+                        android:text="请选择到达地址"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:ellipsize="middle"/>
+
+                    <TextView
+                        android:visibility="gone"
+                        android:id="@+id/transport_to_address"
+                        android:textSize="@dimen/dip14"
+                        android:textColor="@color/gary"
+                        android:text="详细地址"
+                        android:layout_marginTop="@dimen/dip10"
+                        android:layout_below="@+id/transport_to_pace"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <ImageView
+                        android:visibility="gone"
+                        android:layout_alignParentRight="true"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:src="@mipmap/arrow_listpage"/>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/line_color"/>
+
+            <!--运输费用-->
+            <LinearLayout
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:padding="@dimen/dip10"
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+
+                <TextView
+                    android:textSize="@dimen/font16"
+                    android:textColor="@color/app_title_text_color_normal"
+                    android:text="运输费用"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <EditText
+                    android:textCursorDrawable="@drawable/shape_textcursor"
+                    android:inputType="numberDecimal"
+                    android:id="@+id/transport_pice_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:background="@null"
+                    android:hint="请输入运输费用"
+                    android:textColor="@color/text_subtitle"
+                    android:textColorHint="@color/first_fargment_text_gray"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/line_color"/>
+
+
+            <!--货运名称-->
+            <LinearLayout
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:padding="@dimen/dip10"
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+
+                <TextView
+                    android:textSize="@dimen/font16"
+                    android:textColor="@color/app_title_text_color_normal"
+                    android:text="货物名称"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+
+                <EditText
+                    android:textCursorDrawable="@drawable/shape_textcursor"
+                    android:text="煤炭"
+                    android:id="@+id/transport_name_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:background="@null"
+                    android:hint="请输入详细的名称(例如:三八块)"
+                    android:textColor="@color/text_subtitle"
+                    android:textColorHint="@color/first_fargment_text_gray"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/line_color"/>
+
+            <!--共需车数-->
+            <LinearLayout
+                android:id="@+id/transport_car_num_view"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:padding="@dimen/dip10"
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+
+                <TextView
+                    android:textSize="@dimen/font16"
+                    android:textColor="@color/app_title_text_color_normal"
+                    android:text="共需车数"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+
+                <EditText
+                    android:textCursorDrawable="@drawable/shape_textcursor"
+                    android:inputType="number"
+                    android:id="@+id/transport_car_num_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:background="@null"
+                    android:hint="请输入共需车辆"
+                    android:textColor="@color/text_subtitle"
+                    android:textColorHint="@color/first_fargment_text_gray"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/transport_car_num_line"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/line_color"/>
+
+
+            <!--装车费-->
+            <LinearLayout
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:padding="@dimen/dip10"
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+
+                <TextView
+                    android:textSize="@dimen/font16"
+                    android:textColor="@color/app_title_text_color_normal"
+                    android:text="装   车  费"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+
+                <EditText
+                    android:textCursorDrawable="@drawable/shape_textcursor"
+                    android:inputType="numberDecimal"
+                    android:id="@+id/loading_charge_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:background="@null"
+                    android:hint="请输入装车费"
+                    android:textColor="@color/text_subtitle"
+                    android:textColorHint="@color/first_fargment_text_gray"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/line_color"/>
+
+            <!--卸车费-->
+            <LinearLayout
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:padding="@dimen/dip10"
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+
+                <TextView
+                    android:textSize="@dimen/font16"
+                    android:textColor="@color/app_title_text_color_normal"
+                    android:text="卸   车  费"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+
+                <EditText
+                    android:textCursorDrawable="@drawable/shape_textcursor"
+                    android:id="@+id/unloading_charge_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:background="@null"
+                    android:inputType="numberDecimal"
+                    android:hint="请输入卸车费"
+                    android:textColor="@color/text_subtitle"
+                    android:textColorHint="@color/first_fargment_text_gray"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/line_color"/>
+
+            <!--标签-->
+            <LinearLayout
+                android:orientation="horizontal"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:padding="@dimen/dip10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:textSize="@dimen/font16"
+                    android:textColor="@color/app_title_text_color_normal"
+                    android:text="标          签"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/toble_view"
+                    android:layout_marginLeft="@dimen/dip20"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/line_color"/>
+
+            <View
+                android:layout_marginTop="@dimen/dip10"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/line_color"/>
+
+            <!--备注-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/item_bt_bg"
+                android:orientation="horizontal"
+                android:padding="@dimen/dip10">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:ems="4"
+                    android:text="备         注"
+                    android:textColor="@color/app_title_text_color_normal"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:textCursorDrawable="@drawable/shape_textcursor"
+                    android:id="@+id/remarks_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:background="@null"
+                    android:gravity="top"
+                    android:hint="请输入详细说明"
+                    android:lines="3"
+                    android:maxEms="3"
+                    android:textColor="@color/text_subtitle"
+                    android:textColorHint="@color/first_fargment_text_gray"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/line_color"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/bottom_bar"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/line_color"/>
+
+        <TextView
+            android:layout_margin="@dimen/dip15"
+            android:id="@+id/transport_release"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:textSize="@dimen/dip17"
+            android:background="@drawable/button_shape"
+            android:text="确认发布"
+            android:layout_width="match_parent"
+            android:layout_height="50dp" />
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:baselineAligned="@color/white"
+    android:orientation="vertical" >
+
+    <include android:id="@+id/title_bar" layout="@layout/layout_main_header" />
+
+    <include layout="@layout/layout_no_data" />
+
+    <com.sxhalo.PullCoal.ui.smoothlistview.SmoothListView
+        android:id="@+id/my_friend_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:listSelector="@android:color/transparent"
+        android:cacheColorHint="#00000000"
+        android:divider="@null" />
+
+    <LinearLayout
+        android:id="@+id/listview_no_net"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            android:src="@mipmap/net_anomaly_3x" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="网络异常，请检查设备~"
+            android:textColor="@color/first_fargment_text_grays"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+</LinearLayout>

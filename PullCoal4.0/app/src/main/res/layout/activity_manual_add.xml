@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/layout_top"
+        layout="@layout/layout_main_header" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/dip15">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="姓        名" />
+
+        <EditText
+            android:textCursorDrawable="@drawable/shape_textcursor"
+            android:id="@+id/et_driver_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dip15"
+            android:background="@null"
+            android:hint="请输入司机真实姓名"
+            android:inputType="text"
+            android:maxLength="9"
+            android:textColor="@color/text_subtitle"
+            android:textColorHint="@color/first_fargment_text_gray"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dip1"
+        android:background="@color/line_color" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/dip15">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="联系电话" />
+
+        <EditText
+            android:textCursorDrawable="@drawable/shape_textcursor"
+            android:id="@+id/et_driver_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dip15"
+            android:background="@null"
+            android:hint="请输入司机手机号码"
+            android:inputType="number"
+            android:maxLength="11"
+            android:textColor="@color/text_subtitle"
+            android:textColorHint="@color/first_fargment_text_gray"
+            android:textSize="14sp" />
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dip1"
+        android:background="@color/line_color" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/dip15">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="车  牌  号" />
+
+        <EditText
+            android:textCursorDrawable="@drawable/shape_textcursor"
+            android:id="@+id/et_car_plate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dip15"
+            android:background="@null"
+            android:hint="请输入司机车牌号码"
+            android:inputType="text"
+            android:maxLength="7"
+            android:textColor="@color/text_subtitle"
+            android:textColorHint="@color/first_fargment_text_gray"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dip1"
+        android:background="@color/line_color" />
+
+    <Button
+        android:id="@+id/btn_add"
+        android:layout_width="@dimen/dip160"
+        android:layout_height="@dimen/dip45"
+        android:layout_marginTop="@dimen/dip30"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/button_shape"
+        android:gravity="center"
+        android:text="添加"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font18" />
+
+</LinearLayout>

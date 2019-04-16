@@ -1,0 +1,452 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/title_bar"
+        layout="@layout/layout_main_header" />
+
+    <ScrollView
+        android:fadingEdge="none"
+        android:scrollbars="none"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/title_bar">
+
+        <LinearLayout
+            android:paddingRight="@dimen/dip5"
+            android:paddingLeft="@dimen/dip5"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!--收货地区-->
+            <RelativeLayout
+                android:id="@+id/rl_area"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/item_bt_bg"
+                android:padding="@dimen/dip10">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:ems="4"
+                    android:text="收货地区"
+                    android:textColor="@color/app_title_text_color_normal"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/receiving_area"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/iv_arrow"
+                    android:layout_marginRight="@dimen/dip5"
+                    android:text="请选择收货地区" />
+
+                <ImageView
+                    android:id="@+id/iv_arrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@mipmap/icon_arrow_down" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/line_color" />
+
+            <!-- 煤种-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/item_bt_bg"
+                android:orientation="horizontal"
+                android:padding="@dimen/dip10">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="4"
+                    android:text="煤种"
+                    android:textColor="@color/app_title_text_color_normal"
+                    android:textSize="16sp" />
+
+                <com.sxhalo.PullCoal.ui.NoScrollGridView
+                    android:id="@+id/coal_type_grid"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dip10"
+                    android:listSelector="#00000000" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/line_color" />
+
+            <!--货物名称-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/item_bt_bg"
+                android:orientation="horizontal"
+                android:padding="@dimen/dip10">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="4"
+                    android:text="货物名称"
+                    android:textColor="@color/app_title_text_color_normal"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:textCursorDrawable="@drawable/shape_textcursor"
+                    android:id="@+id/purchase_name_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:background="@null"
+                    android:gravity="right"
+                    android:hint="请输入详细的名称(例如:三八块)"
+                    android:textColor="@color/text_subtitle"
+                    android:textColorHint="@color/first_fargment_text_gray"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/line_color" />
+
+            <!--发热量-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/item_bt_bg"
+                android:orientation="horizontal"
+                android:padding="@dimen/dip10">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="4"
+                    android:text="发热量"
+                    android:textColor="@color/app_title_text_color_normal"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:textCursorDrawable="@drawable/shape_textcursor"
+                    android:gravity="right"
+                    android:id="@+id/et_calorific_value"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:background="@null"
+                    android:hint="请输入发热量(kCal/kg)"
+                    android:inputType="number"
+                    android:maxLength="5"
+                    android:textColor="@color/text_subtitle"
+                    android:textColorHint="@color/first_fargment_text_gray"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/line_color" />
+
+            <!--含硫量-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/item_bt_bg"
+                android:orientation="horizontal"
+                android:padding="@dimen/dip10">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="4"
+                    android:text="含硫量"
+                    android:textColor="@color/app_title_text_color_normal"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:textCursorDrawable="@drawable/shape_textcursor"
+                    android:gravity="right"
+                    android:id="@+id/et_sulphur_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:background="@null"
+                    android:hint="请输入含硫量(%)"
+                    android:inputType="numberDecimal"
+                    android:maxLength="4"
+                    android:textColor="@color/text_subtitle"
+                    android:textColorHint="@color/first_fargment_text_gray"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/line_color" />
+
+            <!--预定量-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/item_bt_bg"
+                android:orientation="horizontal"
+                android:padding="@dimen/dip10">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="4"
+                    android:text="预定量"
+                    android:textColor="@color/app_title_text_color_normal"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:textCursorDrawable="@drawable/shape_textcursor"
+                    android:gravity="right"
+                    android:id="@+id/bookings_num_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:background="@null"
+                    android:hint="请输入预定吨数"
+                    android:inputType="number"
+                    android:maxLength="8"
+                    android:textColor="@color/text_subtitle"
+                    android:textColorHint="@color/first_fargment_text_gray"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/line_color" />
+
+            <!--预定价格-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/item_bt_bg"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="@dimen/dip10">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="4"
+                    android:text="预定价格"
+                    android:textColor="@color/app_title_text_color_normal"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:textCursorDrawable="@drawable/shape_textcursor"
+                    android:gravity="right"
+                    android:id="@+id/bookings_price_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:background="@null"
+                    android:hint="请输入每吨价格"
+                    android:inputType="number"
+                    android:maxLength="4"
+                    android:textColor="@color/text_subtitle"
+                    android:textColorHint="@color/first_fargment_text_gray"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/line_color" />
+
+            <!--备注-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/item_bt_bg"
+                android:orientation="horizontal"
+                android:padding="@dimen/dip10">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:ems="4"
+                    android:text="备注"
+                    android:textColor="@color/app_title_text_color_normal"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:textCursorDrawable="@drawable/shape_textcursor"
+                    android:id="@+id/remarks_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:background="@null"
+                    android:gravity="top|right"
+                    android:hint="请输入详细说明"
+                    android:maxEms="3"
+                    android:textColor="@color/text_subtitle"
+                    android:textColorHint="@color/first_fargment_text_gray"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/line_color" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/dip10"
+                android:background="@color/line_color" />
+
+            <!--支付保证金-->
+            <RelativeLayout
+                android:id="@+id/rl_bond_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/item_bt_bg"
+                android:padding="@dimen/dip10">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="支付保证金"
+                    android:textColor="@color/app_title_text_color_normal"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:gravity="right"
+                    android:id="@+id/bond_select_num"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:drawablePadding="@dimen/dip10"
+                    android:text="200元"
+                    android:drawableRight="@mipmap/icon_arrow_down"
+                    android:textColor="@color/short_red" />
+
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/line_color" />
+
+            <!--最多参与信息部-->
+            <RelativeLayout
+                android:visibility="gone"
+                android:id="@+id/rl_participant_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/item_bt_bg"
+                android:padding="@dimen/dip10">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="最多参与信息部"
+                    android:textColor="@color/app_title_text_color_normal"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/participant_num"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:drawablePadding="@dimen/dip10"
+                    android:drawableRight="@mipmap/icon_arrow_down"
+                    android:gravity="right"
+                    android:text="1/家" />
+
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/line_color" />
+
+            <LinearLayout
+                android:layout_marginTop="@dimen/dip30"
+                android:layout_marginBottom="@dimen/dip15"
+                android:id="@+id/bottom_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!--<View-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="1dp"-->
+                    <!--android:background="@color/line_color" />-->
+
+
+                <LinearLayout
+                    android:layout_marginRight="@dimen/dip15"
+                    android:layout_marginLeft="@dimen/dip15"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/cancel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="35dp"
+                        android:layout_marginRight="@dimen/dip5"
+                        android:layout_weight="1"
+                        android:background="@drawable/button_shape"
+                        android:gravity="center"
+                        android:text="取消"
+                        android:textColor="@color/white"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/submit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="35dp"
+                        android:layout_marginLeft="@dimen/dip5"
+                        android:layout_weight="1"
+                        android:background="@drawable/button_shape"
+                        android:gravity="center"
+                        android:text="提交"
+                        android:textColor="@color/white"
+                        android:textSize="18sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+</RelativeLayout>

@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_main_header"/>
+
+    <RelativeLayout
+        android:background="@color/white"
+        android:paddingTop="@dimen/dip10"
+        android:paddingBottom="@dimen/dip10"
+        android:paddingLeft="@dimen/dip15"
+        android:paddingRight="@dimen/dip15"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:textColor="@color/app_title_text_color_normal"
+            android:id="@+id/sampling_test_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:textColor="@color/app_title_text_color_normal"
+            android:layout_toRightOf="@+id/sampling_test_name"
+            android:id="@+id/sampling_test_value"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:textColor="@color/app_title_text_color_normal"
+            android:layout_marginTop="@dimen/dip5"
+            android:layout_below="@+id/sampling_test_name"
+            android:id="@+id/sampling_test_coal_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:textColor="@color/app_title_text_color_normal"
+            android:layout_marginTop="@dimen/dip5"
+            android:layout_below="@+id/sampling_test_value"
+            android:layout_toRightOf="@+id/sampling_test_coal_name"
+            android:id="@+id/sampling_test_coal_value"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:textColor="@color/app_title_text_color_normal"
+            android:id="@+id/sampling_test_cost"
+            android:layout_marginTop="@dimen/dip5"
+            android:layout_below="@+id/sampling_test_coal_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:textColor="@color/app_title_text_color_normal"
+            android:id="@+id/sampling_test_cost_value"
+            android:layout_marginTop="@dimen/dip5"
+            android:layout_below="@+id/sampling_test_coal_value"
+            android:layout_toRightOf="@+id/sampling_test_cost"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:textColor="@color/app_title_text_color_normal"
+            android:id="@+id/sampling_test_recipient"
+            android:layout_marginTop="@dimen/dip5"
+            android:layout_below="@+id/sampling_test_cost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:textColor="@color/app_title_text_color_normal"
+            android:id="@+id/sampling_test_recipient_value"
+            android:layout_marginTop="@dimen/dip5"
+            android:layout_below="@+id/sampling_test_cost_value"
+            android:layout_toRightOf="@+id/sampling_test_recipient"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:textColor="@color/app_title_text_color_normal"
+            android:id="@+id/sampling_test_address"
+            android:layout_marginTop="@dimen/dip5"
+            android:layout_below="@+id/sampling_test_recipient"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:maxLines="2"
+            android:textColor="@color/app_title_text_color_normal"
+            android:id="@+id/sampling_test_address_value"
+            android:layout_marginTop="@dimen/dip5"
+            android:layout_below="@+id/sampling_test_recipient_value"
+            android:layout_toRightOf="@+id/sampling_test_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px_line"
+        android:background="@color/line_color"/>
+
+    <View
+        android:layout_marginTop="@dimen/dip10"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px_line"
+        android:background="@color/line_color"/>
+
+    <RelativeLayout
+        android:paddingTop="@dimen/dip10"
+        android:paddingBottom="@dimen/dip10"
+        android:paddingLeft="@dimen/dip15"
+        android:paddingRight="@dimen/dip15"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:textColor="@color/app_title_text_color_normal"
+            android:id="@+id/sampling_test_pay_amount"
+            android:gravity="right"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_marginTop="@dimen/dip5"
+            android:layout_below="@+id/sampling_test_pay_amount"
+            android:textColor="@color/text_money"
+            android:id="@+id/sampling_test_deductible_amount"
+            android:gravity="right"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px_line"
+        android:background="@color/line_color"/>
+
+    <RelativeLayout
+        android:paddingTop="@dimen/dip10"
+        android:paddingBottom="@dimen/dip10"
+        android:paddingLeft="@dimen/dip15"
+        android:paddingRight="@dimen/dip15"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:textColor="@color/app_title_text_color_normal"
+            android:textSize="@dimen/font16"
+            android:text="实付金额"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:textColor="@color/app_title_text_color_normal"
+            android:textSize="@dimen/font16"
+            android:id="@+id/sampling_test_amount"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px_line"
+        android:background="@color/line_color"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:background="@color/white"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <View
+                android:layout_alignParentBottom="true"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/px_line"
+                android:background="@color/line_color"/>
+
+            <TextView
+                android:id="@+id/sampling_test_pay"
+                android:layout_marginTop="@dimen/dip20"
+                android:layout_marginLeft="@dimen/dip30"
+                android:layout_marginRight="@dimen/dip30"
+                android:layout_marginBottom="@dimen/dip20"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dip40"
+                android:background="@drawable/button_shape"
+                android:gravity="center"
+                android:text="微信支付"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font16" />
+
+        </LinearLayout>
+
+
+
+    </RelativeLayout>
+
+</LinearLayout>

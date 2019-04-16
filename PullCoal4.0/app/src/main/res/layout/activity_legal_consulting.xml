@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_main_header" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/layout_phone_service"
+            android:layout_width="@dimen/dip0"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="@dimen/dip20"
+            android:orientation="vertical">
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="centerInside"
+                android:layout_marginBottom="@dimen/dip3"
+                android:src="@mipmap/icon_telephone_counseling"/>
+
+            <TextView
+                android:layout_marginTop="@dimen/dip3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="电话咨询"/>
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="1px"
+            android:layout_height="match_parent"
+            android:background="@color/line_color" />
+
+        <LinearLayout
+            android:id="@+id/layout_appointment"
+            android:layout_width="@dimen/dip0"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="@dimen/dip20"
+            android:orientation="vertical">
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="centerInside"
+                android:layout_marginBottom="@dimen/dip3"
+                android:src="@mipmap/icon_appointment"/>
+
+            <TextView
+                android:layout_marginTop="@dimen/dip3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="约见律师"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:background="@drawable/item_bt_bg"
+        android:layout_marginTop="@dimen/dip10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/line_color" />
+
+        <RelativeLayout
+            android:id="@+id/layout_leave_message"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dip50"
+            android:background="@color/white">
+
+            <ImageView
+                android:layout_width="@dimen/dip25"
+                android:layout_height="@dimen/dip25"
+                android:layout_alignParentRight="true"
+                android:scaleType="centerInside"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/dip15"
+                android:src="@drawable/icon_right_arrow" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dip5"
+                android:padding="@dimen/dip10"
+                android:text="留言咨询" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/line_color" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="@dimen/dip15"
+        android:layout_marginLeft="@dimen/dip15"
+        android:layout_marginRight="@dimen/dip15"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <View
+            android:layout_marginTop="@dimen/dip5"
+            android:layout_width="@dimen/dip8"
+            android:layout_height="@dimen/dip8"
+            android:background="@drawable/gray_point"/>
+
+        <TextView
+            android:layout_marginLeft="@dimen/dip10"
+            android:textColor="@color/actionsheet_gray"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/legal_advice_prompt"/>
+
+
+    </LinearLayout>
+
+</LinearLayout>

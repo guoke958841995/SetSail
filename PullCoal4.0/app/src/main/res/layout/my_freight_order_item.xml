@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/line_color"/>
+
+    <LinearLayout
+        android:padding="@dimen/dip15"
+        android:background="@drawable/item_bt_bg"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:layout_weight="2"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:gravity="center|left"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:text=""
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/forme_address"
+                    android:textSize="16sp"
+                    android:textColor="@color/app_title_text_color_normal" />
+
+                <ImageView
+                    android:layout_marginLeft="@dimen/dip15"
+                    android:layout_marginRight="@dimen/dip15"
+                    android:src="@mipmap/transportati_start_and_stop"
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:text=""
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/to_address"
+                    android:textSize="16sp"
+                    android:textColor="@color/app_title_text_color_normal" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="@dimen/dip5"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:text="受理时间："
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/actionsheet_gray"
+                    android:id="@+id/time_name" />
+
+                <TextView
+                    android:text=""
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/loading_time"
+                    android:textColor="@color/actionsheet_gray" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="@dimen/dip2"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:text="单        号："
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/actionsheet_gray" />
+
+                <TextView
+                    android:text=""
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/my_waybill_num"
+                    android:textColor="@color/actionsheet_red" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_weight="6"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:visibility="gone"
+                android:padding="2dp"
+                android:layout_gravity="top|center_horizontal"
+                android:gravity="center"
+                android:text="接受邀请"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/accept"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                android:background="@color/app_title_text_color" />
+
+            <TextView
+                android:gravity="right"
+                android:text=""
+                android:layout_marginBottom="@dimen/dip15"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/status"
+                android:textColor="@color/app_title_text_color" />
+
+            <TextView
+                android:visibility="gone"
+                android:padding="2dp"
+                android:layout_marginTop="@dimen/dip15"
+                android:layout_gravity="bottom|center_horizontal"
+                android:gravity="center"
+                android:text="拒绝邀请"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/refuse"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                android:background="@color/actionsheet_red" />
+
+            <TextView
+                android:layout_gravity="bottom"
+                android:text="来源内部邀请"
+                android:gravity="right|bottom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/source"
+                android:textColor="@color/actionsheet_gray" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/line_color"/>
+</LinearLayout>

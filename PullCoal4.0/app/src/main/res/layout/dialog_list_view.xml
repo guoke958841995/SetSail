@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#99232323" >
+
+    <LinearLayout
+        android:id="@+id/list_frame"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/ali_pub_btn_white_nor"
+        android:orientation="vertical" >
+
+        <!-- Title -->
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:background="@color/main_header_bg" >
+
+            <ImageView
+                android:id="@+id/update_wifi_indicator"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:contentDescription="@string/UMGprsCondition"
+                android:src="@drawable/update_wifi_disable"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/UMUpdateTitle"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/app_title_text_color_normal" />
+
+            <Button
+                android:id="@+id/update_id_close"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/update_button_close_bg_selector"
+                android:focusable="true"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <!-- split -->
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="2dp"
+            android:background="@color/line_color" />
+        <!-- Content -->
+
+        <ListView
+            android:id="@+id/dialog_popup_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:divider="@mipmap/ico_list_item_line_popupwindow"
+            android:focusableInTouchMode="true"
+            android:listSelector="@color/line_color" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2" 
+            android:background="@color/line_color">
+
+            <TextView
+                android:id="@+id/dialog_id_ok"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginTop="1dp"
+                android:layout_marginRight="0.5dp"
+                android:background="@color/main_header_bg"
+                android:focusable="true"
+                android:gravity="center"
+                android:padding="12dp"
+                android:text="确定"
+                android:textColor="@color/app_title_text_color_normal" />
+
+            <TextView
+                android:id="@+id/dialog_id_cancel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginTop="1dp"
+                android:layout_marginLeft="0.5dp"
+                android:background="@color/main_header_bg"
+                android:focusable="true"
+                android:gravity="center"
+                android:padding="12dp"
+                android:text="取消"
+                android:textColor="@color/app_title_text_color_normal" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

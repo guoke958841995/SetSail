@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:background="@color/activity_bg_color">
+
+    <include android:id="@+id/title_bar" layout="@layout/layout_main_header" />
+
+    <LinearLayout
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingRight="@dimen/dip15"
+        android:paddingLeft="@dimen/dip15">
+
+        <!--姓  名-->
+        <LinearLayout
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp"
+            android:layout_marginTop="@dimen/dip10"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:textSize="15sp"
+                android:textColor="@color/app_title_text_color_normal"
+                android:text="真实姓名"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:textCursorDrawable="@drawable/shape_textcursor"
+                android:id="@+id/car_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:background="@null"
+                android:hint="请输入真实姓名"
+                android:maxLength="6"
+                android:inputType="text"
+                android:textColor="@color/text_subtitle"
+                android:textColorHint="@color/first_fargment_text_gray"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <View
+            android:layout_marginTop="@dimen/dip10"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/line_color"/>
+
+        <!--手机号码-->
+        <LinearLayout
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp"
+            android:layout_marginTop="@dimen/dip10"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:textSize="15sp"
+                android:textColor="@color/app_title_text_color_normal"
+                android:text="手机号码"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:textCursorDrawable="@drawable/shape_textcursor"
+                android:id="@+id/car_tel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:background="@null"
+                android:hint="请输入手机号码"
+                android:maxLength="11"
+                android:inputType="number"
+                android:textColor="@color/text_subtitle"
+                android:textColorHint="@color/first_fargment_text_gray"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <View
+            android:layout_marginTop="@dimen/dip10"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/line_color"/>
+
+        <!--车牌号-->
+        <LinearLayout
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp"
+            android:layout_marginTop="@dimen/dip10"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:textSize="15sp"
+                android:textColor="@color/app_title_text_color_normal"
+                android:text="车牌号码"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:textCursorDrawable="@drawable/shape_textcursor"
+                android:id="@+id/platenumber_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:background="@null"
+                android:hint="请输入车牌号"
+                android:maxLength="7"
+                android:ems="7"
+                android:inputType="text"
+                android:textColor="@color/text_subtitle"
+                android:textColorHint="@color/first_fargment_text_gray"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <View
+            android:layout_marginTop="@dimen/dip10"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/line_color"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/line_color"/>
+
+    </LinearLayout>
+
+</LinearLayout>

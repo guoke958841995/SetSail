@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_bottom_navigation_bar"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp_50"
+    android:background="@color/white">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/line_color" />
+
+    <RadioGroup
+        android:id="@+id/rg_bottom_group"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <!--主页-->
+        <RadioButton
+            android:id="@+id/rb_bottom_home"
+            style="@style/main_bottom_bar_item"
+            android:checked="true"
+            android:drawableTop="@drawable/selector_bottom_navigation_item_home"
+            android:text="@string/text_bottom_home" />
+
+        <!--货运-->
+        <RadioButton
+            android:id="@+id/rb_bottom_freight"
+            style="@style/main_bottom_bar_item"
+            android:drawableTop="@drawable/selector_bottom_navigation_item_freight"
+            android:text="@string/text_bottom_freight" />
+
+        <!--订单-->
+        <RadioButton
+            android:id="@+id/rb_bottom_order"
+            style="@style/main_bottom_bar_item"
+            android:drawableTop="@drawable/selector_bottom_navigation_item_order"
+            android:text="@string/text_bottom_order" />
+
+        <!--服务-->
+        <RadioButton
+            android:id="@+id/rb_bottom_service"
+            style="@style/main_bottom_bar_item"
+            android:drawableTop="@drawable/selector_bottom_navigation_item_service"
+            android:text="@string/text_bottom_service" />
+
+        <!--个人-->
+        <RadioButton
+            android:id="@+id/rb_bottom_personal"
+            style="@style/main_bottom_bar_item"
+            android:drawableTop="@drawable/selector_bottom_navigation_item_personal"
+            android:text="@string/text_bottom_personnal" />
+    </RadioGroup>
+</RelativeLayout>

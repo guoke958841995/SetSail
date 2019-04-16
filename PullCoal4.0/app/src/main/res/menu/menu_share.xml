@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/wechat"
+        android:icon="@mipmap/wechat_highlight"
+        android:title="@string/wechat"/>
+    <item
+        android:id="@+id/moments"
+        android:icon="@mipmap/ic_share_moments"
+        android:title="@string/moments"/>
+
+    <item
+        android:id="@+id/qq"
+        android:icon="@mipmap/qq_highlight"
+        android:title="@string/qq"/>
+    <item
+        android:id="@+id/qzone"
+        android:icon="@mipmap/ic_share_qzone"
+        android:title="@string/qzone"/>
+</menu>

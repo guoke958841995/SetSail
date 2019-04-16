@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/left_class_recyvler"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:splitMotionEvents="false"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/right_class_recyvler"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="2"
+        android:splitMotionEvents="false"/>
+
+    <!--<com.zhy.srecyclerview.SRecyclerView-->
+        <!--xmlns:app="http://schemas.android.com/apk/res-auto"-->
+        <!--android:id="@+id/left_class_recyvler"-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_weight="1"-->
+        <!--android:splitMotionEvents="false"-->
+        <!--android:background="#F0F0F0"-->
+        <!--app:dividerColor="#BEBEBE"-->
+        <!--app:dividerHeight="0.8dp"-->
+        <!--app:dividerLeftMargin="10dp"-->
+        <!--app:dividerRightMargin="0dp"-->
+        <!--app:layout_behavior="@string/appbar_scrolling_view_behavior"/>-->
+
+    <!--<com.zhy.srecyclerview.SRecyclerView-->
+        <!--xmlns:app="http://schemas.android.com/apk/res-auto"-->
+        <!--android:id="@+id/right_class_recyvler"-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_weight="2"-->
+        <!--android:splitMotionEvents="false"-->
+        <!--android:background="#F0F0F0"-->
+        <!--app:dividerColor="#BEBEBE"-->
+        <!--app:dividerHeight="0.8dp"-->
+        <!--app:dividerLeftMargin="10dp"-->
+        <!--app:dividerRightMargin="0dp"-->
+        <!--app:layout_behavior="@string/appbar_scrolling_view_behavior"/>-->
+
+</LinearLayout>

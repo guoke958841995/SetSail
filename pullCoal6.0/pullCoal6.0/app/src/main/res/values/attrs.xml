@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="PullCoalHeader">
+        <attr name="enable_last_time" format="boolean" />
+        <attr name="header_background_color" format="color" />
+        <attr name="refresh_title_text_size" format="dimension" />
+        <attr name="refresh_title_text_color" format="color" />
+        <attr name="last_time_text_size" format="dimension" />
+        <attr name="last_time_text_color" format="color" />
+    </declare-styleable>
+</resources>

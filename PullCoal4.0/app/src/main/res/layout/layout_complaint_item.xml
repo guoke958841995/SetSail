@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_marginTop="@dimen/dip5"
+        android:textColor="@color/app_title_text_color_normal"
+        android:gravity="center"
+        android:text="3月13"
+        android:id="@+id/complaint_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:padding="@dimen/dip5"
+        android:layout_marginLeft="@dimen/dip70"
+        android:id="@+id/complaint_right_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <com.sxhalo.PullCoal.tools.image.CircleImageView
+            android:layout_alignParentRight="true"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/right_title_img"
+            android:layout_marginRight="@dimen/dip10"
+            android:layout_width="@dimen/dip40"
+            android:layout_height="@dimen/dip40"
+            android:src="@mipmap/icon_login"
+            app:border_color="#e0ffffff"
+            app:border_width="0dp" />
+
+        <TextView
+            android:lineSpacingExtra="3dp"
+            android:lineSpacingMultiplier="1.2"
+            android:background="@drawable/icon_complaint_right"
+            android:text="12345678"
+            android:layout_marginRight="@dimen/dip10"
+            android:layout_toLeftOf="@+id/right_title_img"
+            android:id="@+id/right_count_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:padding="@dimen/dip5"
+        android:layout_marginRight="@dimen/dip70"
+        android:id="@+id/complaint_left_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.sxhalo.PullCoal.tools.image.CircleImageView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_marginLeft="@dimen/dip5"
+            android:id="@+id/left_title_img"
+            android:layout_width="@dimen/dip40"
+            android:layout_height="@dimen/dip40"
+            android:layout_alignParentLeft="true"
+            android:src="@mipmap/icon"
+            app:border_color="#e0ffffff"
+            app:border_width="0dp" />
+
+            <TextView
+                android:lineSpacingExtra="3dp"
+                android:lineSpacingMultiplier="1.2"
+                android:background="@drawable/icon_complaint_left"
+                android:layout_toRightOf="@+id/left_title_img"
+                android:layout_marginLeft="@dimen/dip10"
+                android:text="123478"
+                android:id="@+id/left_count_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,939 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+
+    <!--信息部-->
+    <RelativeLayout
+        android:id="@+id/recommend_infoDeparts_rl"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:visibility="gone"
+        android:background="@drawable/item_bt_bg"
+        android:padding="@dimen/dip10">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:id="@+id/image_view_fl"
+                android:layout_width="@dimen/dip90"
+                android:layout_height="@dimen/dip70">
+
+                <ImageView
+                    android:id="@+id/recommend_IV"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"/>
+
+                <RelativeLayout
+                    android:paddingRight="@dimen/dip10"
+                    android:background="@mipmap/list_bg_type"
+                    android:layout_gravity="bottom"
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dip20">
+
+                    <TextView
+                        android:padding="@dimen/dip2"
+                        android:id="@+id/recommend_type"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:text=""
+                        android:textColor="@color/actionsheet_gray"
+                        android:textSize="@dimen/font13" />
+
+                </RelativeLayout>
+
+            </FrameLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dip10">
+
+                <RelativeLayout
+                    android:id="@+id/recommend_view_rl"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp">
+
+                    <TextView
+                        android:includeFontPadding="false"
+                        android:id="@+id/recommend_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:text="榆林地区农垦局信息部"
+                        android:textColor="@color/app_title_text_color_normal"
+                        android:textSize="@dimen/font16" />
+
+                    <ImageView
+                        android:id="@+id/recommend_business_type"
+                        android:layout_width="wrap_content"
+                        android:layout_height="15dp"
+                        android:src="@mipmap/do_business_status"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/recommend_name" />
+
+                    <TextView
+                        android:visibility="gone"
+                        android:id="@+id/recommend_do_business_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:text="预计11.11营业"
+                        android:layout_marginLeft="@dimen/dip2"
+                        android:textColor="@color/gary"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/recommend_business_type"
+                        android:layout_toEndOf="@+id/recommend_business_type"
+                        android:textSize="@dimen/dip14" />
+
+                    <TextView
+                        android:visibility="gone"
+                        android:layout_marginLeft="@dimen/dip5"
+                        android:layout_marginTop="@dimen/dip2"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/recommend_do_business_time"
+                        android:id="@+id/information_department_send_car"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:textColor="@color/app_title_text_color"
+                        android:gravity="center"
+                        android:textSize="@dimen/font10"
+                        android:paddingLeft="@dimen/dip5"
+                        android:paddingRight="@dimen/dip5"
+                        android:text="可派车"
+                        android:background="@drawable/bull_send_car" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_below="@+id/recommend_view_rl"
+                    android:layout_marginTop="@dimen/dip10"
+                    android:id="@+id/recommend_ll"
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"/>
+
+                <LinearLayout
+                    android:id="@+id/recommend_ll_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/recommend_ll"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginBottom="@dimen/dip3"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:text="信用等级："
+                        android:textColor="@color/actionsheet_gray"
+                        android:textSize="@dimen/font13" />
+
+                    <com.sxhalo.PullCoal.ui.ResetRatingBar xmlns:hedgehog="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/recommend_room_ratingbar1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:isIndicator="true"
+                        android:numStars="5"
+                        android:rating="2"
+                        hedgehog:starCount="5"
+                        hedgehog:starEmpty="@mipmap/ratingbar_normal"
+                        hedgehog:starFill="@mipmap/ratingbar_pressed"
+                        hedgehog:starImageSize="12dp"></com.sxhalo.PullCoal.ui.ResetRatingBar>
+
+                    <LinearLayout
+                        android:layout_marginLeft="@dimen/dip5"
+                        android:orientation="horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+
+                        <TextView
+                            android:textColor="@color/actionsheet_gray"
+                            android:textSize="@dimen/font13"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="煤炭" />
+                        <TextView
+                            android:lines="1"
+                            android:id="@+id/coal_size"
+                            android:textColor="@color/route_navi_text"
+                            android:textSize="@dimen/font13"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="5条" />
+
+                        <TextView
+                            android:layout_marginLeft="@dimen/dip5"
+                            android:textColor="@color/actionsheet_gray"
+                            android:textSize="@dimen/font13"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="货运" />
+
+                        <TextView
+                            android:lines="1"
+                            android:id="@+id/freight_size"
+                            android:textColor="@color/route_navi_text"
+                            android:textSize="@dimen/font13"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="5条" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_below="@+id/recommend_ll_content"
+                    android:id="@+id/recommend_postal_address_k"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:text="详细地址："
+                    android:textColor="@color/actionsheet_gray"
+                    android:textSize="@dimen/font13" />
+
+                <TextView
+                    android:id="@+id/recommend_postal_address_v"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginStart="1dp"
+                    android:layout_toRightOf="@+id/recommend_postal_address_k"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:text="榆林区新民大塔村"
+                    android:textColor="@color/actionsheet_gray"
+                    android:textSize="@dimen/font12" />
+
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <!--矿口-->
+    <RelativeLayout
+        android:id="@+id/recommend_mine_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:background="@drawable/item_bt_bg"
+        android:padding="@dimen/dip10">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:layout_width="@dimen/dip90"
+                android:layout_height="@dimen/dip70">
+
+                <ImageView
+                    android:id="@+id/recommend_mine_IV"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"/>
+
+                <RelativeLayout
+                    android:paddingRight="@dimen/dip10"
+                    android:background="@mipmap/list_bg_type"
+                    android:layout_gravity="bottom"
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dip20">
+
+                    <TextView
+                        android:padding="@dimen/dip2"
+                        android:id="@+id/mine_type"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:text=""
+                        android:textColor="@color/actionsheet_gray"
+                        android:textSize="@dimen/font13" />
+
+                </RelativeLayout>
+
+            </FrameLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginLeft="@dimen/dip10">
+
+                <RelativeLayout
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp">
+
+                    <TextView
+                        android:id="@+id/recommend_mine_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="榆林地区农垦局信息部"
+                        android:textColor="@color/app_title_text_color_normal"
+                        android:textSize="@dimen/font16" />
+
+                    <ImageView
+                        android:id="@+id/mine_business_type"
+                        android:layout_width="wrap_content"
+                        android:layout_height="15dp"
+                        android:layout_centerVertical="true"
+                        android:src="@mipmap/do_business_status"
+                        android:layout_toRightOf="@+id/recommend_mine_name"/>
+
+                    <TextView
+                        android:lines="1"
+                        android:visibility="gone"
+                        android:id="@+id/do_business_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:text="预计11.11营业"
+                        android:layout_marginLeft="@dimen/dip5"
+                        android:textColor="@color/gary"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/mine_business_type"
+                        android:layout_toEndOf="@+id/mine_business_type"
+                        android:textSize="@dimen/dip14" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/recommend_mine_postal_address_k"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:text="地址："
+                    android:textColor="@color/actionsheet_gray"
+                    android:textSize="@dimen/font13"/>
+
+                <LinearLayout
+                    android:id="@+id/recommend_mine_ll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/recommend_mine_postal_address_k"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:visibility="gone"
+                    android:layout_marginBottom="@dimen/dip3"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="联系方式："
+                        android:textColor="@color/actionsheet_gray"
+                        android:textSize="@dimen/font13" />
+
+                    <TextView
+                        android:id="@+id/recommend_mine_call_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@mipmap/contacts"
+                        android:drawablePadding="@dimen/dip1"
+                        android:gravity="center_vertical"
+                        android:text="某先生"
+                        android:textColor="@color/actionsheet_gray"
+                        android:textSize="@dimen/font13" />
+
+                    <TextView
+                        android:id="@+id/recommend_mine_tel_num"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dip5"
+                        android:drawableLeft="@mipmap/contacts_tex"
+                        android:drawablePadding="@dimen/dip1"
+                        android:gravity="center"
+                        android:lines="1"
+                        android:text="15202420490"
+                        android:textColor="@color/actionsheet_blue"
+                        android:textSize="@dimen/font13" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/recommend_mine_ll"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginBottom="@dimen/dip3"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:text="信用等级："
+                        android:textColor="@color/actionsheet_gray"
+                        android:textSize="@dimen/font13" />
+
+                    <com.sxhalo.PullCoal.ui.ResetRatingBar xmlns:hedgehog="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/recommend_mine_room_ratingbar1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:isIndicator="true"
+                        android:numStars="5"
+                        android:rating="2"
+                        hedgehog:starCount="5"
+                        hedgehog:starEmpty="@mipmap/ratingbar_normal"
+                        hedgehog:starFill="@mipmap/ratingbar_pressed"
+                        hedgehog:starImageSize="12dp"></com.sxhalo.PullCoal.ui.ResetRatingBar>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/recommend_mine_ll"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginBottom="@dimen/dip3"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="入驻信息部 "
+                        android:textColor="@color/actionsheet_gray"
+                        android:textSize="@dimen/font13" />
+
+                    <TextView
+                        android:lines="1"
+                        android:id="@+id/mine_info_num"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/route_navi_text"
+                        android:textSize="@dimen/font13" />
+
+                    <TextView
+                        android:layout_marginLeft="@dimen/dip20"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="煤炭 "
+                        android:textColor="@color/actionsheet_gray"
+                        android:textSize="@dimen/font13" />
+
+                    <TextView
+                        android:lines="1"
+                        android:id="@+id/mine_coal_num"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/route_navi_text"
+                        android:textSize="@dimen/font13" />
+
+                    <TextView
+                        android:layout_marginLeft="@dimen/dip10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="货运 "
+                        android:textColor="@color/actionsheet_gray"
+                        android:textSize="@dimen/font13" />
+
+                    <TextView
+                        android:lines="1"
+                        android:id="@+id/mine_freight_num"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:textColor="@color/route_navi_text"
+                        android:textSize="@dimen/font13" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/recommend_mine_postal_address_v"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginStart="1dp"
+                    android:layout_toRightOf="@+id/recommend_mine_postal_address_k"
+                    android:text="榆林区新民大塔村"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:textColor="@color/actionsheet_gray"
+                    android:textSize="@dimen/font12" />
+
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <!--功能列表-->
+    <RelativeLayout
+        android:id="@+id/recommend_drivers_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/activity_bg_color"
+        android:visibility="gone">
+
+        <HorizontalScrollView
+            android:fadingEdge="none"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <GridView
+                    android:id="@+id/grid"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:horizontalSpacing="@dimen/dip1"
+                    android:numColumns="auto_fit"
+                    android:stretchMode="spacingWidthUniform"></GridView>
+            </LinearLayout>
+        </HorizontalScrollView>
+
+    </RelativeLayout>
+
+    <!--货运-->
+    <LinearLayout
+        android:visibility="gone"
+        android:background="@drawable/item_bt_bg"
+        android:id="@+id/recommend_transport_rl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginRight="@dimen/dip5"
+            android:layout_marginLeft="@dimen/dip5"
+            android:background="@color/line_color" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dip40">
+
+            <TextView
+                android:id="@+id/tv_source"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/dip5"
+                android:drawableLeft="@drawable/icon_cargo_type"
+                android:drawablePadding="@dimen/dip3"
+                android:gravity="center"
+                android:text="信息部货运"
+                android:textColor="@color/text_color_gray" />
+
+            <TextView
+                android:layout_toLeftOf="@+id/tv_transport_cost"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="运费："
+                android:textColor="@color/text_color_gray" />
+
+            <TextView
+                android:id="@+id/tv_transport_cost"
+                android:layout_toLeftOf="@+id/tv_surplus"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="120"
+                android:layout_marginRight="@dimen/dip20"
+                android:textColor="@color/short_red" />
+
+            <TextView
+                android:id="@+id/tv_surplus"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_margin="5dp"
+                android:background="@drawable/shape_red"
+                android:gravity="center"
+                android:text="剩10车"
+                android:padding="@dimen/dip5"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font12" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginRight="@dimen/dip5"
+            android:layout_marginLeft="@dimen/dip5"
+            android:background="@color/line_color" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/layout_from"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dip40"
+                android:layout_toLeftOf="@+id/iv_phone"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/dip30"
+                    android:layout_height="@dimen/dip30"
+                    android:layout_gravity="center_vertical"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/icon_cargo_start"/>
+
+
+                <TextView
+                    android:id="@+id/tv_start_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:maxLines="1"
+                    android:text="陕西省西安市莲湖区" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dip40"
+                android:layout_below="@+id/layout_from"
+                android:layout_toLeftOf="@+id/iv_phone"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/dip30"
+                    android:layout_height="@dimen/dip30"
+                    android:layout_gravity="center_vertical"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/icon_cargo_destination"/>
+
+
+                <TextView
+                    android:id="@+id/tv_end_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:maxLines="1"
+                    android:text="陕西省西安市莲湖区科技二路西安软件园秦风阁" />
+
+            </LinearLayout>
+
+
+            <ImageView
+                android:id="@+id/iv_phone"
+                android:layout_width="@dimen/dip40"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:scaleType="centerInside"
+                android:src="@mipmap/derver_tel" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="20px"
+            android:background="@color/line_color"/>
+
+    </LinearLayout>
+
+    <!--资讯-->
+    <RelativeLayout
+        android:id="@+id/recommend_informations_rl"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:background="@drawable/item_bt_bg"
+        android:orientation="horizontal"
+        android:padding="@dimen/dip10"
+        android:visibility="gone">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/dip10"
+            android:layout_toLeftOf="@+id/recommend_informations_image"
+            android:layout_toStartOf="@+id/recommend_informations_image">
+
+            <TextView
+                android:id="@+id/recommend_informations_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:maxLines="2"
+                android:text="煤炭交易活跃睹下降煤炭交易活跃睹下降"
+                android:textColor="@color/app_title_text_color_normal"
+                android:textSize="17sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:gravity="bottom"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/recommend_informations_originPlace"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_weight="1"
+                    android:text="新华公社"
+                    android:textColor="@color/border_color"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/recommend_informations_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_toEndOf="@+id/recommend_informations_originPlace"
+                    android:layout_toRightOf="@+id/recommend_informations_originPlace"
+                    android:layout_weight="1"
+                    android:text="13"
+                    android:textColor="@color/border_color"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/textView18"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_toEndOf="@+id/recommend_informations_num"
+                    android:layout_toRightOf="@+id/recommend_informations_num"
+                    android:text="访问量"
+                    android:textColor="@color/border_color"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/recommend_informations_push_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:text="10-09 22:55 "
+                    android:textColor="@color/border_color"
+                    android:textSize="12sp" />
+
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/recommend_informations_image"
+            android:layout_width="100dp"
+            android:layout_height="70dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/new_image" />
+    </RelativeLayout>
+
+    <!--快煤宝 煤炭资讯-->
+    <RelativeLayout
+        android:background="@drawable/item_bt_bg"
+        android:id="@+id/information_coal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dip10"
+        android:visibility="gone">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_weight="1"
+                    android:id="@+id/information_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="top"
+                    android:lines="2"
+                    android:text="TextView"
+                    android:textColor="@color/app_title_text_color_normal"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:visibility="gone"
+                    android:layout_weight="4"
+                    android:id="@+id/information_time_coal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:lines="1"
+                    android:textColor="@color/app_title_text_color_normal"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/information_origin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:gravity="center_vertical|left"
+                    android:lines="1"
+                    android:textColor="@color/app_title_text_color_normal" />
+
+                <TextView
+                    android:id="@+id/information_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:gravity="center_vertical|right"
+                    android:lines="1"
+                    android:textColor="@color/actionsheet_gray" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <!--快煤宝 货运资讯-->
+    <LinearLayout
+        android:visibility="gone"
+        android:background="@drawable/item_bt_bg"
+        android:id="@+id/information_freight"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/layout_divider"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="20px"
+                android:background="@color/line_color" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/line_color" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="@dimen/dip10">
+
+            <TextView
+                android:id="@+id/tv_from_place"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:ems="6"
+                android:layout_gravity="center_vertical" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/dip20"
+                android:src="@mipmap/addrss_interval" />
+
+            <TextView
+                android:id="@+id/tv_to_place"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:ems="6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/dip20" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dip10"
+            android:padding="@dimen/dip10"
+            android:textColor="@color/father_group_text_color" />
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:padding="@dimen/dip10"
+            android:textColor="@color/lighter_gray" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px_line"
+        android:background="@color/line_color" />
+
+</RelativeLayout>

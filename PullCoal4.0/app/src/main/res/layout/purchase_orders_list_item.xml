@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <View
+        android:visibility="gone"
+        android:id="@+id/layout_divider_rough"
+        android:layout_width="match_parent"
+        android:layout_height="20px"
+        android:background="@color/item_divider_color" />
+    <View
+        android:visibility="gone"
+        android:id="@+id/layout_divider_thin"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/line_color" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/dip5"
+        android:paddingBottom="@dimen/dip5"
+        android:paddingRight="@dimen/dip15"
+        android:paddingLeft="@dimen/dip15"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <com.sxhalo.PullCoal.tools.image.CircleImageView
+            android:id="@+id/iv_head"
+            android:layout_width="@dimen/dip30"
+            android:layout_height="@dimen/dip30"
+            android:src="@mipmap/main_tab_item"
+            app:border_color="#ffffffff"
+            app:border_width="0dp" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_marginLeft="@dimen/dip10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/tv_status"
+            android:layout_marginLeft="@dimen/dip5"
+            android:textColor="@color/white"
+            android:padding="@dimen/dip2"
+            android:textSize="@dimen/font10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/tv_cash_deposit"
+            android:layout_marginLeft="@dimen/dip5"
+            android:textColor="@color/white"
+            android:padding="@dimen/dip2"
+            android:text="保证金"
+            android:visibility="gone"
+            android:textSize="@dimen/font10"
+            android:layout_width="wrap_content"
+            android:background="@drawable/shape_orange"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/tv_cash"
+            android:visibility="gone"
+            android:textColor="@color/list_item_quote_text_color_day"
+            android:padding="@dimen/dip2"
+            android:text="¥200"
+            android:background="@drawable/shape_light_gray"
+            android:textSize="@dimen/font10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:gravity="right"
+            android:layout_width="match_parent"
+            android:textColor="@color/first_fargment_text_gray"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_marginLeft="@dimen/dip15"
+        android:layout_marginRight="@dimen/dip15"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/line_color" />
+
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:paddingBottom="@dimen/dip10"
+        android:paddingLeft="@dimen/dip15"
+        android:paddingRight="@dimen/dip15"
+        android:paddingTop="@dimen/dip10"
+        android:ellipsize="end"
+        android:textStyle="bold" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/dip5"
+        android:paddingBottom="@dimen/dip10"
+        android:paddingRight="@dimen/dip15"
+        android:paddingLeft="@dimen/dip15">
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="煤种："
+            android:textColor="@color/first_fargment_text_gray" />
+
+        <TextView
+            android:id="@+id/tv_coal_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/textView1"
+            android:textColor="@color/first_fargment_text_gray" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="收货地："
+            android:textColor="@color/first_fargment_text_gray" />
+
+        <TextView
+            android:id="@+id/tv_area"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/textView2"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/first_fargment_text_gray" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView1"
+            android:layout_marginTop="@dimen/dip5"
+            android:text="数量(吨)："
+            android:textColor="@color/first_fargment_text_gray" />
+
+        <TextView
+            android:id="@+id/tv_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/textView3"
+            android:layout_toRightOf="@+id/textView3"
+            android:textColor="@color/text_purchase_input" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textView2"
+            android:layout_below="@+id/textView2"
+            android:layout_marginTop="@dimen/dip5"
+            android:text="限价(元/吨)："
+            android:textColor="@color/first_fargment_text_gray" />
+
+        <TextView
+            android:id="@+id/tv_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/textView4"
+            android:layout_toRightOf="@+id/textView4"
+            android:textColor="@color/text_purchase_input" />
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <View
+        android:visibility="gone"
+        android:id="@+id/search_layout_line"
+        android:layout_width="match_parent"
+        android:layout_height="20px"
+        android:background="@color/item_divider_color"/>
+
+    <LinearLayout
+        android:id="@+id/layout_coal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:visibility="visible"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/line_color" />
+
+        <TextView
+            android:id="@+id/title_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dip10"
+            android:layout_marginLeft="@dimen/dip5"
+            android:textSize="@dimen/font16"
+            android:textColor="@color/actionsheet_gray" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/line_color" />
+
+         <com.sxhalo.PullCoal.ui.CustomListView
+             android:layout_marginLeft="@dimen/dip10"
+             android:layout_marginRight="@dimen/dip10"
+             android:id="@+id/layout_search_listview"
+             android:listSelector="@color/transparent"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/line_color" />
+
+        <RelativeLayout
+            android:id="@+id/layout_search_more"
+            android:layout_width="match_parent"
+            android:layout_height="40dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dip10"
+                android:layout_marginLeft="@dimen/dip5"
+                android:textSize="@dimen/font16"
+                android:textColor="@color/actionsheet_gray"
+                android:text="点击查看更多" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/dip15"
+                android:src="@mipmap/arrow_listpage" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_alignParentBottom="true"
+                android:background="@color/line_color" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

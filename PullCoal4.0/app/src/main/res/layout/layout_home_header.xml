@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_header"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/app_title_bar_hight"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/tv_location"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/dip10"
+        android:gravity="center"
+        android:text="榆林"
+        android:textColor="@color/black" />
+
+    <LinearLayout
+        android:id="@+id/layout_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="@dimen/dip15"
+        android:layout_marginRight="@dimen/dip15"
+        android:layout_toLeftOf="@+id/message_ll"
+        android:layout_toRightOf="@+id/tv_location"
+        android:background="@drawable/search_shape_gray_background"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="@dimen/dip15"
+            android:layout_height="@dimen/dip15"
+            android:layout_marginLeft="@dimen/dip10"
+            android:scaleType="centerInside"
+            android:src="@drawable/search_icon" />
+
+        <TextView
+            android:id="@+id/layout_search_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dip5"
+            android:text="让买煤更快捷"
+            android:textColor="@color/text_color_search" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_freight"
+        android:layout_width="wrap_content"
+        android:visibility="gone"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" >
+
+        <TextView
+            android:id="@+id/tv_freight_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/offlinearrow_tab1_pressed"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:text="货运搜索"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font15" />
+
+        <TextView
+            android:id="@+id/tv_book_freight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/offlinearrow_tab2_normal"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:text="订阅货运"
+            android:textColor="@color/app_title_text_color"
+            android:textSize="@dimen/font15" />
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/tv_title"
+        style="@style/title_text_style"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:text="标题"
+        android:textColor="@color/black"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/message_ll"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/dip10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/iv_message"
+            android:layout_width="@dimen/dip30"
+            android:layout_height="@dimen/dip30"
+            android:scaleType="centerInside"
+            android:src="@mipmap/message_center_icon" />
+
+        <ImageView
+            android:id="@+id/iv_red_point"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@+id/iv_message"
+            android:layout_alignTop="@+id/iv_message"
+            android:src="@mipmap/sin"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/tv_freight_record"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/dip10"
+        android:layout_width="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/actionsheet_blue"
+        android:layout_height="match_parent"
+        android:text="货运记录"/>
+
+
+    <View
+        android:id="@+id/view_header"
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:layout_alignParentBottom="true"
+        android:background="@color/line_color" />
+
+</RelativeLayout>

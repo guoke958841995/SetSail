@@ -1,0 +1,83 @@
+<resources>
+    <string name="app_name">拉煤宝</string>
+
+
+    <string name="text_bottom_home">主页</string>
+    <string name="text_bottom_freight">货运</string>
+    <string name="text_bottom_order">订单</string>
+    <string name="text_bottom_service">服务</string>
+    <string name="text_bottom_personnal">个人</string>
+    <string name="nav_desc">nav_desc</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="splash_ad_ignore">跳过广告</string>
+
+    <string name="wechat">微信</string>
+    <string name="moments">朋友圈</string>
+    <string name="qq">QQ</string>
+    <string name="qzone">QQ空间</string>
+
+    <!--注册-->
+    <string name="empty_phone">手机号码不能为空！</string>
+    <string name="empty_pwd">密码不能为空！</string>
+    <string name="invalid_phone">请输入正确的手机号码</string>
+    <string name="wrong_pwd_tips">您输入的密码有误，请重新输入</string>
+    <string name="empty_code">验证码不能为空哦</string>
+    <string name="invalid_recommended_phone">请输入正确的推荐人手机号码！</string>
+    <string name="wrong_code">真遗憾，验证码错误</string>
+    <string name="not_match">手机号与验证码不匹配</string>
+    <string name="wrong_no_code">亲，您还没获取验证码哟！</string>
+    <string name="invalid_no_code">亲，您的验证码已经失效，请重新获取！</string>
+
+    <!--登录-->
+    <string name="uninstalled_wechat">您当前手机未安装微信！</string>
+    <string name="uninstalled_qq">您当前手机未安装QQ！</string>
+    <string name="authorization_qq">QQ正在授权中，请稍后...</string>
+    <string name="authorization_wechat">微信正在授权中，请稍后...</string>
+    <string name="authorization_bolg">微博正在授权中，请稍后...</string>
+    <string name="cancel_authorization">取消授权成功</string>
+    <string name="wrong_signature">签名错误</string>
+    <string name="refuse_authorization">"用户拒绝授权"</string>
+
+
+    <!--密码-->
+    <string name="input_old_pwd">请输入旧密码</string>
+    <string name="wrong_old_pwd">旧密码输入有误，请检查后重新输入</string>
+    <string name="input_new_pwd">请输入您的新密码</string>
+    <string name="confirm_new_pwd">请再次输入新密码</string>
+    <string name="pwd_equal">新密码与原密码不能相同哦</string>
+    <string name="pwd_too_short">密码不能小于6位字符哦</string>
+    <string name="pwd_twice_different">两次密码输入不一致，请重新输入</string>
+    <string name="pwd_modify_success">密码修改成功啦</string>
+    <string name="input_pwd">请输入密码</string>
+    <string name="input_pwd_again">请再次输入密码</string>
+    <string name="illeg_pwd">密码不能包含中文字符</string>
+
+    <string name="unable_net_work">真遗憾，当前网络不可用，请检查网络是否正常！</string>
+
+    <!--电话-->
+    <string name="no_sim_card">在设备中没有可用的SIM卡</string>
+    <string name="call_tips">是否呼叫</string>
+    <string name="load_img_failed">真抱歉，图片加载失败了，请稍后重试</string>
+    <string name="forbidden_permission">应用已被禁止权限，请在设置中开启</string>
+    <string name="checkout_sim_card">请检查您的SIM卡</string>
+    <string name="logout_success">注销成功</string>
+
+    <!--货运相关-->
+    <string name="no_submit_vehicle_data">您尚未完成司机认证哦</string>
+    <string name="under_review_vehicle">车辆认证正在审核中，请您耐心等待...</string>
+    <string name="under_review_vehicle_failed">真遗憾，车辆认证失败了，请重新申请认证</string>
+    <string name="already_get_transport">您已抢单，请到 订单->货运单 查看详细信息</string>
+    <string name="get_transport_success">抢单提交成功啦！</string>
+    <string name="unable_get_transport">主人，您不能抢自己的货运哦</string>
+    <string name="regret_tips">真遗憾，该货运已经被抢完了，再看看其他货运呗</string>
+    <string name="delete_freight_route">确定要删除该条路线吗？</string>
+    <string name="delete_vehicle">确定要删除吗？</string>
+    <string name="delete_my_release">确定要删除该信息吗？</string>
+    <string name="prompt_my_release">您的买煤求购正在进行中，不能删除</string>
+    <string name="add_freight_success">订阅添加成功</string>
+    <string name="select_start_area">请选择出发地</string>
+    <string name="select_end_area">请选择目的地</string>
+    <string name="accept_transport_success">接受邀约成功</string>
+
+</resources>

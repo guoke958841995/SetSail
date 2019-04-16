@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@color/background_color"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/layout_main_header" android:id="@+id/title_bar"/>
+
+    <com.sxhalo.PullCoal.ui.recyclerviewmode.StickyNavLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:background="@color/background_color"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/id_stickynavlayout_topview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/dip10"
+            android:focusable="true"
+            android:focusableInTouchMode="true">
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/px_line"
+                android:background="@color/line_color"/>
+
+            <com.sxhalo.PullCoal.ui.recyclerviewmode.SimpleViewPagerIndicator
+                android:id="@+id/id_stickynavlayout_indicator"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="#ffffffff" >
+            </com.sxhalo.PullCoal.ui.recyclerviewmode.SimpleViewPagerIndicator>
+
+        </LinearLayout>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/id_stickynavlayout_viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </android.support.v4.view.ViewPager>
+
+    </com.sxhalo.PullCoal.ui.recyclerviewmode.StickyNavLayout >
+
+</LinearLayout>

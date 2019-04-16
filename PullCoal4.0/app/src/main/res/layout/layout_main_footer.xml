@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layoutFooter"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="@color/main_footer_bg">
+    <!--android:background="@color/main_footer_bg"-->
+
+    <View
+        android:id="@+id/viewSplit"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/line_color" />
+
+    <RadioGroup
+        android:id="@+id/group"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/foot_bar_home"
+            style="@style/main_tab_item"
+            android:drawableTop="@drawable/main_tab_item_home"
+            android:checked="true"
+            android:text="@string/main_navigation_home" />
+
+        <RadioButton
+            android:id="@+id/foot_bar_car"
+            style="@style/main_tab_item"
+            android:drawableTop="@drawable/main_tab_item_transportation"
+            android:text="@string/main_navigation_car" />
+
+        <RadioButton
+            android:id="@+id/foot_bar_order"
+            style="@style/main_tab_item"
+            android:drawableTop="@drawable/main_tab_item_order"
+            android:text="@string/main_navigation_order" />
+
+        <RadioButton
+            android:id="@+id/foot_bar_found"
+            style="@style/main_tab_item"
+            android:drawableTop="@drawable/main_tab_item_found"
+            android:text="@string/main_navigation_found" />
+
+        <RadioButton
+            android:id="@+id/foot_bar_news"
+            style="@style/main_tab_item"
+            android:drawableTop="@drawable/main_tab_item_my"
+            android:text="@string/main_navigation_my" />
+    </RadioGroup>
+
+</RelativeLayout>

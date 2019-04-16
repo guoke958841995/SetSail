@@ -1,0 +1,182 @@
+  //------------- PowerfulStickyDecoration 使用部分  ----------------
+        PowerGroupListener listener = new PowerGroupListener() {
+            @Override
+            public String getGroupName(int position) {
+                //获取组名，用于判断是否是同一组
+                if (APPdataList != null && APPdataList.getList() != null && APPdataList.getList().size() > 0 ) {
+                    return APPdataList.getTitle();
+                }
+                return null;
+            }
+
+            @Override
+            public View getGroupView(int position) {
+                //获取自定定义的组View
+                if (myListData.size() > position) {
+                    View view = getLayoutInflater().inflate(R.layout.screening_suspension_item_group, null, false);
+                    return view;
+                } else {
+                    return null;
+                }
+            }
+        };
+        decoration = PowerfulStickyDecoration.Builder
+                .init(listener)
+                .setGroupHeight(BaseUtils.dip2px(this, 46))     //设置高度
+                .setGroupBackground(Color.parseColor("#ffffff"))        //设置背景
+                .setDivideColor(Color.parseColor("#e0e0e0"))            //分割线颜色
+                .setDivideHeight(BaseUtils.dip2px(this, 0))     //分割线高度
+                .setCacheEnable(false)                                              //是否使用缓存
+                .setStrongReference(true)                                          //设置强引用（在使用缓存时才生效）
+                .setHeaderCount(1)
+                .setOnClickListener(new OnGroupClickListener() {                   //点击事件，返回当前分组下的第一个item的position
+                    @Override
+                    public void onClick(int position, int id) {                                 //Group点击事件
+//                        String content = "onGroupClick --> " + dataList.get(position).getProvince() + "   id --> " + id;
+//                        showToast(content);
+                    }
+                })
+                .build();
+        //-------------                  ----------------
+
+
+        //下面是平时的RecyclerView操作
+        RecyclerView.LayoutManager manager = new GridLayoutManager(this, 1);
+        decoration.resetSpan(mRecyclerView, (GridLayoutManager) manager);
+        mRecyclerView.setLayoutManager(manager);
+        mRecyclerView.addItemDecoration(decoration);
+
+
+        mAdapter = new CommonAdapter<Coal>(this, R.layout.fragment_coal_list_item, myListData){
+            @Override
+            protected void convert(ViewHolder holder, Coal coals, int position){
+                getImageManager().loadCoalTypeUrlImage(coals.getImageUrl(),(ImageView) holder.getView(R.id.iv_com_head));
+                holder.setText(R.id.coal_item_name, coals.getCoalName());
+                holder.setText(R.id.coal_price, coals.getOneQuote());
+                holder.setText(R.id.tv_com_calorificvalue, coals.getCalorificValue() + "kCal/kg");
+                holder.setText(R.id.tv_com_storagerate, coals.getMineMouthName());
+                holder.setText(R.id.information_name, coals.getCompanyName());
+                if (StringUtils.isEmpty(coals.getCoalReportPicUrl())) {
+                    holder.getView(R.id.iv_test).setVisibility(View.GONE);
+                } else {
+                    holder.getView(R.id.iv_test).setVisibility(View.VISIBLE);
+                }
+                holder.setText(R.id.push_time, coals.getDifferMinute());
+                setItemView(holder, coals);
+            }
+        };
+
+        //如果设置了加载监听，就是需要刷新加载功能，如果没有设置加载监听，那么就没有下拉与底部加载
+        mRecyclerView.setLoadListener(new SRecyclerView.LoadListener() {
+            @Override
+            public void refresh() {
+                new Handler().postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        refreshData();
+                        mRecyclerView.refreshComplete();
+                    }
+                }, 2000);
+            }
+
+            @Override
+            public void loading() {
+                new Handler().postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        if (myListData.size() != 30) {
+                            loadData();
+                            mRecyclerView.loadingComplete();
+                        } else {
+                            mRecyclerView.loadNoMoreData();
+                        }
+                    }
+                }, 2000);
+            }
+        });
+
+
+        //可以设置一个EmptyView
+        //mRecyclerView.setEmptyView(new View(this));
+        initEmptyView();
+
+        //可以在xml中配置分割线，也可以在代码中设置分割线
+//        mRecyclerView.setDivider(Color.LTGRAY, 3, 30, 0);
+
+        //可以手动设置一个刷新头部，应该在setAdapter方法之前调用，适用于某个列表需要特殊刷新头的场景
+        //SRecyclerView的刷新头部和加载尾部的设置有两种种方法：
+        // 代码设置，全局配置。如果两种方法都没有设置，则使用自带的默认刷新头和加载尾
+        //recyclerView.setRefreshHeader(new TestRefreshHeader(this));
+        //recyclerView.setLoadingFooter(new TestLoadFooter(this));
+
+
+        //SRecyclerView的刷新头部和加载尾部的全局配置需要新建一个类，
+        // 并实现SRecyclerViewModule接口，并在AndroidManifest.xml中添加meta-data，
+        // 对SRV进行全局配置，name为实现类的路径，value必须为接口名称： "SRecyclerViewModule"
+        //示例如下
+        // <meta-data
+        //          android:name="com.hzw.srecyclerviewproject.TestSRVModule"
+        //          android:value="SRecyclerViewModule" />
+
+
+        //可以添加一个或多个尾部
+        View footer = LayoutInflater.from(this).inflate(R.layout.footer_test, mRecyclerView, false);
+        mRecyclerView.addFooter(footer);
+
+        //这里的适配器使用的一个简易的SRV适配器：BaseSRVAdapter，可以很大程度上减少适配器的代码量，
+        // 这个适配器同样也可以用于普通的RecyclerView，当然这里也可以用原生的适配器
+        mRecyclerView.setAdapter(mAdapter);
+//        mRecyclerView.setAdapter(new SRVAdapter(list));
+        //recyclerView.setAdapter(new InitAdapter(list, this));
+
+        //可以添加一个或多个头部
+        View header = LayoutInflater.from(this).inflate(R.layout.header_test, mRecyclerView, false);
+        mRecyclerView.addHeader(header);
+
+        //SRV的代码刷新，应该在setAdapter方法之后调用，true表示有刷新动画，false无动画
+        mRecyclerView.startRefresh(true);
+
+        //混淆
+        //-keep public class * implements com.hzw.srecyclerview.SRecyclerViewModule
+
+        mRecyclerView.setItemClickListener(new SRecyclerView.ItemClickListener() {
+            @Override
+            public void click(View v, int position) {
+                try {
+                    //TODO 条目布局
+                } catch (Exception e) {
+                    Log.i("煤炭列表点击", e.toString());
+                }
+            }
+        });
+    }
+
+    //下啦刷新
+    private void refreshData() {
+        myListData.clear();
+        myListData.addAll(APPdataList.getList());
+        mRecyclerView.getAdapter().notifyDataSetChanged();
+    }
+
+     // 加载更多
+    private void loadData() {
+        int index = myListData.size() + 1;
+        myListData.addAll(APPdataList.getList());
+        mRecyclerView.getAdapter().notifyItemInserted(index);
+    }
+
+    //设置一个没有数据时的布局显示
+    private void initEmptyView(){
+        mEmptyWrapper = new EmptyWrapper(mAdapter);
+        mEmptyWrapper.setEmptyView(LayoutInflater.from(mContext).inflate(R.layout.layout_no_data, mRecyclerView, false));
+    }
+
+    /**
+     * 给据资讯的付费情况对界面进行处理
+     *
+     * @param helper
+     * @param coals
+     */
+    private void setItemView(ViewHolder helper, Coal coals) {
+       //TODO 点击后的操作
+    }

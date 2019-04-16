@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="wrap_content">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px_line"
+        android:background="@color/line_color" />
+
+    <LinearLayout
+        android:background="@drawable/item_bt_bg"
+        android:padding="@dimen/dip15"
+        android:id="@+id/layout_root"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:scaleType="centerInside"
+            android:adjustViewBounds="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/auto_scroll_icon"/>
+
+        <View
+            android:layout_marginLeft="@dimen/dip15"
+            android:layout_width="2px"
+            android:layout_height="match_parent"
+            android:background="@color/line_color"/>
+
+        <com.sxhalo.PullCoal.ui.upmarqueeview.UPMarqueeView
+            android:id="@+id/up_marquee_view"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="@dimen/dip15"
+            android:layout_marginRight="@dimen/dip10"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px_line"
+        android:background="@color/line_color" />
+
+</LinearLayout>

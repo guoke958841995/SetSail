@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_marginTop="@dimen/dip5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dip5"
+        android:gravity="center_vertical"
+        android:background="@drawable/background_blue_shape"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_marginLeft="@dimen/dip3"
+            android:id="@+id/passing_poi_colass"
+            android:layout_width="13dp"
+            android:layout_height="13dp"
+            android:src="@mipmap/colos_passing_poi" />
+
+        <TextView
+            android:id="@+id/passing_poi_text"
+            android:textSize="@dimen/font16"
+            android:layout_marginLeft="@dimen/dip10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent"
+            android:text="请输入途经点"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+
+</LinearLayout>

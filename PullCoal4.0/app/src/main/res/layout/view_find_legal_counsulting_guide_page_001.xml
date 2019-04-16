@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#a6000000">
+
+
+
+        <RelativeLayout
+            android:background="#a6000000"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </RelativeLayout>
+
+
+        <ImageView
+            android:layout_marginLeft="@dimen/dip15"
+            android:id="@+id/guide_001"
+            android:layout_marginTop="179.5dp"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/icon_guide_message_001"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <ImageView
+            android:layout_marginLeft="@dimen/dip40"
+            android:layout_marginTop="174.5dp"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/icon_consult_a_message_001"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+
+        <Button
+            android:id="@+id/btn_home_act_enter_know"
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="60dp"
+            android:background="@mipmap/icon_guide_06"
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+
+</RelativeLayout>

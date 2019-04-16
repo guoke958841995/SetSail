@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/id_container"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/layout_home_header" android:id="@+id/title_bar"/>
+
+    <com.sxhalo.amoldzhang.library.PullToRefreshListView
+        xmlns:ptr="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/title_bar"
+        ptr:ptrAnimationStyle="flip"
+        android:id="@+id/refresh_scroll_view"
+        ptr:ptrDrawable="@drawable/default_ptr_flip"
+        ptr:ptrHeaderBackground="#383838"
+        ptr:ptrHeaderTextColor="#FFFFFF"
+        android:divider="@null"
+        android:fadingEdge="none"
+        android:scrollbars="none"/>
+
+    <RelativeLayout
+        android:background="@color/transparent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/deco_view1"
+            android:layout_marginLeft="@dimen/dip5"
+            android:layout_marginTop="@dimen/dip200"
+            android:layout_width="@dimen/dip85"
+            android:layout_height="@dimen/dip85">
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_alignParentRight="true"
+            android:id="@+id/deco_view2"
+            android:layout_marginRight="@dimen/dip5"
+            android:layout_marginTop="200dp"
+            android:layout_width="@dimen/dip85"
+            android:layout_height="@dimen/dip85">
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_alignParentRight="true"
+            android:id="@+id/deco_view3"
+            android:layout_marginRight="95dp"
+            android:layout_marginTop="280dp"
+            android:layout_width="@dimen/dip85"
+            android:layout_height="@dimen/dip85">
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_alignParentRight="true"
+            android:id="@+id/deco_view4"
+            android:layout_marginRight="@dimen/dip5"
+            android:layout_marginTop="280dp"
+            android:layout_width="@dimen/dip85"
+            android:layout_height="@dimen/dip85">
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

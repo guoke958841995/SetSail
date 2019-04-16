@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardView"
+    app:cardUseCompatPadding="true"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_vertical"
+    app:cardBackgroundColor="@color/coal_fine_title_lg">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_marginRight="@dimen/dip15"
+            android:padding="@dimen/dip10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:textColor="@color/white"
+                android:id="@+id/coal_title"
+                android:lines="1"
+                android:maxEms="5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/font16" />
+
+            <TextView
+                android:id="@+id/coal_type_grid"
+                android:layout_marginLeft="@dimen/dip3"
+                android:textSize="@dimen/font12"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dip5"
+                android:layout_toRightOf="@+id/coal_title" />
+
+            <TextView
+                android:layout_alignParentRight="true"
+                android:textColor="@color/white"
+                android:id="@+id/coal_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/font16" />
+
+            <LinearLayout
+                android:layout_marginTop="@dimen/dip5"
+                android:orientation="horizontal"
+                android:layout_below="@+id/coal_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:textSize="@dimen/font12"
+                    android:id="@+id/coal_hot"
+                    android:textColor="@color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/coal_moth"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dip10"
+                    android:lines="1"
+                    android:ellipsize="end"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font12" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <com.sxhalo.PullCoal.ui.textview.SlantedTextView
+            android:layout_gravity="right"
+            android:id="@+id/slanted_text_view"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:gravity="center"
+            app:slantedBackgroundColor="@color/white"
+            app:slantedLength="15dp"
+            app:slantedMode="right"
+            app:slantedText="免费信息"
+            app:slantedTextColor="@color/route_navi_bg"
+            app:slantedTextSize="8sp"/>
+
+    </FrameLayout>
+
+</android.support.v7.widget.CardView>

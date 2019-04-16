@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include android:id="@+id/title_bar" layout="@layout/layout_main_header" />
+
+    <ScrollView
+        android:fadingEdge="none"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp">
+
+                <TextView
+                    android:textSize="@dimen/dip16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/dip20"
+                    android:gravity="center_vertical"
+                    android:text="是否有货" />
+
+                <com.sxhalo.PullCoal.ui.switchbtn.SwitchButton
+                    android:id="@+id/message_notify_switch"
+                    android:layout_width="80dip"
+                    android:layout_height="28dip"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/dip20" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/line_color" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:textSize="@dimen/dip16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/dip20"
+                    android:gravity="center_vertical"
+                    android:text="排队车辆" />
+
+                <EditText
+                    android:id="@+id/drever_num"
+                    android:layout_marginLeft="@dimen/dip10"
+                    android:textSize="@dimen/dip16"
+                    android:padding="@dimen/dip3"
+                    android:background="@color/white"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:maxLength="3"
+                    android:inputType="number"
+                    android:hint="请输入排队车数" />
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/line_color" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:textSize="@dimen/dip16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/dip20"
+                    android:gravity="center_vertical"
+                    android:text="装车情况" />
+
+            </LinearLayout>
+
+
+            <com.sxhalo.PullCoal.ui.NoScrollGridView
+                android:layout_marginRight="@dimen/dip20"
+                android:layout_marginLeft="@dimen/dip20"
+                android:id="@+id/attr_list_grid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:horizontalSpacing="@dimen/dip5"
+                android:scrollbars="none"
+                android:listSelector="@android:color/transparent"
+                android:numColumns="3"
+                android:verticalSpacing="14dp" />
+
+            <EditText
+                android:id="@+id/dynamic_content"
+                android:layout_marginLeft="@dimen/dip20"
+                android:layout_marginRight="@dimen/dip20"
+                android:layout_marginTop="@dimen/dip10"
+                android:gravity="top"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:lines="8"
+                android:inputType="textMultiLine"
+                android:hint="这一刻矿口最新动态..."/>
+
+
+                <com.sxhalo.PullCoal.ui.NoScrollGridView
+                    android:paddingRight="@dimen/dip20"
+                    android:paddingLeft="@dimen/dip20"
+                    android:layout_marginTop="@dimen/dip10"
+                    android:verticalSpacing="@dimen/dip10"
+                    android:horizontalSpacing="@dimen/dip10"
+                    android:numColumns="3"
+                    android:id="@+id/image_gridview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:listSelector="@android:color/transparent" />
+
+            <LinearLayout
+                android:paddingLeft="@dimen/dip20"
+                android:paddingRight="@dimen/dip20"
+                android:paddingBottom="@dimen/dip10"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/iv_upload"
+                    android:layout_width="@dimen/dip70"
+                    android:layout_height="@dimen/dip70"
+                    android:src="@mipmap/icon_upload_picture" />
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dip70">
+
+                    <TextView
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="bottom"
+                        android:padding="@dimen/dip5"
+                        android:text="上传照片" />
+
+                    <TextView
+                        android:layout_weight="1"
+                        android:textSize="@dimen/font12"
+                        android:textColor="@color/gary"
+                        android:padding="@dimen/dip5"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="清晰准确的信息会帮到有需要的人" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/line_color" />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

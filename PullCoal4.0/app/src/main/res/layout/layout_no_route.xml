@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_no_route"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:visibility="gone"
+    android:background="@color/white">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tv_no_data"
+        android:layout_centerHorizontal="true"
+        android:scaleType="fitCenter"
+        android:src="@mipmap/icon_no_route" />
+
+    <TextView
+        android:id="@+id/tv_no_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="@dimen/dip20"
+        android:drawablePadding="@dimen/dip5"
+        android:text="暂无订阅路线"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:id="@+id/tv1"
+        android:layout_below="@+id/tv_no_data"
+        android:layout_marginTop="@dimen/dip10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/gray"
+        android:gravity="center"
+        android:text="立即添加关注路线"/>
+    <TextView
+        android:id="@+id/tv2"
+        android:layout_below="@+id/tv1"
+        android:layout_marginTop="@dimen/dip5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/gray"
+        android:gravity="center"
+        android:text="随时获取每一条最新货运信息"/>
+
+    <Button
+        android:id="@+id/btn_add_immediately"
+        android:layout_marginTop="@dimen/dip20"
+        android:layout_below="@+id/tv2"
+        android:layout_width="@dimen/dip120"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/white"
+        android:layout_height="@dimen/dip45"
+        android:text="立刻添加路线"
+        android:background="@drawable/button_shape_pressed"/>
+
+
+</RelativeLayout>

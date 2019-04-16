@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="@dimen/dip5"
+    android:paddingBottom="@dimen/dip5"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <View
+            android:id="@+id/start_line"
+            android:layout_width="match_parent"
+            android:layout_height="3px"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/imageView"
+            android:background="@color/lighter_gray" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="@dimen/dip15"
+            android:layout_height="@dimen/dip15"
+            android:layout_centerInParent="true"
+            android:scaleType="fitCenter"
+            android:src="@drawable/icon_status_0" />
+
+        <View
+            android:id="@+id/end_line"
+            android:layout_width="match_parent"
+            android:layout_height="3px"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/imageView"
+            android:background="@color/lighter_gray" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_status"
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/dip5"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="提交订单" />
+
+</LinearLayout>

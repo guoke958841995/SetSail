@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--<color name="colorPrimary">#008577</color>-->
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="button_light">#1e7aea</color>
+    <color name="button_normal">#a5a5a5</color>
+    <color name="colorPrimary">#1e7aea</color>
+    <color name="short_red">#ff5b46</color>
+    <!--<color name="colorPrimaryDark">#ffffff</color>-->
+    <color name="colorblue">#1e7aea</color>
+    <color name="background_color">#f4f5f6</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="bg_content_color">#F2F3F7</color>
+    <color name="line_color">#e0e0e0</color>
+    <color name="fragment_bg_color">#f5f5f5</color>
+    <color name="app_title_text_color">#1e7aea</color>
+    <color name="transparent_background_button">#11000000</color>
+    <color name="item_color">#5fe0e0e0</color>
+    <color name="app_title_text_color_normal">#333333</color>
+    <color name="detail_title_text_color">#333333</color>
+    <color name="toast_color">#626363</color>
+
+    <!-- 透明半透明色值 -->
+    <color name="transparent">#00000000</color>
+    <color name="transparent_half">#e0000000</color>
+
+    <color name="shape_garen_right_color">#54a1fd</color>
+    <color name="main_header_bg">#f4f5f6</color>
+    <color name="gray">#bbbbbb</color>
+    <color name="first_fargment_text_gray">#a5a5a5</color>
+
+    <!-- 字体颜色值 -->
+    <color name="text_color_blue">#0081e1</color>
+    <color name="text_color_search">#c2c2c2</color>
+    <color name="text_color_black">#323232</color>
+    <color name="text_color_white">#ffffff</color>
+    <color name="text_color_gray">#888888</color>
+    <color name="text_color_gray_light">#A8A8A8</color>
+    <color name="text_color_red">#ff5b46</color>
+    <color name="text_color_hint">#ffaaaaaa</color>
+    <color name="text_color_input">#ff111111</color>
+    <color name="text_purchase_input">#72a8d7</color>
+    <color name="gray_font_dark">#646464</color>
+    <color name="list_item_background_day">#fff</color>
+    <color name="list_item_text_color_day">#002F45</color>
+    <color name="list_item_quote_text_color_day">#f46300</color>
+
+    <color name="alertdialog_line">#c6c6c6</color>
+    <color name="actionsheet_blue">#037bff</color>
+    <color name="actionsheet_red">#fd4a2e</color>
+    <color name="actionsheet_gray">#8f8f8f</color>
+    <color name="label_one_background">#58ACEC</color>
+    <color name="label_two_background">#93C0FB</color>
+    <color name="label_three_background">#64D9BF</color>
+    <color name="label_four_background">#A6D3E0</color>
+
+
+    <color name="scrollview_background">#F2F3F7</color>
+    <color name="search_text_color_green">#34b829</color>
+
+    <!-- 分割线色值 -->
+    <color name="short_blue">#48B7FF</color>
+
+    <color name="blue">#008dff</color>
+    <color name="province_line_border">#c7c7c7</color>
+</resources>

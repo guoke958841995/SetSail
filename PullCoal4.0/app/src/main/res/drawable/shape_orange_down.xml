@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+
+    <stroke
+        android:width="@dimen/dip1"
+        android:color="@color/list_item_quote_text_color_day" />
+
+    <!-- rounded corner -->
+    <corners
+        android:bottomLeftRadius="@dimen/dip3"
+        android:bottomRightRadius="@dimen/dip3" />
+    <solid android:color="@color/white" />
+</shape>

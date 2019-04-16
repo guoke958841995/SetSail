@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/detail_activity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/scrollview_background"
+    android:orientation="vertical">
+
+
+    <FrameLayout
+        android:background="@mipmap/bg_my_balance_layout"
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
+
+        <RelativeLayout
+            android:padding="@dimen/dip5"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dip50">
+
+            <ImageView
+                android:id="@+id/title_bar_left"
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:src="@mipmap/icon_back_whrat"
+                android:paddingBottom="8dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="5dp"
+                android:paddingTop="8dp"
+                android:visibility="visible" />
+
+            <TextView
+                android:text="我的煤炭托管账户"
+                android:textSize="@dimen/font18"
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:textColor="@color/white"/>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_marginTop="@dimen/dip50"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dip20"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:textSize="@dimen/font12"
+                    android:textColor="@color/gray_search_background"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="总金额(元)"/>
+
+                <TextView
+                    android:id="@+id/tv_total_amount"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font20"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0.00"/>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="@dimen/dip20"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_marginRight="@dimen/dip15"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tv_freezing_amount"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/font14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0.00"/>
+
+                    <TextView
+                        android:layout_marginTop="@dimen/dip5"
+                        android:textSize="@dimen/font12"
+                        android:textColor="@color/gray_search_background"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="冻结金额(元)"/>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginLeft="@dimen/dip15"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tv_refundable_amount"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/font14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0.00"/>
+
+                    <TextView
+                        android:layout_marginTop="@dimen/dip5"
+                        android:textSize="@dimen/font12"
+                        android:textColor="@color/gray_search_background"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="可退款金额(元)"/>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/line_color"/>
+
+    <!--账户明细-->
+    <RelativeLayout
+        android:id="@+id/layout_account_details"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dip50"
+        android:background="@drawable/item_bt_bg">
+
+        <ImageView
+            android:id="@+id/iv_top_up"
+            android:layout_width="@dimen/dip40"
+            android:layout_height="@dimen/dip40"
+            android:layout_margin="@dimen/dip10"
+            android:scaleType="centerInside"
+            android:src="@mipmap/icon_detailed" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/iv_top_up"
+            android:text="煤款明细" />
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/dip20"
+            android:src="@mipmap/arrow_listpage" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/line_color"/>
+
+    <!--煤炭订单-->
+    <RelativeLayout
+        android:id="@+id/layout_coal_orders"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dip50"
+        android:background="@drawable/item_bt_bg">
+
+        <ImageView
+            android:id="@+id/iv_transaction"
+            android:layout_width="@dimen/dip40"
+            android:layout_height="@dimen/dip40"
+            android:layout_margin="@dimen/dip10"
+            android:scaleType="centerInside"
+            android:src="@mipmap/icon_coal_order" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/iv_transaction"
+            android:text="煤炭订单" />
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/dip20"
+            android:src="@mipmap/arrow_listpage" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/line_color"/>
+
+    <RelativeLayout
+        android:background="@color/white"
+        android:gravity="bottom"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:background="@color/scrollview_background"
+                android:padding="@dimen/dip15"
+                android:textColor="@color/gary"
+                android:text="说明："
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:layout_marginLeft="@dimen/dip15"
+                android:layout_marginRight="@dimen/dip15"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dip10"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dip5"
+                    android:src="@drawable/gray_point" />
+
+                <TextView
+                    android:paddingLeft="@dimen/dip5"
+                    android:textColor="@color/gary"
+                    android:text="托管账户中所有的货款现金的具体财务业务工作均不在线上平台进行；"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginLeft="@dimen/dip15"
+                android:layout_marginRight="@dimen/dip15"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dip10"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dip5"
+                    android:src="@drawable/gray_point" />
+
+                <TextView
+                    android:paddingLeft="@dimen/dip5"
+                    android:textColor="@color/gary"
+                    android:text="平台仅记录买家用户在托管账户中充值、向卖家支付、平台向买家退款的详细记录，仅作为线下财务资金管理的日志记录使用；"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginLeft="@dimen/dip15"
+                android:layout_marginRight="@dimen/dip15"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dip10"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dip5"
+                    android:src="@drawable/gray_point" />
+
+                <TextView
+                    android:paddingLeft="@dimen/dip5"
+                    android:textColor="@color/gary"
+                    android:text="所有关于货款的争议也全部在线下完成，争议对原有的在线买煤业务信息不受影响；"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_tel"
+            android:background="@color/white"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/line_color"/>
+
+            <!--<ImageView-->
+            <!--android:src="@drawable/icon_phone"-->
+            <!--android:layout_width="30dp"-->
+            <!--android:layout_height="30dp" />-->
+
+            <TextView
+                android:layout_marginTop="@dimen/dip15"
+                android:gravity="center"
+                android:layout_gravity="bottom"
+                android:textColor="@color/app_title_text_color"
+                android:text="如有其他疑问或建议，可联系客服"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

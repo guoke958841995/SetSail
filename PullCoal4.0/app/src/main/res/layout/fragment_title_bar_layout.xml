@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!--默认数据显示-->
+            <LinearLayout
+                android:id="@+id/bottom_default_view"
+                android:layout_marginTop="@dimen/dip25"
+                android:layout_gravity="bottom"
+                android:background="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/line_color"/>
+
+                <TextView
+                    android:layout_marginTop="@dimen/dip5"
+                    android:layout_marginLeft="@dimen/dip10"
+                    android:textSize="@dimen/font16"
+                    android:textColor="@color/app_title_text_color_normal"
+                    android:id="@+id/default_map_navi_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="信息部名称" />
+
+                <LinearLayout
+                    android:paddingTop="@dimen/dip5"
+                    android:paddingBottom="@dimen/dip5"
+                    android:paddingRight="@dimen/dip10"
+                    android:paddingLeft="@dimen/dip10"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:gravity="center_vertical"
+                        android:layout_weight="3"
+                        android:id="@+id/default_map_navi_addaess"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="叶达路附近"
+                        android:textColor="@color/actionsheet_gray"
+                        android:layout_marginRight="@dimen/dip10"
+                        android:lines="2"
+                        android:textSize="@dimen/font14" />
+
+                    <TextView
+                        android:lines="2"
+                        android:gravity="right|center_vertical"
+                        android:layout_weight="1"
+                        android:id="@+id/default_map_navi_dis"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="距您xx公里"
+                        android:textColor="@color/actionsheet_gray"
+                        android:textSize="@dimen/font14" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/line_color"/>
+
+                <LinearLayout
+                    android:id="@+id/default_map_navi_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    android:gravity="center">
+                    <TextView
+                        android:padding="@dimen/dip10"
+                        android:textSize="@dimen/font16"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@mipmap/map_navi"
+                        android:drawablePadding="@dimen/dip5"
+                        android:gravity="center"
+                        android:text="导航"
+                        android:textColor="@color/app_title_text_color" />
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/line_color"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:visibility="gone"
+                android:layout_marginTop="@dimen/dip25"
+                android:id="@+id/open_layout_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:id="@+id/layout_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/blue"
+                            android:padding="@dimen/dip10">
+
+                            <TextView
+                                android:id="@+id/layout_title"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:text="信息部名称"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/font16" />
+
+                            <TextView
+                                android:id="@+id/layout_type"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/layout_title"
+                                android:layout_marginTop="@dimen/dip10"
+                                android:text="信息部"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/font14" />
+                        </RelativeLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/white"
+                            android:orientation="horizontal"
+                            android:padding="@dimen/dip10">
+
+                            <TextView
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="1"
+                                android:id="@+id/layout_address"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:drawableLeft="@mipmap/infor_address"
+                                android:drawablePadding="@dimen/dip5"
+                                android:layout_marginRight="@dimen/dip10"
+                                android:text="详细地址"
+                                android:textColor="@color/app_title_text_color_normal"
+                                android:textSize="@dimen/font16" />
+
+                            <TextView
+                                android:visibility="invisible"
+                                android:layout_gravity="center"
+                                android:id="@+id/layout_tel"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@mipmap/derver_tel" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1px"
+                            android:background="@color/line_color" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:background="@color/activity_bg_color" />
+
+                <LinearLayout
+                    android:background="@color/activity_bg_color"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal"
+                    android:paddingTop="1px">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="0.5dp"
+                        android:layout_weight="1"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/left_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="true"
+                            android:gravity="center"
+                            android:padding="10dip"
+                            android:text="left_text"
+                            android:textColor="@color/app_title_text_color"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="1px"
+                        android:layout_weight="1"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/right_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="true"
+                            android:gravity="center"
+                            android:padding="10dip"
+                            android:text="right_text"
+                            android:textColor="@color/father_group_text_color"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/tab_line_iv"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:contentDescription="tab"
+                    android:src="@color/app_title_text_color" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/line_color" />
+
+                <com.sxhalo.PullCoal.ui.SuperViewPager
+                    android:id="@+id/super_viewpager"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_marginRight="@dimen/dip25"
+            android:id="@+id/layout_navi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:src="@mipmap/route_blue" />
+
+
+    </FrameLayout>
+
+</LinearLayout>

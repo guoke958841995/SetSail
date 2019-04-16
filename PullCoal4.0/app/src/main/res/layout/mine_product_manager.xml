@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <!--矿口基本信息-->
+    <LinearLayout
+        android:paddingTop="@dimen/dip10"
+        android:paddingLeft="@dimen/dip15"
+        android:paddingRight="@dimen/dip15"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!--矿口名称 营运状态 导航-->
+        <RelativeLayout
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imageView_navi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/location_map"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+
+            <TextView
+                android:id="@+id/mine_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:textSize="@dimen/dip18"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <ImageView
+                android:layout_marginLeft="@dimen/dip10"
+                android:id="@+id/mine_business_type"
+                android:layout_width="wrap_content"
+                android:layout_height="17dp"
+                android:src="@mipmap/do_business_status"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/mine_name"
+                android:layout_toEndOf="@+id/mine_name" />
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/do_business_time"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="预计11.11营业"
+                android:layout_marginLeft="@dimen/dip10"
+                android:textColor="@color/gary"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/mine_business_type"
+                android:layout_toEndOf="@+id/mine_business_type"
+                android:textSize="@dimen/dip14" />
+
+        </RelativeLayout>
+
+        <!--轮播图-->
+        <ListView
+            android:layout_marginTop="@dimen/dip10"
+            android:id="@+id/information_department_imageView_listview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <LinearLayout
+            android:paddingTop="@dimen/dip5"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!--矿口类型-->
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/mine_type_tv"
+                android:layout_marginTop="@dimen/dip5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/actionsheet_gray"/>
+
+            <!-- 通讯地址-->
+            <TextView
+                android:layout_marginTop="@dimen/dip5"
+                android:layout_marginBottom="@dimen/dip15"
+                android:text="TextView"
+                android:textColor="@color/actionsheet_gray"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/mine_address" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/line_color"/>
+
+    <!--矿口简介-->
+    <LinearLayout
+        android:background="@color/white"
+        android:id="@+id/mine_profile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dip15"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/line_color" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dip50"
+            android:layout_marginLeft="15dp"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:text="矿口简介"
+            android:textSize="@dimen/dip18" />
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/line_color" />
+
+        <TextView
+            android:layout_marginBottom="@dimen/dip10"
+            android:layout_marginTop="@dimen/dip10"
+            android:layout_marginLeft="@dimen/dip20"
+            android:layout_marginRight="@dimen/dip20"
+            android:id="@+id/introduction_content_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:ellipsize="end"
+            android:lines="4"
+            android:gravity="center_vertical"
+            android:lineSpacingExtra="@dimen/dip3"
+            android:textColor="@color/setting_alt_text_normal"
+            android:textSize="@dimen/dip14" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/line_color" />
+
+
+        <LinearLayout
+            android:id="@+id/more_comment_ll"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dip50">
+
+            <TextView
+                android:id="@+id/tv_more_comment"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dip50"
+                android:background="@drawable/item_bt_bg"
+                android:gravity="center"
+                android:text="展开"
+                android:textColor="@color/button_normal"
+                android:textSize="@dimen/dip16" />
+
+            <ImageView
+                android:layout_marginLeft="@dimen/dip10"
+                android:id="@+id/home_openclass_open"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/sort_common_down" />
+
+        </LinearLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/line_color" />
+
+    </LinearLayout>
+
+
+    <!--矿口动态-->
+    <LinearLayout
+        android:id="@+id/mine_news_dynamic_ll"
+        android:layout_marginTop="@dimen/dip15"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/line_color"/>
+
+        <RelativeLayout
+
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dip50">
+
+            <TextView
+                android:gravity="center_vertical"
+                android:text="矿口动态"
+                android:textSize="@dimen/dip18"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dip50"
+                android:layout_marginLeft="16dp" />
+
+            <LinearLayout
+                android:id="@+id/more_dynamic"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:background="@drawable/item_bt_bg"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:padding="@dimen/dip5"
+                    android:paddingLeft="@dimen/dip5"
+                    android:gravity="center"
+                    android:textColor="@color/actionsheet_gray"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="查看全部" />
+
+                <ImageView style="@style/setting_arrow" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/line_color"/>
+
+        <LinearLayout
+            android:padding="@dimen/dip10"
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_marginLeft="@dimen/dip10"
+                android:id="@+id/news_content"
+                android:textSize="@dimen/dip14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/setting_alt_text_normal"
+                android:lineSpacingExtra="@dimen/dip3" />
+
+
+            <LinearLayout
+                android:layout_marginLeft="@dimen/dip10"
+                android:layout_marginRight="@dimen/dip10"
+                android:layout_marginTop="@dimen/dip10"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:visibility="gone"
+                    android:id="@+id/imageView"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:scaleType="centerCrop"
+                    android:src="@color/first_table_layout_bg"/>
+
+                <com.sxhalo.PullCoal.ui.NoScrollGridView
+                    android:layout_weight="1"
+                    android:verticalSpacing="@dimen/dip10"
+                    android:horizontalSpacing="@dimen/dip10"
+                    android:numColumns="3"
+                    android:id="@+id/news_gridview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:listSelector="@android:color/transparent" />
+
+                <View
+                    android:visibility="gone"
+                    android:id="@+id/view_grid"
+                    android:background="@android:color/transparent"
+                    android:layout_weight="2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/time_refresh"
+                android:layout_marginTop="@dimen/dip3"
+                android:gravity="right"
+                android:textColor="@color/first_fargment_text_gray"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/line_color"/>
+
+    </LinearLayout>
+
+
+    <!--信息部的标题头-->
+    <LinearLayout
+        android:layout_marginTop="@dimen/dip15"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/title_ll">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/line_color"/>
+
+
+        <RelativeLayout
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+
+            <TextView
+                android:text="代销信息部列表"
+                android:textSize="@dimen/dip18"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginStart="20dp"
+                android:id="@+id/title" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/line_color"/>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:gravity="center_vertical">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dip5"
+        android:orientation="vertical"
+        android:padding="@dimen/dip10">
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="05-04"
+            android:textColor="@color/actionsheet_blue"
+            android:textSize="@dimen/dip12" />
+
+        <TextView
+            android:id="@+id/tv_time_ss"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dip2"
+            android:gravity="center"
+            android:text="09:17"
+            android:textColor="@color/actionsheet_blue"
+            android:textSize="@dimen/font10" />
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="@dimen/dip15"
+        android:layout_height="match_parent">
+
+        <View
+            android:id="@+id/view_line_top"
+            android:layout_width="@dimen/dip1"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/iv_status"
+            android:layout_centerHorizontal="true"
+            android:background="@color/line_color"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/iv_status"
+            android:layout_width="@dimen/dip15"
+            android:layout_height="@dimen/dip15"
+            android:layout_centerInParent="true"
+            android:background="@color/white"
+            android:src="@drawable/icon_status_2" />
+
+        <View
+            android:id="@+id/view_line_bottom"
+            android:layout_width="@dimen/dip1"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/iv_status"
+            android:layout_centerHorizontal="true"
+            android:background="@color/line_color"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dip10"
+        android:layout_marginRight="@dimen/dip15"
+        android:text="买家提交煤炭预约订单，等待信息部确认受理"
+        android:textColor="@color/actionsheet_blue"
+        android:textSize="@dimen/dip12" />
+
+</LinearLayout>

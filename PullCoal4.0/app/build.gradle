@@ -1,0 +1,303 @@
+//noinspection GradleCompatible
+apply plugin: 'com.android.application'
+
+/**
+ * 获取极光推送的appkey
+ * @return
+ */
+String jpushAppkeyValue(){
+    if ("115".equals(project.OPERATION_MODE)){
+        return "a7ae096d8c5b8b6448d83e86"
+    }else{
+        return "6739397e6107c51b3c66ab1c"
+    }
+}
+
+///**
+// * 获取appAccessKey
+// * @return
+// */
+//def appAccessKey(){
+//    if ("test199".equals(project.OPERATION_MODE)) {
+//        return "\"" + project.BASE_ACCESS_KEY_DEBUG + "\""
+//    } else if ("test139".equals( project.OPERATION_MODE )) {
+//        return "\"" + project.BASE_ACCESS_KEY_DEBUG + "\""
+//    } else if ("115".equals( project.OPERATION_MODE )) {
+//        return "\"" + project.BASE_ACCESS_KEY_RELEASE + "\""
+//    }
+//}
+
+/**
+ * 获取baseUrl
+ * @return
+ */
+def baseUrl(){
+    if ("test199".equals( project.OPERATION_MODE )) {
+        return "\"" + project.BASE_URL_TEST_DEBUG_199 + "\""
+    } else if ("test139".equals( project.OPERATION_MODE )) {
+        return "\"" + project.BASE_URL_TEST_DEBUG_139 + "\""
+    } else if ("115".equals( project.OPERATION_MODE )) {
+        return "\"" + project.BASE_URL_REAL_RELEASE + "\""
+    }
+}
+
+///**
+// * 获取baseShareIp
+// * @return
+// */
+//def baseShareIp(){
+//    if ("test199".equals( project.OPERATION_MODE )) {
+//        return "\"" + project.BASE_SHARE_IP_DEBUG + "\""
+//    } else if ("test139".equals( project.OPERATION_MODE )) {
+//        return "\"" + project.BASE_SHARE_IP_DEBUG + "\""
+//    } else if ("115".equals( project.OPERATION_MODE )) {
+//        return "\"" + project.BASE_SHARE_IP_RELEASE + "\""
+//    }
+//}
+
+/**
+ * 获取server
+ * @return
+ */
+def server(){
+    if ("test199".equals( project.OPERATION_MODE )) {
+        return  "\"/lmbapi/\""
+//        return  "\"\""
+    } else if ("test139".equals(project.OPERATION_MODE )) {
+        return "\"/lmbapi/\""
+    } else if ("115".equals( project.OPERATION_MODE )) {
+        return "\"/lmbapi/\""
+    }
+}
+
+android {
+    String JPUSH_APPKEY_VALUE = jpushAppkeyValue()
+
+    def api_version = "\"" + project.API_VERSION + "\""
+//    def appAccessKey = appAccessKey()
+    def baseUrl = baseUrl()
+//    def baseShareIp = baseShareIp()
+    def server = server()
+
+    lintOptions {
+        disable "ResourceType"
+        checkReleaseBuilds false
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError false
+    }
+    //编译版本
+    //noinspection GradleCompatible
+    compileSdkVersion 26
+    //构建工具版本
+    buildToolsVersion '28.0.2'
+    //默认配置
+    defaultConfig {
+        //当方法数超过65535时便会自动打出两个Dex包命名为 classes.dex classes2.dex ,一些方法被打入了第二个dex包，即classes2.dex中，导致了5.0以下机型无法运行应用报错。
+        multiDexEnabled true
+        //应用包名
+        applicationId "com.sxhalo.PullCoal"
+        //最小版本
+        minSdkVersion 14
+        //目标版本
+        targetSdkVersion 28
+        //应用版本号
+        versionCode  java.lang.Integer.valueOf(project.APP_VERSION_CODE)
+        // 应用版本名称
+        versionName  project.APP_VERSION_NAME
+
+        buildConfigField("String","JPUSH_APPKEY", "\"" +"${JPUSH_APPKEY_VALUE}"+ "\"")
+
+        buildConfigField "String","OPERATION_MODE","\"" + project.OPERATION_MODE + "\""
+        buildConfigField "String","API_VERSION", "${api_version}"
+//        buildConfigField "String","APP_ACCESS_KEY", "${appAccessKey}"
+        buildConfigField "String","BASE_URL", "${baseUrl}"
+//        buildConfigField "String","SHARE_IP", "${baseShareIp}"
+        buildConfigField "String","SERVICE", "${server}"
+
+        manifestPlaceholders = [
+                JPUSH_PKGNAME : applicationId,
+//                JPUSH_APPKEY : "6739397e6107c51b3c66ab1c", //测试  appKey=6739397e6107c51b3c66ab1c
+//                JPUSH_APPKEY : "a7ae096d8c5b8b6448d83e86", //正式 appKey=a7ae096d8c5b8b6448d83e86
+                JPUSH_APPKEY : "${JPUSH_APPKEY_VALUE}",
+                JPUSH_CHANNEL : "developer-default", //暂时填写默认值即可.
+        ]
+    }
+
+
+
+    dexOptions{
+        javaMaxHeapSize "4g"
+    }
+
+    //签名
+    signingConfigs {
+        debug {
+            storeFile file("E:/Git/pullCoal2.0/PullCoalKeyStore.keystore")      //签名文件
+//            storeFile file("D:/work/pullCoal2.0/PullCoalKeyStore.keystore")   //签名文件
+            storePassword "sxhalo.com"
+            keyAlias "拉煤宝"
+            keyPassword "sxhalo.com"  //签名密码
+        }
+
+        release {
+            keyAlias '拉煤宝'
+            keyPassword 'sxhalo.com'
+            storeFile file('E:/Git/pullCoal2.0/PullCoalKeyStore.keystore')
+//            storeFile file("D:/work/pullCoal2.0/PullCoalKeyStore.keystore")
+            storePassword 'sxhalo.com'
+        }
+    }
+
+    buildTypes {
+        debug {
+            // 指定签名为release
+            signingConfig signingConfigs.debug
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            // 自定义输出配置
+            flavorDimensions "default"//这个名字貌似随便取，也可以有多个，总之一定要有..
+            android.applicationVariants.all { variant ->
+                variant.outputs.all {
+                    outputFileName = "PullCoal_V${defaultConfig.versionName}_${variant.productFlavors[0].name}.apk"
+                }
+            }
+        }
+        release {
+            // 指定签名为release
+            signingConfig signingConfigs.release
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro','gradle.properties'
+            // 自定义输出配置
+            flavorDimensions "default"//这个名字貌似随便取，也可以有多个，总之一定要有..
+            android.applicationVariants.all { variant ->
+                variant.outputs.all {
+                    outputFileName = "PullCoal_V${defaultConfig.versionName}_${variant.productFlavors[0].name}.apk"
+                }
+            }
+        }
+    }
+
+    productFlavors {
+        debug199 {}
+        sxhalo195 {}
+        sxhalo194 {}
+        sxhalo199 {}
+        sxhalo {}
+        sxhalotest {}
+        yingyongbao {}
+        xiaomi {}
+        qh360 {}
+        baidu {}
+        wandoujia {}
+    }
+
+    productFlavors.all {
+        flavor -> flavor.manifestPlaceholders = [SXHALO_CHANNEL_VALUE: name]
+    }
+
+    packagingOptions {
+        exclude 'META-INFTICE' // will not include NOTICE file
+        exclude 'META-INF/LICENSE' // will not include LICENSE file
+        exclude 'META-INF/DEPENDENCIES.txt'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/notice.txt'
+        exclude 'META-INF/license.txt'
+        exclude 'META-INF/dependencies.txt'
+        exclude 'META-INF/LGPL2.1'
+    }
+    aaptOptions {
+        cruncherEnabled = false
+        useNewCruncher = false
+    }
+    defaultConfig {
+        ndk {
+            //选择要添加的对应cpu类型的.so库。
+            abiFilters 'armeabi', 'armeabi-v7a', 'arm64-v8a','x86','x86_64'
+        }
+        testInstrumentationRunner 'android.support.test.runner.AndroidJUnitRunner'
+        javaCompileOptions {
+            annotationProcessorOptions {
+                includeCompileClasspath = true    //加上这行即可
+            }
+        }
+    }
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['src/main/jniLibs']
+            assets.srcDirs = ['src/main/assets', 'src/main/assets/']
+        }
+    }
+}
+
+repositories {
+    flatDir {
+        dirs 'libs'
+    }
+}
+
+//configurations.all {
+//    resolutionStrategy.eachDependency { DependencyResolveDetails details ->
+//        def requested = details.requested
+//        if (requested.group == 'com.android.support') {
+//            if (!requested.name.startsWith("multidex")) {
+//                details.useVersion '25.3.1'
+//            }
+//        }
+//    }
+//}
+
+def retrofitVersion = '2.5.0'
+
+dependencies {
+    implementation 'com.android.support.constraint:constraint-layout:1.1.2'
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    implementation 'com.android.support:multidex:1.0.1'
+    apply plugin: 'project-report'
+    //noinspection GradleCompatible
+    implementation 'com.android.support:support-v4:26+'
+    //noinspection GradleCompatible
+    implementation 'com.android.support:cardview-v7:26+'
+    implementation 'com.android.support:design:26+'
+    implementation 'com.readystatesoftware.systembartint:systembartint:1.0.3'
+    //    implementation project(':weibosdk')
+    implementation 'org.jetbrains:annotations-java5:15.0'
+    implementation "com.squareup.retrofit2:retrofit:$retrofitVersion"
+    //Retrofit2所需要的包
+    implementation "com.squareup.retrofit2:converter-gson:$retrofitVersion"
+    //ConverterFactory的Gson依赖包
+    implementation "com.squareup.retrofit2:converter-scalars:$retrofitVersion"
+    //ConverterFactory的String依赖包
+    implementation "com.squareup.retrofit2:adapter-rxjava:$retrofitVersion"
+    //retrofit对RxJava的支持
+    implementation 'io.reactivex:rxandroid:1.1.0'
+    implementation 'io.reactivex:rxjava:1.1.0'
+    implementation 'ch.ielse:switchbutton:1.0.0'
+    //    implementation 'com.baoyz.swipemenulistview:library:1.3.0'
+    implementation project(':selectimagepicker')
+    implementation 'com.yanzhenjie:permission:2.0.0-rc2'
+    implementation 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
+    //导航依赖
+    implementation files('libs/AMap3DMap_6.8.0_AMapNavi_6.7.0_AMapSearch_6.5.0_AMapLocation_4.5.1_20190402.jar')
+    implementation files('libs/open_sdk_r6008_lite.jar')
+    implementation project(path: ':bottomdialog')
+    implementation project(path: ':hightlight')
+    implementation project(path: ':baseadapter-recyclerview')
+    implementation project(path: ':scrollablepanellibrary')
+    implementation files('libs/jcore-android-1.2.3.jar')
+    implementation files('libs/jpush-android-3.1.5.jar')
+    implementation project(':pulltorefresh')
+    implementation 'com.nineoldandroids:library:2.4.0'
+    //    debugCompile 'com.squareup.leakcanary:leakcanary-android:1.3'
+    //    releaseCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.3'
+    implementation 'com.bm.photoview:library:1.4.1'
+    implementation files('libs/commons-codec-1.10-1.jar')
+
+}

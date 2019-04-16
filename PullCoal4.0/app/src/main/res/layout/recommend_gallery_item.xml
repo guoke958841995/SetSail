@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:background="@mipmap/bg_coupons"
+            android:layout_width="100dp"
+            android:layout_height="80dp">
+
+            <TextView
+                android:layout_marginTop="@dimen/dip5"
+                android:text="￥"
+                android:textSize="@dimen/font20"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tv_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="1.0"
+                android:textColor="@color/white"
+                android:textSize="@dimen/dip30" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:padding="@dimen/dip10"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/setting_alt_text_normal"
+                android:text="资讯费支付代金券"
+                android:textSize="@dimen/font16"
+                android:textStyle="bold" />
+
+            <TextView
+                android:gravity="right|top"
+                android:id="@+id/tv_number"
+                android:text="1张"
+                android:textSize="@dimen/font16"
+                android:textColor="@color/text_color_pay_num"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/tv_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_title"
+                android:layout_marginTop="@dimen/dip15"
+                android:text="2018.01.01-2018.02.10"
+                android:textColor="@color/actionsheet_gray"
+                android:textSize="@dimen/font12" />
+
+            <LinearLayout
+                android:gravity="right"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:focusable="true"
+                    android:divider="@drawable/btn_amount_divider"
+                    android:background="@drawable/bg_amount_layout"
+                    android:showDividers="middle"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:paddingTop="@dimen/dip0"
+                        android:textColor="@color/setting_alt_text_normal"
+                        android:id="@+id/reduce_use"
+                        android:layout_width="25dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:background="@drawable/btn_amount_left"
+                        android:text="-"/>
+
+                    <TextView
+                        android:id="@+id/voucher_selected_number"
+                        android:layout_width="30dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:textColor="@color/setting_alt_text_normal"
+                        android:text="100"/>
+
+                    <Button
+                        android:textColor="@color/setting_alt_text_normal"
+                        android:id="@+id/add_use"
+                        android:layout_width="25dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:background="@drawable/btn_amount_right"
+                        android:text="+"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

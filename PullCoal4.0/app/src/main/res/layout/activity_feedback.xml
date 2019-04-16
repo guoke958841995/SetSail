@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/detail_activity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activity_bg_color"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/title_bar"
+        layout="@layout/layout_main_header" />
+
+    <TextView
+        android:text="您的意见和想法对我们很重要"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dip15"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/line_color" />
+
+    <EditText
+        android:id="@+id/et_content"
+        android:padding="@dimen/dip15"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxLines="8"
+        android:minLines="5"
+        android:gravity="start"
+        android:textSize="@dimen/font14"
+        android:hint="请提出您宝贵的意见"
+        android:background="@color/white"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/line_color" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btn_submit"
+            style="@style/SmsButton"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dip40"
+            android:layout_marginTop="@dimen/dip30"
+            android:layout_marginBottom="@dimen/dip20"
+            android:layout_marginLeft="@dimen/dip60"
+            android:layout_marginRight="@dimen/dip60"
+            android:text="提     交" />
+
+        <TextView
+            android:layout_marginLeft="@dimen/dip15"
+            android:layout_marginRight="@dimen/dip15"
+            android:textColor="@color/actionsheet_gray"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="我们将从反馈意见的用户中，不定期抽取提出优秀意见的客户给予奖励。名单将在煤炭资讯的头条资讯中公布。"/>
+    </LinearLayout>
+
+</LinearLayout>

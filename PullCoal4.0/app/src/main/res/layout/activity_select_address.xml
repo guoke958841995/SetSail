@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <include
+        android:id="@+id/title_bar"
+        layout="@layout/layout_main_header" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.amap.api.maps.MapView
+            android:id="@+id/map_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <ScrollView
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="@dimen/dip25"
+            android:layout_marginRight="@dimen/dip25"
+            android:layout_marginBottom="@dimen/dip10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_gravity="bottom"
+                    android:layout_marginLeft="@dimen/dip25"
+                    android:layout_marginRight="@dimen/dip25"
+                    android:layout_marginBottom="@dimen/dip10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:background="@color/line_color"
+                        android:padding="@dimen/dip1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/dip10">
+
+                        <RelativeLayout
+                            android:gravity="center_horizontal"
+                            android:background="@color/white"
+                            android:layout_width="@dimen/dip40"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:layout_marginTop="@dimen/dip15"
+                                android:id="@+id/iv_my_address"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@mipmap/amap_mark_point" />
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:layout_toRightOf="@+id/iv_my_address"
+                            android:background="@color/white"
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <LinearLayout
+                                android:padding="@dimen/dip10"
+                                android:id="@+id/layout_address"
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:lines="1"
+                                    android:ellipsize="end"
+                                    android:gravity="center_vertical"
+                                    android:layout_weight="1"
+                                    android:id="@+id/tv_select_address"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_centerVertical="true"
+                                    android:layout_toLeftOf="@+id/iv_arrow"
+                                    android:layout_marginRight="@dimen/dip5"
+                                    android:text="请选择收货地区" />
+
+                                <ImageView
+                                    android:id="@+id/iv_arrow"
+                                    android:layout_width="30dp"
+                                    android:layout_height="25dp"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_centerVertical="true"
+                                    android:src="@drawable/icon_right_arrow" />
+                            </LinearLayout>
+
+                            <View
+                                android:layout_marginLeft="@dimen/dip10"
+                                android:layout_width="match_parent"
+                                android:layout_height="2px"
+                                android:background="@color/line_color"/>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/item_bt_bg"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal"
+                                android:padding="@dimen/dip10">
+
+                                <EditText
+                                    android:textCursorDrawable="@drawable/shape_textcursor"
+                                    android:id="@+id/et_detailed_address"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@null"
+                                    android:hint="请输入详细地址"
+                                    android:maxLines="2"
+                                    android:inputType="text"
+                                    android:imeOptions="actionDone"
+                                    android:singleLine="true"
+                                    android:textColor="@color/text_subtitle"
+                                    android:textColorHint="@color/first_fargment_text_gray"
+                                    android:textSize="14sp" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tv_determine"
+                        android:textSize="@dimen/font16"
+                        android:text="确定"
+                        android:gravity="center"
+                        android:textColor="@color/white"
+                        android:background="@drawable/button_shape"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dip50" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+
+    </FrameLayout>
+
+</LinearLayout>

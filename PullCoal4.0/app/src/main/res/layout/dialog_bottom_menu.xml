@@ -1,0 +1,58 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="12dip">
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/dialog_botton_menu_linearlayout"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/dip30">
+
+        <ImageView
+            android:src="@mipmap/upload_photo_bg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/dialog_botton_menu_image" />
+
+        <TextView
+            android:layout_marginLeft="@dimen/dip5"
+            android:layout_marginTop="@dimen/dip10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_color_white"
+            android:text="1、请严格按照图例上传" />
+
+        <TextView
+            android:layout_marginLeft="@dimen/dip5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_color_white"
+            android:layout_marginTop="@dimen/dip10"
+            android:text="2、四角对齐，信息完整。如模糊、反光、太暗、有遮挡，则不予认证。" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lay_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dip"
+        android:orientation="vertical"/>
+
+    <TextView
+        android:id="@+id/btn_add"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/common_dialog_selection_selector_singleton"
+        android:paddingBottom="15dip"
+        android:paddingTop="15dip"
+        android:layout_marginBottom="15dp"
+        android:text="@string/cancel"
+        android:gravity="center"
+        android:textColor="#007AFF"
+        android:textSize="19sp"/>
+
+</LinearLayout>

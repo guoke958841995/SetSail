@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/dip15">
+
+    <View
+        android:id="@+id/view_line"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dip15"/>
+
+    <RelativeLayout
+        android:gravity="center_vertical"
+        android:background="@color/white"
+        android:padding="@dimen/dip10"
+        android:id="@+id/title_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dip45"
+        tools:ignore="UselessParent">
+
+        <TextView
+            android:layout_marginLeft="@dimen/dip5"
+            android:textSize="@dimen/dip16"
+            android:textColor="@color/app_title_text_color_normal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/title_text" />
+
+
+        <LinearLayout
+            android:layout_gravity="right"
+            android:layout_alignParentRight="true"
+            android:id="@+id/right_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_marginRight="-7dp"
+                android:textSize="@dimen/dip16"
+                android:text="查看更多"
+                android:textColor="@color/gary" />
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="20dp"
+                android:layout_marginRight="-5dp"
+                android:src="@drawable/icon_right_arrow" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/my_srecycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:splitMotionEvents="false"
+        android:background="@color/white"
+        android:paddingLeft="@dimen/dip10"
+        android:paddingRight="@dimen/dip10">
+
+    </android.support.v7.widget.RecyclerView>
+
+
+</LinearLayout>

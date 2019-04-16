@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <title>pc sticky</title>
+    <style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    .banner {
+        height: 200px;
+    }
+    .nav {
+        height: 40px;
+        background-color: skyblue;
+        border: 1px solid silver;
+    }
+    .sticky {
+        /*滚过初始位置时自动吸顶*/
+        position: -webkit-sticky;
+        position: sticky;
+        /*吸顶时的定位*/
+        top: 0;
+        left: 0;
+        /*z比下方所有z高*/
+        z-index: 9999;
+    }
+    .content {
+        height: 1500px;
+    }
+
+    .fixed-top {
+        position: fixed;
+        width: 100%;
+        left: 0;
+        top: 0;
+    }
+
+    </style>
+</head>
+<body>
+<div class="banner">轮播图</div>
+
+<div class="nav">吸顶元素</div>
+<div class="content">很长的内容</div>
+
+<script src="https://cdn.bootcss.com/zepto/1.0rc1/zepto.min.js"></script>
+<script>
+	  var stickyEl = document.querySelector('.nav');
+	  function fixed(num) {
+         var u = navigator.userAgent;
+         var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1;
+         var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/);
+         if(isAndroid) {
+            document.body.onscroll = function(e) {
+                var scrollT = document.body.scrollTop;
+                if (scrollT > num) {
+                    $(stickyEl).addClass('fixed-top');
+                }else {
+                    $(stickyEl).removeClass('fixed-top');
+                }
+            };
+        }else if(isiOS) {
+            $(stickyEl).addClass('sticky');
+            console.log(11);
+        }
+    }
+    fixed(200);
+  </script>
+</body>

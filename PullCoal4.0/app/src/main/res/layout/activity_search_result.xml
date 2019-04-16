@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical">
+
+
+    <!--标题头-->
+    <RelativeLayout
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:layout_height="@dimen/dip48"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:onClick="back"
+            android:paddingBottom="5dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="5dp"
+            android:paddingTop="5dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/btn_back" />
+
+        <EditText
+            android:id="@+id/et_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_toRightOf="@+id/iv_back"
+            android:background="@drawable/search_shape_background"
+            android:textCursorDrawable="@drawable/shape_textcursor"
+            android:gravity="center_vertical"
+            android:hint="搜索"
+            android:imeOptions="actionSearch"
+            android:maxLines="1"
+            android:inputType="text"
+            android:paddingLeft="40dp"
+            android:textSize="16sp"
+            android:textColorHint="@color/province_line_border" />
+
+        <ImageView
+            android:layout_width="@dimen/dip15"
+            android:layout_height="@dimen/dip15"
+            android:layout_centerVertical="true"
+            android:layout_alignLeft="@id/et_search"
+            android:layout_marginLeft="@dimen/dip15"
+            android:src="@drawable/search_icon" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:background="@color/line_color"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.sxhalo.PullCoal.ui.smoothlistview.SmoothListView
+            android:id="@+id/search_list_type"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@null"
+            android:dividerHeight="0dp"
+            android:fadingEdge="none"
+            android:overScrollMode="never"
+            android:scrollbars="none"/>
+
+
+        <com.sxhalo.PullCoal.ui.addrightview.LayoutContrastView
+            android:visibility="gone"
+            android:id="@+id/ll_contrast"
+            android:layout_gravity="bottom"
+            android:layout_width="match_parent"
+            android:layout_height="51dp"/>
+
+        <LinearLayout
+            android:id="@+id/listview_ementy"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <ImageView
+                android:layout_width="140dp"
+                android:layout_height="140dp"
+                android:src="@mipmap/search_anomaly_3x" />
+
+            <TextView
+                android:id="@+id/text_ementy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="搜索感兴趣的内容"
+                android:textColor="@color/first_fargment_text_grays"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/listview_no_net"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <ImageView
+                android:layout_width="140dp"
+                android:layout_height="140dp"
+                android:src="@mipmap/net_anomaly_3x" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="网络异常，请稍后再试~"
+                android:textColor="@color/first_fargment_text_grays"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+    </FrameLayout>
+
+
+
+
+</LinearLayout>

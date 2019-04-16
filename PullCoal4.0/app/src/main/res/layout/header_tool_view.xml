@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:text="实用服务"
+        android:padding="@dimen/dip10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px_line"
+        android:background="@color/line_color" />
+
+    <LinearLayout
+        android:background="@color/white"
+        android:padding="@dimen/dip10"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_margin="@dimen/dip2"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:scaleType="fitXY"
+                android:id="@+id/imageView0"/>
+            <ImageView
+                android:layout_margin="@dimen/dip2"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:scaleType="fitXY"
+                android:id="@+id/imageView1"/>
+            <ImageView
+                android:layout_margin="@dimen/dip2"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:scaleType="fitXY"
+                android:id="@+id/imageView2"/>
+            <ImageView
+                android:layout_margin="@dimen/dip2"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:scaleType="fitXY"
+                android:id="@+id/imageView3"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_margin="@dimen/dip2"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_marginRight="@dimen/dip2"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:scaleType="fitXY"
+                android:id="@+id/imageView4"/>
+
+
+            <ImageView
+                android:layout_marginLeft="@dimen/dip2"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:scaleType="fitXY"
+                android:id="@+id/imageView5"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px_line"
+        android:background="@color/line_color" />
+
+</LinearLayout>

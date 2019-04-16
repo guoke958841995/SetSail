@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:id="@+id/layout1"
+        style="@style/title_bar_style"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/title_bar_left"
+            android:layout_width="@dimen/dip40"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="5dp"
+            android:paddingTop="5dp"
+            android:src="@drawable/btn_back" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@+id/map_type"
+            android:layout_toRightOf="@+id/title_bar_left"
+            android:padding="@dimen/dip5">
+
+            <EditText
+                android:textCursorDrawable="@drawable/shape_textcursor"
+                android:id="@+id/et_search"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/dip5"
+                android:layout_marginTop="@dimen/dip5"
+                android:layout_toRightOf="@+id/iv_back"
+                android:background="@drawable/search_shape_background"
+                android:gravity="center_vertical"
+                android:hint="查找信息部"
+                android:inputType="text"
+                android:imeOptions="actionDone"
+                android:maxLines="1"
+                android:paddingLeft="40dp"
+                android:textColorHint="@color/province_line_border"
+                android:textSize="@dimen/font14" />
+
+            <ImageView
+                android:layout_width="@dimen/dip15"
+                android:layout_height="@dimen/dip15"
+                android:layout_alignLeft="@id/et_search"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dip15"
+                android:src="@mipmap/search_icon" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/map_type"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="@dimen/dip5"
+            android:layout_marginLeft="@dimen/dip10"
+            android:layout_marginRight="@dimen/dip15"
+            android:layout_marginTop="@dimen/dip5"
+            android:gravity="center"
+            android:text="地图模式"
+            android:textColor="@color/app_title_text_color" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_top"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dip45"
+        android:background="@color/white">
+
+        <RelativeLayout
+            android:id="@+id/layout_area"
+            android:layout_width="@dimen/dip0"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/tv_area"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:textColor="@color/app_title_text_color_normal"
+                android:ellipsize="end"
+                android:ems="4"
+                android:gravity="center"
+                android:maxLines="1"
+                android:text="全国" />
+
+            <ImageView
+                android:id="@+id/iv_area"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/tv_area"
+                android:src="@mipmap/icon_arrow_down" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_order"
+            android:layout_width="@dimen/dip0"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/tv_order"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:ellipsize="end"
+                android:textColor="@color/app_title_text_color_normal"
+                android:ems="4"
+                android:gravity="center"
+                android:maxLines="1"
+                android:text="综合排序" />
+
+            <ImageView
+                android:id="@+id/iv_order"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/tv_order"
+                android:src="@mipmap/icon_arrow_down" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:background="@color/line_color" />
+
+        <LinearLayout
+            android:id="@+id/layout_filter"
+            android:layout_width="@dimen/dip0"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/actionsheet_blue"
+                android:layout_marginRight="@dimen/dip3"
+                android:text="筛选" />
+
+            <ImageView
+                android:layout_width="@dimen/dip14"
+                android:layout_height="@dimen/dip14"
+                android:layout_marginLeft="@dimen/dip3"
+                android:src="@drawable/icon_filter" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/line_color" />
+
+    <include layout="@layout/layout_no_data" />
+
+    <com.sxhalo.PullCoal.ui.smoothlistview.SmoothListView
+        android:id="@+id/information_department_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/transparent"
+        android:divider="@null"
+        android:dividerHeight="0dp"
+        android:fadingEdge="none"
+        android:overScrollMode="never"
+        android:scrollbars="none" />
+
+</LinearLayout>

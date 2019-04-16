@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:paddingRight="@dimen/dip15"
+        android:paddingLeft="@dimen/dip15"
+        android:paddingTop="@dimen/dip10"
+        android:paddingBottom="@dimen/dip10"
+        android:background="@drawable/item_bt_bg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/sampling_name"
+            android:textSize="@dimen/font16"
+            android:textColor="@color/app_title_text_color_normal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/sampling_type"
+            android:textColor="@color/gray"
+            android:layout_marginTop="@dimen/dip5"
+            android:layout_below="@+id/sampling_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:textColor="@color/text_color_blue"
+            android:textSize="@dimen/font16"
+            android:layout_alignParentRight="true"
+            android:id="@+id/sampling_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_marginTop="@dimen/dip5"
+            android:textColor="@color/gray"
+            android:layout_below="@+id/sampling_state"
+            android:id="@+id/sampling_time"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px_line"
+        android:background="@color/line_color"/>
+
+</LinearLayout>

@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <View
+        android:layout_marginTop="@dimen/dip10"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px_line"
+        android:background="@color/line_color"/>
+
+    <LinearLayout
+        android:paddingRight="@dimen/dip15"
+        android:paddingLeft="@dimen/dip15"
+        android:orientation="vertical"
+        android:background="@drawable/item_bt_bg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:paddingTop="@dimen/dip10"
+            android:paddingBottom="@dimen/dip10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:textColor="@color/label_one_background"
+                android:id="@+id/customer_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="@dimen/dip5"
+                android:drawableLeft="@mipmap/icon_guest_registration" />
+
+            <TextView
+                android:layout_alignParentRight="true"
+                android:id="@+id/follow_name"
+                android:text="跟单人："
+                android:textColor="@color/app_title_text_color"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px_line"
+            android:background="@color/line_color"/>
+
+        <LinearLayout
+            android:paddingTop="@dimen/dip10"
+            android:paddingBottom="@dimen/dip10"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_weight="1"
+                android:layout_width="@dimen/dip0"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/from_address"
+                    android:textSize="@dimen/font16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:layout_marginLeft="@dimen/dip10"
+                    android:layout_toRightOf="@+id/from_address"
+                    android:id="@+id/to_address"
+                    android:drawableLeft="@drawable/icon_start_and_end"
+                    android:drawablePadding="@dimen/dip10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/font16" />
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_marginTop="@dimen/dip5"
+                    android:layout_below="@+id/from_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text="类型："
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:layout_marginRight="@dimen/dip20"
+                        android:id="@+id/dict_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/text_money"/>
+
+                    <TextView
+                        android:text="需求量："
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:id="@+id/quantity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/text_money"/>
+
+                    <TextView
+                        android:id="@+id/tv_unit"
+                        android:text="吨"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:lines="1"
+                        android:id="@+id/status"
+                        android:layout_marginLeft="@dimen/dip20"
+                        android:text="状态："
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_gravity="center"
+                android:id="@+id/contact_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/derver_tel" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px_line"
+            android:background="@color/line_color"/>
+
+        <LinearLayout
+            android:paddingTop="@dimen/dip10"
+            android:paddingBottom="@dimen/dip10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/registrar_name"
+                android:layout_weight="1"
+                android:text="登记人："
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/gray"/>
+
+            <TextView
+                android:id="@+id/update_time"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:text="更新时间："
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/gray"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px_line"
+        android:background="@color/line_color"/>
+
+</LinearLayout>

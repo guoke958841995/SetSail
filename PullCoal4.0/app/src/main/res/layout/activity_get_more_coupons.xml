@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activity_bg_color">
+
+    <include
+        android:id="@+id/title_bar"
+        layout="@layout/layout_main_header" />
+
+    <ScrollView
+        android:layout_below="@+id/title_bar"
+        android:scrollbars="none"
+        android:fillViewport="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+           <FrameLayout
+               android:layout_width="match_parent"
+               android:layout_height="match_parent">
+
+               <ImageView
+                   android:layout_width="match_parent"
+                   android:layout_height="@dimen/dip220"
+                   android:scaleType="fitXY"
+                   android:src="@mipmap/more_coupons_top_banner" />
+
+               <RelativeLayout
+                   android:background="@drawable/coupons_bottom"
+                   android:layout_marginTop="170dp"
+                   android:paddingBottom="@dimen/dip40"
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent">
+
+                   <com.sxhalo.PullCoal.ui.CustomListView
+                       android:padding="@dimen/dip5"
+                       android:background="@drawable/background_shape_white"
+                       android:id="@+id/custom_list_view"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:listSelector="@android:color/transparent">
+
+                   </com.sxhalo.PullCoal.ui.CustomListView>
+
+                   <Button
+                       android:layout_below="@+id/custom_list_view"
+                       android:layout_marginTop="@dimen/dip40"
+                       android:id="@+id/btn_one_key"
+                       android:layout_width="match_parent"
+                       android:layout_height="45.0dip"
+                       android:background="@drawable/button_shape_golden"
+                       android:text="一键领取"
+                       android:textColor="@color/white"
+                       android:textSize="16sp" />
+
+               </RelativeLayout>
+
+           </FrameLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+</RelativeLayout>

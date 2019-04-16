@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout android:orientation="horizontal" style="@style/title_bar_style">
+
+        <ImageView
+            android:id="@+id/title_bar_left"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:gravity="center_vertical"
+            android:src="@drawable/btn_back"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="5dp"
+            android:paddingTop="5dp"
+            android:visibility="visible" />
+
+        <com.sxhalo.PullCoal.ui.SearchView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/search_layout"
+            app:queryHint="请输入商品名称"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:focusable="true"
+            android:focusableInTouchMode="true"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px_line"
+        android:background="@color/line_color"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.sxhalo.amoldzhang.library.extras.recyclerview.PullToRefreshRecyclerView
+            android:id="@+id/pull_to_refresh_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </com.sxhalo.amoldzhang.library.extras.recyclerview.PullToRefreshRecyclerView>
+
+      <include layout="@layout/layout_no_data"/>
+
+    </FrameLayout>
+
+</LinearLayout>

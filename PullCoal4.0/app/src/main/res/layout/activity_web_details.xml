@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root_view"
+    style="@style/detail_activity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@null">
+
+    <include android:id="@+id/title_bar" layout="@layout/layout_main_header" />
+
+    <WebView
+        android:id="@+id/wb_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:scrollbars="none"
+        android:layout_below="@+id/title_bar"
+        android:layout_above="@+id/btn_add" />
+
+
+    <LinearLayout
+        android:id="@+id/btn_add"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dip50">
+
+
+        <LinearLayout
+            android:paddingTop="@dimen/dip1"
+            android:background="@color/line_color"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_marginRight="0.5dp"
+                android:orientation="vertical"
+                android:id="@+id/btn_coal_collect"
+                android:gravity="center"
+                android:background="@color/white"
+                android:layout_weight="1"
+                android:layout_width="@dimen/dip0"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_gravity="center_horizontal"
+                    android:id="@+id/iv_btn_coal_collect"
+                    android:src="@mipmap/coal_collect_pressed"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp" />
+
+                <TextView
+                    android:layout_marginTop="@dimen/dip2"
+                    android:textSize="@dimen/font12"
+                    android:id="@+id/tv_btn_coal_collect"
+                    android:text="收藏"
+                    android:textColor="@color/btn_cancel_color_hell"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginLeft="0.5dp"
+                android:background="@color/white"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:id="@+id/btn_coal_contrast"
+                android:gravity="center"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/iv_btn_coal_contrast"
+                    android:src="@mipmap/icon_buy_coal_contarst_normal"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"/>
+
+                <TextView
+                    android:layout_marginTop="@dimen/dip2"
+                    android:id="@+id/tv_btn_coal_contrast"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/btn_cancel_color"
+                    android:textSize="@dimen/font12"
+                    android:text="对比"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/btn_buy_coal"
+            android:textColor="@color/white"
+            android:layout_width="@dimen/dip0"
+            android:layout_height="match_parent"
+            android:layout_marginRight="@dimen/px_line"
+            android:layout_weight="1"
+            android:background="@drawable/rectangle_bt_blue_bg"
+            android:gravity="center"
+            android:text="我要买煤" />
+
+    </LinearLayout>
+
+    <Button
+        android:visibility="gone"
+        android:layout_marginBottom="@dimen/dip5"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dip40"
+        android:layout_marginLeft="@dimen/dip5"
+        android:layout_marginRight="@dimen/dip5"
+        android:layout_weight="1"
+        android:background="@drawable/button_shape"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font18" />
+
+    <View
+        android:id="@+id/error_image"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:background="@mipmap/error_web_view"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/view_no_net"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:layout_below="@+id/title_bar"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            android:src="@mipmap/net_anomaly_3x" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="网络异常，请检查设备~"
+            android:textColor="@color/first_fargment_text_grays"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+
+</RelativeLayout>

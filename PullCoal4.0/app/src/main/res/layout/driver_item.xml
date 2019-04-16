@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:background="@drawable/item_bt_bg"
+        android:padding="@dimen/dip5"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/select_ll_view"
+            android:gravity="center"
+            android:layout_width="40dp"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/iv_select"
+                android:src="@drawable/checkbox_selector"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/selected_driver"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="@dimen/dip20"
+                    android:src="@drawable/selected_image"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/dip5">
+
+
+                    <FrameLayout
+                        android:layout_width="70dp"
+                        android:layout_height="70dp">
+
+                        <com.sxhalo.PullCoal.tools.image.CircleImageView
+                            android:id="@+id/recommend_drivder_image"
+                            android:layout_width="68dp"
+                            android:layout_height="68dp"
+                            android:src="@mipmap/main_tab_item"
+                            app:border_color="#ffffffff"
+                            app:border_width="0dp"></com.sxhalo.PullCoal.tools.image.CircleImageView>
+
+                        <ImageView
+                            android:id="@+id/driver_current_status"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:layout_marginLeft="@dimen/dip2"
+                            android:layout_marginRight="@dimen/dip2"
+                            android:src="@mipmap/free"
+                            android:text="空闲中" />
+                    </FrameLayout>
+
+                    <com.sxhalo.PullCoal.ui.CustomeProgressBar
+                        android:id="@+id/text_progressbar"
+                        style="@android:style/Widget.ProgressBar.Horizontal"
+                        android:layout_width="@dimen/dip70"
+                        android:layout_height="@dimen/dip15" />
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/dip5"
+                    android:padding="@dimen/dip10">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/drivert_name_num"
+                            android:layout_width="wrap_content"
+                            android:textColor="@color/title_color"
+                            android:layout_height="wrap_content"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:visibility="gone"
+                            android:id="@+id/tv_is_friend"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="@dimen/dip8"
+                            android:background="@drawable/shape_light_yellow"
+                            android:gravity="center"
+                            android:padding="@dimen/dip1"
+                            android:text="好友"
+                            android:textColor="@color/white"
+                            android:textSize="10sp"/>
+
+                        <TextView
+                            android:text="专线"
+                            android:visibility="gone"
+                            android:id="@+id/tv_special_line"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="@dimen/dip4"
+                            android:background="@drawable/shape_specil_line"
+                            android:padding="@dimen/dip1"
+                            android:textColor="@color/white"
+                            android:textSize="10sp" />
+
+                        <com.sxhalo.PullCoal.ui.ResetRatingBar
+                            android:layout_marginLeft="@dimen/dip40"
+                            xmlns:hedgehog="http://schemas.android.com/apk/res-auto"
+                            android:id="@+id/recommend_drivder_ratingbar1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:isIndicator="true"
+                            android:numStars="5"
+                            android:rating="2"
+                            hedgehog:starCount="5"
+                            hedgehog:starEmpty="@mipmap/ratingbar_normal"
+                            hedgehog:starFill="@mipmap/ratingbar_pressed"
+                            hedgehog:starImageSize="12dp" >
+                        </com.sxhalo.PullCoal.ui.ResetRatingBar>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/drivert_car_content"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/button_normal" />
+
+                    <LinearLayout
+                        android:layout_alignParentBottom="true"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_weight="1"
+                            android:layout_width="@dimen/dip0"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:text="车牌："
+                                android:textColor="@color/setting_alt_text_normal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+
+                            <TextView
+                                android:id="@+id/tv_licence_plate"
+                                android:layout_width="wrap_content"
+                                android:padding="@dimen/dip3"
+                                android:lines="1"
+                                android:textSize="@dimen/font13"
+                                android:layout_height="wrap_content" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_weight="1"
+                            android:layout_width="@dimen/dip0"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:text="累计："
+                                android:textColor="@color/setting_alt_text_normal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+
+                            <TextView
+                                android:id="@+id/drivert_common_singular"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/actionsheet_red" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/setting_alt_text_normal"
+                                android:text="单"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/driver_fread_state"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:gravity="center_vertical|right"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/derver_tel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@mipmap/derver_tel" />
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/line_color" />
+
+</LinearLayout>

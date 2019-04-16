@@ -1,0 +1,808 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/layout_top"
+        layout="@layout/layout_main_header" />
+
+    <ScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/layout_bottom"
+        android:layout_below="@+id/layout_top"
+        android:background="@color/scrollview_background"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!--货运地址信息-->
+            <RelativeLayout
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:padding="@dimen/dip10">
+
+                <!--始发地-->
+                <RelativeLayout
+                    android:layout_toLeftOf="@+id/iv_navi"
+                    android:id="@+id/layout_from"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dip5">
+
+                    <ImageView
+                        android:id="@+id/iv_start"
+                        android:layout_width="@dimen/dip20"
+                        android:layout_height="@dimen/dip20"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/icon_cargo_detail_start" />
+
+                    <TextView
+                        android:id="@+id/tv_start_area"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dip5"
+                        android:layout_toRightOf="@+id/iv_start"
+                        android:gravity="top"
+                        android:padding="@dimen/dip0"
+                        android:textColor="@color/app_title_text_color_normal"
+                        android:textSize="@dimen/font15" />
+
+                </RelativeLayout>
+
+                <!--目的地-->
+                <RelativeLayout
+                    android:layout_toLeftOf="@+id/iv_navi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/layout_from"
+                    android:layout_marginBottom="@dimen/dip5"
+                    android:layout_marginTop="@dimen/dip10">
+
+                    <ImageView
+                        android:id="@+id/iv_end"
+                        android:layout_width="@dimen/dip20"
+                        android:layout_height="@dimen/dip20"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/icon_cargo_detail_destination" />
+
+
+                    <TextView
+                        android:id="@+id/tv_end_area"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dip5"
+                        android:layout_toRightOf="@+id/iv_end"
+                        android:gravity="top"
+                        android:padding="@dimen/dip0"
+                        android:textColor="@color/app_title_text_color_normal"
+                        android:textSize="@dimen/font15" />
+
+                </RelativeLayout>
+
+                <!--导航布局-->
+                <LinearLayout
+                    android:visibility="gone"
+                    android:id="@+id/iv_navi"
+                    android:orientation="vertical"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/dip5">
+
+                    <ImageView
+                        android:layout_gravity="center"
+                        android:layout_width="@dimen/dip30"
+                        android:layout_height="@dimen/dip20"
+                        android:scaleType="centerInside"
+                        android:src="@mipmap/icon_to"
+                        android:visibility="visible" />
+
+                    <TextView
+                        android:textColor="@color/actionsheet_gray"
+                        android:textSize="@dimen/font10"
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="距离"/>
+
+                    <TextView
+                        android:textColor="@color/actionsheet_gray"
+                        android:id="@+id/tv_distance"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/font10"
+                        android:gravity="center"
+                        android:lines="1"
+                        android:text=""/>
+
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/line_color" />
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginTop="@dimen/dip15"
+                android:background="@color/line_color" />
+
+            <!--货物详情信息-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dip5"
+                    android:layout_marginTop="@dimen/dip5"
+                    android:gravity="center_vertical"
+                    android:padding="@dimen/dip10">
+
+                    <TextView
+                        android:gravity="center_vertical"
+                        android:id="@+id/tv_category_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="货物："
+                        android:textSize="@dimen/font16" />
+
+                    <TextView
+                        android:gravity="center_vertical"
+                        android:id="@+id/tv_transport_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_toRightOf="@+id/tv_category_title"
+                        android:textSize="@dimen/font16" />
+
+                    <TextView
+                        android:gravity="center_vertical"
+                        android:id="@+id/tv_transport_cost"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:textColor="@color/short_red"
+                        android:layout_toLeftOf="@+id/transport_calculator"
+                        android:layout_marginRight="@dimen/dip30"
+                        android:textSize="@dimen/font16" />
+
+                    <LinearLayout
+                        android:visibility="gone"
+                        android:layout_marginRight="@dimen/dip15"
+                        android:id="@+id/transport_calculator"
+                        android:gravity="center"
+                        android:layout_alignParentRight="true"
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:src="@mipmap/icon_calculator"
+                            android:layout_width="20dp"
+                            android:layout_height="15dp" />
+
+                        <TextView
+                            android:layout_marginTop="@dimen/dip2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="运费计算"
+                            android:textColor="@color/short_red"
+                            android:textSize="@dimen/font7" />
+
+                    </LinearLayout>
+
+
+                </RelativeLayout>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/line_color" />
+
+                <!--费用信息-->
+                <LinearLayout
+                    android:layout_marginTop="@dimen/dip5"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dip60"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="@dimen/dip0"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/tv_information_fee"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_above="@+id/view1"
+                            android:layout_marginBottom="@dimen/dip5"
+                            android:gravity="center"
+                            android:textColor="@color/actionsheet_blue"
+                            android:textSize="@dimen/font16" />
+
+                        <View
+                            android:id="@+id/view1"
+                            android:layout_width="match_parent"
+                            android:layout_height="1px"
+                            android:layout_centerInParent="true" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/view1"
+                            android:gravity="center"
+                            android:text="信息费"
+                            android:textColor="@color/gray"
+                            android:textSize="@dimen/font16" />
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="1px"
+                        android:layout_height="match_parent"
+                        android:background="@color/line_color" />
+
+                    <RelativeLayout
+                        android:layout_width="@dimen/dip0"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/tv_loading_charges"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_above="@+id/view2"
+                            android:layout_marginBottom="@dimen/dip5"
+                            android:gravity="center"
+                            android:textColor="@color/actionsheet_blue"
+                            android:textSize="@dimen/font16" />
+
+                        <View
+                            android:id="@+id/view2"
+                            android:layout_width="match_parent"
+                            android:layout_height="1px"
+                            android:layout_centerInParent="true" />
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/view2"
+                            android:gravity="center"
+                            android:text="装货费"
+                            android:textColor="@color/gray"
+                            android:textSize="@dimen/font16" />
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="1px"
+                        android:layout_height="match_parent"
+                        android:background="@color/line_color" />
+
+                    <RelativeLayout
+                        android:layout_width="@dimen/dip0"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/tv_unloading_charge"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_above="@+id/view3"
+                            android:layout_marginBottom="@dimen/dip5"
+                            android:gravity="center"
+                            android:textColor="@color/actionsheet_blue"
+                            android:textSize="@dimen/font16" />
+
+                        <View
+                            android:id="@+id/view3"
+                            android:layout_width="match_parent"
+                            android:layout_height="1px"
+                            android:layout_centerInParent="true" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/view3"
+                            android:gravity="center"
+                            android:text="卸车费"
+                            android:textColor="@color/gray"
+                            android:textSize="@dimen/font16" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/line_color" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/line_color" />
+
+            <!--货运描述-->
+            <LinearLayout
+                android:background="@color/white"
+                android:padding="@dimen/dip10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/requirement_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/font15" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/line_color" />
+
+            <!--动态-->
+            <LinearLayout
+                android:id="@+id/news_content_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:padding="@dimen/dip10">
+
+                <TextView
+                    android:id="@+id/production_source"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="货  源  地："
+                    android:textSize="@dimen/font16" />
+
+                <TextView
+                    android:id="@+id/news_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dip10"
+                    android:text="最新动态："
+                    android:lineSpacingExtra="@dimen/dip3"
+                    android:textColor="@color/setting_alt_text_normal"
+                    android:textSize="@dimen/font16" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dip10"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/imageView"
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:scaleType="centerCrop"
+                        android:src="@color/first_table_layout_bg"
+                        android:visibility="gone" />
+
+                    <com.sxhalo.PullCoal.ui.NoScrollGridView
+                        android:id="@+id/news_gridview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:horizontalSpacing="@dimen/dip10"
+                        android:listSelector="@android:color/transparent"
+                        android:numColumns="3"
+                        android:verticalSpacing="@dimen/dip10" />
+
+                    <View
+                        android:id="@+id/view_grid"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:background="@android:color/transparent"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+
+                <TextView
+                    android:id="@+id/time_refresh"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dip5"
+                    android:textColor="@color/first_fargment_text_gray"
+                    android:gravity="right"
+                    android:text="刚刚" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/line_color" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/line_color" />
+
+            <!--标签-->
+            <LinearLayout
+                android:id="@+id/label_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:visibility="gone"
+                    android:id="@+id/publishTag0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/label_one_shape"
+                    android:paddingLeft="@dimen/dip2"
+                    android:paddingRight="@dimen/dip2"
+                    android:text="标签一"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:visibility="gone"
+                    android:id="@+id/publishTag1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dip5"
+                    android:background="@drawable/label_two_shape"
+                    android:paddingLeft="@dimen/dip2"
+                    android:paddingRight="@dimen/dip2"
+                    android:text="标签二"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:visibility="gone"
+                    android:id="@+id/publishTag2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dip5"
+                    android:background="@drawable/label_three_shape"
+                    android:paddingLeft="@dimen/dip2"
+                    android:paddingRight="@dimen/dip2"
+                    android:text="标签三"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:visibility="gone"
+                    android:id="@+id/publishTag3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dip5"
+                    android:background="@drawable/label_four_shape"
+                    android:paddingLeft="@dimen/dip2"
+                    android:paddingRight="@dimen/dip2"
+                    android:text="标签四"
+                    android:textColor="@color/white" />
+
+            </LinearLayout>
+
+            <!--备注-->
+            <LinearLayout
+                android:id="@+id/remark_ll_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:padding="@dimen/dip10">
+
+                <TextView
+                    android:visibility="gone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="备注："
+                    android:textColor="@color/actionsheet_gray"
+                    android:textSize="@dimen/font15" />
+
+                <TextView
+                    android:id="@+id/tv_transport_remark"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="4"
+                    android:lineSpacingMultiplier="1.2"
+                    android:textColor="@color/actionsheet_gray"
+                    android:textSize="@dimen/font15" />
+            </LinearLayout>
+
+            <!--信息部布局-->
+            <LinearLayout
+                android:layout_marginTop="@dimen/dip15"
+                android:paddingBottom="@dimen/dip10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/line_color" />
+
+                <!--信息部来源-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/dip10">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="信息来源："
+                        android:textColor="@color/app_title_text_color_normal" />
+
+                    <TextView
+                        android:id="@+id/tv_source"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/app_title_text_color_normal" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/line_color" />
+
+                <RelativeLayout
+                    android:layout_marginTop="@dimen/dip10"
+                    android:paddingRight="@dimen/dip10"
+                    android:paddingLeft="@dimen/dip10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@+id/iv_phone"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_info_from_detail"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textColor="@color/app_title_text_color_normal"
+                            android:visibility="gone" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="信用等级："
+                                android:textColor="@color/app_title_text_color_normal" />
+
+                            <com.sxhalo.PullCoal.ui.ResetRatingBar xmlns:hedgehog="http://schemas.android.com/apk/res-auto"
+                                android:id="@+id/quality_rating"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:isIndicator="true"
+                                hedgehog:starCount="5"
+                                hedgehog:starEmpty="@mipmap/ratingbar_normal"
+                                hedgehog:starFill="@mipmap/ratingbar_pressed"
+                                hedgehog:starImageSize="12dp"></com.sxhalo.PullCoal.ui.ResetRatingBar>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dip3">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="联  系  人："
+                                android:textColor="@color/app_title_text_color_normal" />
+
+                            <TextView
+                                android:id="@+id/tv_contact"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/iv_phone"
+                        android:layout_width="@dimen/dip40"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:scaleType="centerInside"
+                        android:src="@mipmap/derver_tel"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/address_view"
+                    android:paddingRight="@dimen/dip10"
+                    android:paddingBottom="@dimen/dip0"
+                    android:paddingLeft="@dimen/dip10"
+                    android:layout_marginTop="@dimen/dip3"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="详细地址："
+                        android:textColor="@color/app_title_text_color_normal" />
+
+                    <com.sxhalo.PullCoal.ui.JustifyTextView
+                        android:id="@+id/tv_detail_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/app_title_text_color_normal" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <!--说明布局-->
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/line_color" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dip15"
+                    android:layout_marginLeft="@dimen/dip10"
+                    android:layout_marginTop="@dimen/dip15"
+                    android:text="说明"
+                    android:textColor="@color/actionsheet_gray" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/line_color" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dip10"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/say_view_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dip10"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dip5"
+                            android:src="@drawable/gray_point" />
+
+                        <TextView
+                            android:id="@+id/tv_declare_1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dip10"
+                            android:textColor="@color/gray" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/say_view_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dip10"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dip5"
+                            android:src="@drawable/gray_point" />
+
+                        <TextView
+                            android:id="@+id/say_text_2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dip10"
+                            android:text="@string/transport_detail_instruction_2"
+                            android:textColor="@color/gray" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dip10"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dip5"
+                            android:src="@drawable/gray_point" />
+
+                        <TextView
+                            android:id="@+id/tv_declare_3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dip10"
+                            android:textColor="@color/gray" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/line_color" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:visibility="invisible"
+        android:id="@+id/layout_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dip55"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/btn_pull_coal"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dip40"
+            android:layout_marginLeft="@dimen/dip20"
+            android:layout_marginRight="@dimen/dip20"
+            android:background="@drawable/button_shape"
+            android:gravity="center"
+            android:text="接单拉煤"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font18" />
+
+    </LinearLayout>
+
+</RelativeLayout>

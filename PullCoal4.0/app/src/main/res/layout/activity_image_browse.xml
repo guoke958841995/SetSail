@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/page_size"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dip10"
+        android:gravity="center"
+        android:text="1/2"
+        android:textColor="@color/action_comment_text"
+        android:textSize="@dimen/font16" />
+
+    <com.sxhalo.PullCoal.ui.ExtendedViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/page_size"
+        android:layout_marginTop="@dimen/dip10" />
+
+</RelativeLayout>

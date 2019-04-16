@@ -1,0 +1,395 @@
+<resources>
+    <string name="app_name">拉煤宝</string>
+    <string name="app_title">拉煤宝</string>
+    <string name="app_last_sync">version 2016.03.01</string>
+    <!-- 页面名称 -->
+    <string name="main_navigation_home">首页</string>
+    <string name="main_navigation_coal">煤炭</string>
+    <string name="main_navigation_car">货运</string>
+    <string name="main_navigation_order">订单</string>
+    <string name="main_navigation_found">服务</string>
+    <string name="main_navigation_my">我的</string>
+
+
+    <string name="left_login_name">点击登陆</string>
+    <string name="left_drawer_item_first">资料认证</string>
+    <string name="left_drawer_item_second">企业简介</string>
+    <string name="left_drawer_item_third">设置</string>
+    <string name="left_drawer_item_fourth">手机验证</string>
+    <string name="drawer_item_left">我的订单</string>
+    <string name="collection_my">我的收藏</string>
+    <string name="subscribe_my_category">我的栏目</string>
+    <string name="subscribe_manager_category_info_2">单击增删栏目</string>
+    <string name="subscribe_more_category">更多栏目</string>
+    <string name="username_hint">请输入用户名</string>
+    <string name="phone_hint">请输入您的手机号</string>
+    <string name="pwd_hint">6-11位数字、字母或组合</string>
+    <string name="recommend_hint">请输入推荐人手机号(选填)</string>
+    <string name="phone_hint1">请输入您的验证码</string>
+    <string name="verification_password_hint">请确认新密码</string>
+    <string name="password_hint">请输入您的密码           </string>
+    <string name="old_password_hint">请输入旧密码           </string>
+    <string name="new_first_password_hint">请输入新密码           </string>
+    <string name="name">真实姓名</string>
+    <string name="number">身份证号或驾驶证号</string>
+    <string name="car_number">车牌号</string>
+    <string name="login_submit">登        录</string>
+    <string name="register_submit">注        册</string>
+    <string name="title_alert">提示</string>
+    <string name="cancel">取  消</string>
+    <string name="sure">确  定</string>
+    <string name="subscribe">¥</string>
+    <string name="app_text">TextView</string>
+    <string name="action_settings">Settings</string>
+    <string name="nav_desc">nav_desc</string>
+    <string name="header_hint_refresh_normal">下拉刷新</string>
+    <string name="header_hint_refresh_ready">松开刷新</string>
+    <string name="header_hint_refresh_loading">刷新中&#8230;</string>
+    <string name="header_hint_refresh_time">最后更新：</string>
+    <string name="footer_hint_load_normal">上拉载入更多</string>
+    <string name="footer_hint_load_ready">松开载入更多</string>
+    <string name="smoothlistview_header_hint_normal">下拉刷新</string>
+    <string name="smoothlistview_header_hint_ready">松开刷新</string>
+    <string name="smoothlistview_header_hint_loading">正在加载...</string>
+    <string name="smoothlistview_header_last_time">最后更新：</string>
+    <string name="smoothlistview_footer_hint_normal"></string>
+    <string name="smoothlistview_footer_hint_ready">松开载入更多</string>
+
+
+    <!--<string name="jingdong_pull_label">下拉可以刷新</string>-->
+    <!--<string name="jingdong_refreshing_label">正在加载中</string>-->
+    <!--<string name="jingdong_release_label">松开后刷新</string>-->
+
+    <!--<string name="tmall_pull_label">下拉刷新</string>-->
+    <!--<string name="tmall_refreshing_label">正在刷新...</string>-->
+    <!--<string name="tmall_release_label">松开立即刷新</string>-->
+
+    <string name="label_cancel_dislike">撤消</string>
+    <string name="day_today">今天</string>
+    <string name="day_yesterday">昨天</string>
+    <string name="day_before">前天</string>
+    <string name="search_count_fmt">发现%1$s篇文章</string>
+    <string name="pattern_update">发现%1$d条更新</string>
+    <string name="ss_pattern_update">发现%1$d条更新</string>
+    <string name="ss_have_a_rest">暂无更新, 休息一会儿</string>
+    <string name="gridview_typeface_size">14sp</string>
+    <string name="ok">完成</string>
+    <string name="wechat">微信</string>
+    <string name="moments">朋友圈</string>
+    <string name="qq">QQ</string>
+    <string name="qzone">QQ空间</string>
+    <string name="alipay">支付宝</string>
+    <string name="upmp">银联</string>
+    <string name="bfb">百度钱包</string>
+    <string name="jdpay">京东支付</string>
+    <string name="confirm">确认</string>
+    <string name="yuan">元</string>
+    <string name="donateFailMessage">\u3000\u3000感谢你的爱心，\n但是系统出现了一些错误</string>
+    <string name="validationErrors">错误</string>
+    <string name="notInstalled">未安装支付软件</string>
+    <string name="amount">支付金额</string>
+    <string name="missingImage">图片加载失败</string>
+    <string name="title_activity_register">RegisterActivity</string>
+    <string name="app_id">输入您讯飞的appid</string>
+    <string name="mypoistion">我的位置</string>
+    <string name="mappoistion">地图点选</string>
+    <string name="positioninfo">位置信息</string>
+
+    <string name="image">图片</string>
+    <string name="preview">预览</string>
+    <string name="select">选择</string>
+
+    <string name="preference_default_tts_role">xiaoyan</string>
+    <string name="preference_key_tts_speed">tts_speed</string>
+    <string name="preference_title_tts_speed">语速</string>
+    <string name="preference_default_tts_speed">50</string>
+    <string name="preference_dialog_title_tts_speed">选择语速</string>
+    <string name="preference_key_tts_volume">tts_volume</string>
+    <string name="preference_title_tts_volume">音量</string>
+    <string name="preference_default_tts_volume">50</string>
+    <string name="preference_dialog_title_tts_volume">选择音量</string>
+    <string name="preference_key_tts_pitch">tts_pitch</string>
+    <string name="preference_title_tts_pitch">语调</string>
+    <string name="preference_default_tts_pitch">50</string>
+    <string name="intell_bd_title">智能播报</string>
+    <string name="the_current_city">当前城市-</string>
+    <string name="the_location_city">当前城市</string>
+    <string name="recent_visit_to_the_city">最近访问城市</string>
+    <string name="the_hot_city"> 已开通城市</string>
+    <string name="activity_collierymessage_nanme">矿口信息</string>
+
+    <!-- PoiSearch -->
+    <string name="error_network">搜索失败,请检查网络连接！</string>
+    <string name="error_key">key验证无效！</string>
+    <string name="error_other">未知错误，请稍后重试!错误码为</string>
+    <string name="no_result">该范围内没有相关数据，请选择较大的区域进行检索！</string>
+    <string name="setting_text01">仅wifi下自动同步</string>
+    <string name="register_show">点击提交，即表示您已同意《拉煤宝平台用户及隐私安全协议》</string>
+
+    <!-- Update -->
+    <string name="UMBreak_Network">未联网</string>
+    <string name="UMUpdateTitle">发现新版本</string>
+    <string name="UMNewVersion">最新版本: </string>
+    <string name="UMUpdateContent">更新内容</string>
+    <string name="UMUpdateSize">仅需要下载:</string>
+    <string name="UMTargetSize">新版本大小:</string>
+    <string name="UMGprsCondition">（提示：非WIFI环境）</string>
+    <string name="UMUpdateNow">立即更新</string>
+    <string name="UMAppUpdate">应用更新</string>
+    <string name="UMNotNow">以后再说</string>
+    <string name="UMIgnore">忽略该版</string>
+    <string name="UMToast_IsUpdating">正在更新中....</string>
+    <string name="UMDialog_InstallAPK">最新版本已下载，是否安装？</string>
+
+    <!-- XListView  下拉刷新 -->
+    <string name="string_listview_pullrefresh">下拉可以刷新</string>
+    <string name="string_listview_lastupdate">上次更新</string>
+    <string name="string_listview_loadmore">加载更多</string>
+    <string name="xlistview_header_hint_normal">下拉刷新</string>
+    <string name="xlistview_header_hint_ready">松开刷新数据</string>
+    <string name="xlistview_header_hint_loading">正在加载&#8230;</string>
+    <string name="xlistview_header_last_time">最后更新：</string>
+    <string name="xlistview_footer_hint_normal"></string>
+    <string name="xlistview_footer_hint_ready">松开载入更多</string>
+    <string name="title_activity_navigation_end">NavigationEndActivity</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_offline">OfflineActivity</string>
+
+    <!--货运详情-->
+    <string name="transport_detail_instruction_1">如果对过程有疑问，请点击《接单拉煤常见问题帮助》了解详细的操作方法和相关信息。</string>
+    <string name="transport_detail_instruction_2">此货运信息为信息部发布，具体货运价格以您和信息部沟通结果为准。</string>
+    <string name="transport_detail_instruction_2_1">此货运信息为个人发布，具体货运价格以您和联系人沟通结果为准。</string>
+    <!--订单详情-->
+    <string name="order_detail_instruction_1">如果对过程有疑问，请点击《预订买煤常见问题帮助》了解详细的操作方法和相关信息。</string>
+    <string name="order_detail_instruction_2">所有的预约信息均为信息部发布，具体煤炭价格以您和信息部沟通结果为准。</string>
+    <string name="order_detail_instruction_3">如果您在使用中有任何疑问，请拨打客服电话400-0912-518。</string>
+
+    <!--客服中心-->
+    <string name="service_qq">3207530287</string>
+    <string name="service_hot_line">4000912518</string>
+
+    <!--注册-->
+    <string name="empty_phone">手机号码不能为空！</string>
+    <string name="empty_pwd">密码不能为空！</string>
+    <string name="invalid_phone">请输入正确的手机号码</string>
+    <string name="wrong_pwd_tips">您输入的密码有误，请重新输入</string>
+    <string name="empty_code">验证码不能为空哦</string>
+    <string name="invalid_recommended_phone">请输入正确的推荐人手机号码！</string>
+    <string name="wrong_code">真遗憾，验证码错误</string>
+    <string name="not_match">手机号与验证码不匹配</string>
+    <string name="wrong_no_code">亲，您还没获取验证码哟！</string>
+    <string name="invalid_no_code">亲，您的验证码已经失效，请重新获取！</string>
+
+    <!--登录-->
+    <string name="uninstalled_wechat">您当前手机未安装微信！</string>
+    <string name="uninstalled_qq">您当前手机未安装QQ！</string>
+    <string name="authorization_qq">QQ正在授权中，请稍后...</string>
+    <string name="authorization_wechat">微信正在授权中，请稍后...</string>
+    <string name="authorization_bolg">微博正在授权中，请稍后...</string>
+    <string name="cancel_authorization">取消授权成功</string>
+    <string name="wrong_signature">签名错误</string>
+    <string name="refuse_authorization">"用户拒绝授权"</string>
+
+
+    <!--密码-->
+    <string name="input_old_pwd">请输入旧密码</string>
+    <string name="wrong_old_pwd">旧密码输入有误，请检查后重新输入</string>
+    <string name="input_new_pwd">请输入您的新密码</string>
+    <string name="confirm_new_pwd">请再次输入新密码</string>
+    <string name="pwd_equal">新密码与原密码不能相同哦</string>
+    <string name="pwd_too_short">密码不能小于6位字符哦</string>
+    <string name="pwd_twice_different">两次密码输入不一致，请重新输入</string>
+    <string name="pwd_modify_success">密码修改成功啦</string>
+    <string name="input_pwd">请输入密码</string>
+    <string name="input_pwd_again">请再次输入密码</string>
+    <string name="illeg_pwd">密码不能包含中文字符</string>
+
+
+    <!--买家认证-->
+    <string name="submit_under_review_success">提交审核成功</string>
+    <string name="submit_under_review_failed">您提交的资料审核失败，是否再次提交？</string>
+
+    <!--司机认证-->
+    <string name="input_driving_licence_name">请输入真实姓名</string>
+    <string name="input_driving_licence_tel">请输入手机号</string>
+    <string name="select_vehicle_mode">请选择您的座驾类型</string>
+    <string name="input_licence_plate_number">请输入您的车牌号</string>
+    <string name="wrong_licence_plate_number">真遗憾，您输入的车牌号有误，请重新输入</string>
+    <string name="wrong_identity_card_number">请输入正确的身份证号码</string>
+    <string name="submit_success">提交成功</string>
+
+    <string name="under_review">正在为您加速审核，请您耐心等待</string>
+    <string name="upload_pic_success">图片上传成功啦</string>
+    <string name="upload_pic_failed">抱歉，图片上传失败，快前往重新上传</string>
+    <string name="save_pic_failed">真抱歉，图片保存失败了，请稍后重试</string>
+    <string name="unable_real_name_the_authentication">您尚未进行实名认证，请立即前往认证</string>
+
+    <!--买煤求购-->
+    <string name="input_procurement_name">请输入采购的煤种名称</string>
+    <string name="input_calorific_value">请输入发热量</string>
+    <string name="input_correct_calorific_value">请输入正确的发热量</string>
+    <string name="input_suplhur_content">请输入含硫量</string>
+    <string name="input_correct_suplhur_content">请输入正确的含硫量</string>
+    <string name="input_procurement_number">请输入预约采购量</string>
+    <string name="procurement_number_min">预定量不能小于1哦</string>
+    <string name="procurement_number_max">预定量不能大于8位数哦</string>
+    <string name="input_procurement_price">请先输入预定价格</string>
+    <string name="input_legally_price">请输入正确的预定价格</string>
+    <string name="procurement_price_max">预定价格输入不能大于8位数哦</string>
+    <string name="input_consignee">请输入收货人</string>
+    <string name="input_consignee_phone">请输入收货人电话</string>
+    <string name="input_consignee_area">请选择收货地区</string>
+    <string name="input_consignee_address">请输入收货地址</string>
+    <string name="submit_procurement_success">买煤求购提交成功啦</string>
+    <string name="delete_procurement_success">买煤求购删除成功</string>
+    <string name="submit_procurement_failed">抱歉，您的买煤求购提交失败了，请稍后重新提交</string>
+
+    <!--我要拉煤-->
+    <string name="input_from_time">请选择出发时间</string>
+    <string name="input_from_time_tatyday">出发时间不能小于今天</string>
+    <string name="input_from_time_day">到达时间不能小于出发时间</string>
+    <string name="input_from_area">请选择出发地</string>
+    <string name="input_to_time">请选择到达时间</string>
+    <string name="input_to_area">请选择目的地</string>
+    <string name="input_car_mode">请选择车辆类型</string>
+
+    <!--离线地图-->
+    <string name="get_offline_map_list_tips">正在获取离线城市列表，请稍等</string>
+    <string name="delete_map_success">离线地图删除成功</string>
+    <string name="delete_map_failed">真遗憾，离线地图删除失败了，请您稍后再试</string>
+
+    <!--个人信息-->
+    <string name="modify_head_pic_success">修改头像成功啦</string>
+    <string name="modify_head_pic_failed">真遗憾，图片上传失败了，请稍后重试</string>
+    <string name="save_head_pic_failed">真遗憾，图片保存失败了，请稍后重试</string>
+    <string name="modify_nick_name_success">昵称修改成功啦</string>
+    <string name="modify_relmib_success">推荐人成功啦</string>
+    <string name="modify_nick_name_failed">新昵称和旧昵称不能相同哦</string>
+
+    <!--设置-->
+    <string name="check_update_success">当前已经是最新版本了</string>
+    <string name="check_update_failed">真抱歉，没有获取到服务器版本号，请稍后重试</string>
+    <string name="clear_cache_tips">确定要清空缓存吗</string>
+    <string name="clear_cache_success">缓存清除成功啦</string>
+    <string name="clear_cache_failed">抱歉，缓存清除失败了，请稍后重试</string>
+    <string name="modify_area">地区修改成功</string>
+    <string name="logout_tips">确定要注销登录吗？</string>
+
+    <!--买煤-->
+    <string name="unable_buy_myself">主人，您不能买自己发布的煤哦</string>
+
+    <!--下订单-->
+    <string name="input_order_number">请先填写预定量</string>
+    <string name="input_contact_person">请先填写联系人</string>
+    <string name="illegally_order_number">请输入正确的预定量</string>
+    <string name="input_consignee_first">请先填写收货人</string>
+    <string name="input_consignee_phone_first">请先填写收货人电话</string>
+    <string name="select_area_first">请先选择收货地址</string>
+
+    <!--信息部详情-->
+
+    <string name="cancel_focus_tips">确定要取消关注吗</string>
+    <!--搜索-->
+    <string name="no_result_tips">真遗憾，没有找到相关信息，请重新修改条件查找</string>
+
+    <!--路径规划-->
+    <string name="route_tips">正在进行初始化加载中，请耐心等候</string>
+    <string name="route_no_net">断网了，我和世界唯一的联系中断了。</string>
+    <string name="route_failed">真抱歉，当前服务器繁忙，请您稍后再试</string>
+    <string name="open_gps">请先打开GPS后再使用此功能</string>
+    <string name="departure_tips">您已偏离路线</string>
+
+    <!--消息-->
+    <string name="delete_coal_tips">确定要删除这条煤炭预约通知吗</string>
+    <string name="clear_all_coal_tips">确定要清空煤炭预约通知吗</string>
+    <string name="delete_transport_tips">确定要删除这条货运通知吗</string>
+    <string name="delete_system_tips">系统广播不可删除哦</string>
+    <string name="clear_all_transport_tips">确定要清空货运通知吗</string>
+    <string name="delete_failed">真遗憾，消息删除失败，请稍后重试</string>
+
+    <!--地图相关-->
+    <string name="no_result_in_map">真遗憾，没有找到相关信息，请更改搜索条件后重试</string>
+
+    <!--货运相关-->
+    <string name="no_submit_vehicle_data">您尚未完成司机认证哦</string>
+    <string name="under_review_vehicle">车辆认证正在审核中，请您耐心等待...</string>
+    <string name="under_review_vehicle_failed">真遗憾，车辆认证失败了，请重新申请认证</string>
+    <string name="already_get_transport">您已抢单，请到 订单->货运单 查看详细信息</string>
+    <string name="get_transport_success">抢单提交成功啦！</string>
+    <string name="unable_get_transport">主人，您不能抢自己的货运哦</string>
+    <string name="regret_tips">真遗憾，该货运已经被抢完了，再看看其他货运呗</string>
+    <string name="delete_freight_route">确定要删除该条路线吗？</string>
+    <string name="delete_vehicle">确定要删除吗？</string>
+    <string name="delete_my_release">确定要删除该信息吗？</string>
+    <string name="prompt_my_release">您的买煤求购正在进行中，不能删除</string>
+    <string name="add_freight_success">订阅添加成功</string>
+    <string name="select_start_area">请选择出发地</string>
+    <string name="select_end_area">请选择目的地</string>
+    <string name="accept_transport_success">接受邀约成功</string>
+
+    <string name="unable_net_work">真遗憾，当前网络不可用，请检查网络是否正常！</string>
+    <string name="no_sim_card">在设备中没有可用的SIM卡</string>
+    <string name="call_tips">是否呼叫</string>
+    <string name="load_img_failed">真抱歉，图片加载失败了，请稍后重试</string>
+    <string name="forbidden_permission">应用已被禁止权限，请在设置中开启</string>
+    <string name="checkout_sim_card">请检查您的SIM卡</string>
+    <string name="logout_success">注销成功</string>
+
+
+    <string name="upload_pound_list_success">上传成功！</string>
+    <string name="upload_pound_list_again">重新上传磅单</string>
+    <string name="upload_pound_list">点击上传磅单</string>
+    <string name="wrong_weight">毛重必须大于净重！</string>
+    <string name="cargo_suttle">净重</string>
+    <string name="cargo_rough_weight">毛重</string>
+    <string name="upload_list">上传磅单</string>
+    <string name="upload_again">重新上传</string>
+    <string name="hint_input_cargo_weight">请输入载货重量</string>
+    <string name="please_upload_picture">请上传图片！</string>
+    <string name="please_input_cargo_weight">请输入载货净重！</string>
+    <string name="please_input_cargo_rough_weight">请输入载货毛重！</string>
+    <string name="btn_submit">提     交</string>
+    <string name="select_area_tips">收货地区不能选择全国！</string>
+
+    <string name="splash_ad_ignore">跳过广告</string>
+
+    <string name="please_input_cargo_price">请输入货物单价</string>
+    <string name="please_input_correct_cargo_price">请输入正确的货物单价</string>
+    <string name="please_input_cargo">请输入货物重量</string>
+    <string name="please_input_correct_cargo_weight">请输入正确的货物净重</string>
+    <string name="please_input_correct_cargo_rough_weight">请输入正确的货物重量</string>
+    <string name="please_input_gas_price">请输入当前油价</string>
+    <string name="please_input_correct_gas_weight">请输入正确的当前油价</string>
+    <string name="please_input_oil_consumption">请输入车辆油耗</string>
+    <string name="please_input_correct_oil_consumption">请输入正确的车辆油耗</string>
+
+    <string name="payment_string">支付中，请稍后...</string>
+    <string name="app_tip">提示</string>
+    <string name="pay_result_callback_msg" formatted="false">微信支付结果：%s</string>
+
+    <string name="legal_advice_prompt">如果您在煤炭交易和运输过程中出现了法律纠纷需要法律支持，平台为您提供法律咨询、纠纷处理咨询等服务。</string>
+    <string name="all_right">©2017 SXHALO.ALL RIGHTS RESERVED</string>
+    <string name="protocol_privacy_declare">已同意《拉煤宝平台用户协议》、《用户隐私政策》和《免责声明》。</string>
+
+    <string name="withdraw_money_tips">请输入提现金额！</string>
+    <string name="withdraw_money_min">最少提现金额为1元！</string>
+    <string name="withdraw_money_max">最多提现金额为 %1$s 元！</string>
+    <string name="no_money_tips">当前账户余额不足，不能提现！</string>
+    <string name="please_bind_wechat">请先绑定微信后进行提现操作！</string>
+    <string name="please_input_pwd">请输入登录密码后进行提现操作！</string>
+    <string name="dialog_title">用户提示</string>
+    <string name="dialog_left_text">知道了</string>
+    <string name="dialog_right_text">去下载</string>
+    <string name="dialog_tips">用户您好，买家的联络方式只有在快煤宝APP当中才可以查看。给您造成的不便，敬请谅解。</string>
+
+    <!--下订单说明提示-->
+    <string name="string_coal_order_tips_1">在线买煤交易的买卖双方必须是平台中的注册用户，并且在平台中进行了相关认证，所有认证资料经平台审核真实完整；</string>
+    <string name="string_coal_order_tips_2">磅单信息贯穿于整个在线交易的过程中，是双方结算的货物数量凭证，请在交易中如实上报磅单资料；</string>
+    <string name="string_coal_order_tips_3">在买家提交订单时预定价格不是最终的成交价格，提交订单后双方磋商明确指标范围和成交单价，信息部修订订单买家确认后正式成交，并形成最终的定单；</string>
+    <string name="string_coal_order_tips_4">煤款账户资金的结算含充值、支付、退款环节均由平台提供的线下第三方财务服务完成，线上仅作过程记录，确保各方交易资金安全；</string>
+    <string name="string_coal_order_tips_5">您有其他问题可直接联系客服电话或查看《拉煤宝煤炭交易平台常见问题说明》了解更多详情。</string>
+
+    <!--<string name="string_send_sms"> 温馨提示，%1$s诚邀您参与货运，联系电话：%2$s，提货码：%3$s，请前往 http://www.17lm.com/web/appDownload.html 下载拉煤宝app查看和处理！【拉煤宝平台】</string>-->
+    <!--<string name="string_send_sms"> 温馨提示，%1$s诚邀您参与货运，联系电话：%2$s，提货码：%3$s，请前往 http://www.17lm.com/web/appDownload.html 下载拉煤宝app查看和处理！【光环科技】</string>-->
+    <string name="string_send_sms"> 尊敬的司机师傅：您好，买家%1$s邀请您参与%2$s的货运，联系电话：%3$s，提货码：%4$s，信息部后请务必先验证提货码，详情查看 https://dwz.cn/kUaqltWy 退订请回T 【拉煤宝平台】</string>
+</resources>

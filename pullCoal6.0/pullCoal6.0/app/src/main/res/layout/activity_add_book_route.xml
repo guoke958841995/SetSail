@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/scrollview_background"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/title_bar"
+        layout="@layout/layout_include_main_title" />
+
+    <RelativeLayout
+        android:id="@+id/layout_start"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        android:layout_gravity="center_vertical"
+        android:layout_marginTop="@dimen/dp_20"
+        android:background="@color/white"
+        android:paddingLeft="@dimen/dp_20"
+        android:paddingRight="@dimen/dp_20">
+
+        <TextView
+            android:id="@+id/tv_start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="出发地" />
+
+        <TextView
+            android:id="@+id/tv_start_area"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:gravity="right|center_vertical"
+            android:layout_toRightOf="@+id/tv_start"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:maxLines="3"
+            android:layout_marginRight="@dimen/dp_10"
+            android:layout_toLeftOf="@+id/iv_start_arrow"
+            android:text="请选择出发地" />
+
+        <ImageView
+            android:id="@+id/iv_start_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/sort_common_down" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_end"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        android:layout_gravity="center_vertical"
+        android:layout_marginTop="@dimen/dp_20"
+        android:background="@color/white"
+        android:paddingLeft="@dimen/dp_20"
+        android:paddingRight="@dimen/dp_20">
+
+        <TextView
+            android:id="@+id/tv_end"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="目的地" />
+
+        <TextView
+            android:gravity="right|center_vertical"
+            android:maxLines="3"
+            android:layout_toRightOf="@+id/tv_end"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:id="@+id/tv_end_area"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dp_10"
+            android:layout_toLeftOf="@+id/iv_end_arrow"
+            android:text="请选择目的地" />
+
+        <ImageView
+            android:id="@+id/iv_end_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/sort_common_down" />
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btn_add"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_45"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/dp_20"
+        android:background="@drawable/button_shape"
+        android:text="添加"
+        android:textColor="@color/white" />
+
+</LinearLayout>

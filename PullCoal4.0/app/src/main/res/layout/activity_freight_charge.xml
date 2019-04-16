@@ -1,0 +1,592 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/scrollview_background"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/layout_top"
+        layout="@layout/layout_main_header" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/layout_bottom"
+        android:layout_below="@+id/layout_top"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/layout_navi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!--货运地址信息-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:padding="@dimen/dip10">
+
+                <!--始发地-->
+                <RelativeLayout
+                    android:id="@+id/layout_from"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dip5"
+                    android:layout_toLeftOf="@+id/iv_navi">
+
+                    <ImageView
+                        android:id="@+id/iv_start"
+                        android:layout_width="@dimen/dip20"
+                        android:layout_height="@dimen/dip20"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/icon_cargo_detail_start" />
+
+                    <TextView
+
+                        android:id="@+id/tv_start_area"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dip5"
+                        android:layout_toRightOf="@+id/iv_start"
+                        android:gravity="top"
+                        android:padding="@dimen/dip0"
+                        android:textColor="@color/app_title_text_color_normal"
+                        android:textSize="@dimen/font15" />
+
+                </RelativeLayout>
+
+                <!--目的地-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/layout_from"
+                    android:layout_marginBottom="@dimen/dip5"
+                    android:layout_marginTop="@dimen/dip10"
+                    android:layout_toLeftOf="@+id/iv_navi">
+
+                    <ImageView
+                        android:id="@+id/iv_end"
+                        android:layout_width="@dimen/dip20"
+                        android:layout_height="@dimen/dip20"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/icon_cargo_detail_destination" />
+
+
+                    <TextView
+                        android:id="@+id/tv_end_area"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dip5"
+                        android:layout_toRightOf="@+id/iv_end"
+                        android:gravity="top"
+                        android:maxLines="1"
+                        android:padding="@dimen/dip0"
+                        android:textColor="@color/app_title_text_color_normal"
+                        android:textSize="@dimen/font15" />
+
+                </RelativeLayout>
+
+                <!--导航布局-->
+                <LinearLayout
+                    android:id="@+id/iv_navi"
+                    android:layout_width="45dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/dip5"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="@dimen/dip30"
+                        android:layout_height="@dimen/dip20"
+                        android:layout_gravity="center"
+                        android:scaleType="centerInside"
+                        android:src="@mipmap/icon_to"
+                        android:visibility="visible" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="距离"
+                        android:textColor="@color/actionsheet_gray"
+                        android:textSize="@dimen/font8" />
+
+                    <TextView
+                        android:id="@+id/tv_distance"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:lines="1"
+                        android:text=""
+                        android:textColor="@color/actionsheet_gray"
+                        android:textSize="@dimen/font8" />
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/layout_custome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/layout_start"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dip50"
+                android:layout_gravity="center_vertical"
+                android:background="@color/white"
+                android:paddingLeft="@dimen/dip20"
+                android:paddingRight="@dimen/dip20">
+
+                <TextView
+                    android:id="@+id/tv_start"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="出发地" />
+
+                <TextView
+                    android:gravity="right|center_vertical"
+                    android:maxLines="3"
+                    android:layout_toRightOf="@+id/tv_start"
+                    android:layout_marginLeft="@dimen/dip10"
+                    android:id="@+id/tv_select_start"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/dip10"
+                    android:layout_toLeftOf="@+id/iv_start_arrow"
+                    android:text="请选择出发地" />
+
+                <ImageView
+                    android:id="@+id/iv_start_arrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/sort_common_down" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_marginLeft="@dimen/dip10"
+                android:layout_marginRight="@dimen/dip10"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/line_color" />
+
+            <RelativeLayout
+                android:id="@+id/layout_end"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dip50"
+                android:layout_gravity="center_vertical"
+                android:background="@color/white"
+                android:paddingLeft="@dimen/dip20"
+                android:paddingRight="@dimen/dip20">
+
+                <TextView
+                    android:id="@+id/tv_end"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="目的地" />
+
+                <TextView
+                    android:gravity="right|center_vertical"
+                    android:maxLines="3"
+                    android:layout_toRightOf="@+id/tv_end"
+                    android:layout_marginLeft="@dimen/dip10"
+                    android:id="@+id/tv_select_end"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/dip10"
+                    android:layout_toLeftOf="@+id/iv_end_arrow"
+                    android:text="请选择目的地" />
+
+                <ImageView
+                    android:id="@+id/iv_end_arrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/sort_common_down" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/line_color" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginTop="@dimen/dip15"
+            android:background="@color/line_color" />
+
+        <!--货物单价-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dip50"
+            android:background="@color/white">
+
+            <TextView
+                android:layout_marginLeft="@dimen/dip15"
+                android:id="@+id/tv_cargo_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="货物单价"
+                android:layout_centerVertical="true"
+                android:textColor="@color/app_title_text_color_normal"
+                android:textSize="@dimen/font15" />
+
+            <EditText
+                android:id="@+id/et_cargo_price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/tv_cargo_price_unit"
+                android:layout_toRightOf="@+id/tv_cargo_price"
+                android:background="@color/white"
+                android:inputType="number"
+                android:maxLength="4"
+                android:hint="请输入货物单价"
+                android:paddingLeft="@dimen/dip10"
+                android:paddingRight="@dimen/dip10"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_marginRight="@dimen/dip15"
+                android:layout_centerVertical="true"
+                android:id="@+id/tv_cargo_price_unit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="元/吨" />
+        </RelativeLayout>
+
+        <View
+            android:layout_marginLeft="@dimen/dip10"
+            android:layout_marginRight="@dimen/dip10"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/line_color" />
+
+        <!--货物重量-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dip50"
+            android:background="@color/white">
+
+            <TextView
+                android:layout_marginLeft="@dimen/dip15"
+                android:layout_centerVertical="true"
+                android:id="@+id/tv_cargo_weight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="货物重量"
+                android:textColor="@color/app_title_text_color_normal"
+                android:textSize="@dimen/font15" />
+
+            <EditText
+                android:layout_centerVertical="true"
+                android:id="@+id/et_cargo_weight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/tv_cargo_weight_unit"
+                android:layout_toRightOf="@+id/tv_cargo_weight"
+                android:background="@color/white"
+                android:inputType="number|numberDecimal"
+                android:maxLength="8"
+                android:hint="请输入货物总重量"
+                android:paddingLeft="@dimen/dip10"
+                android:paddingRight="@dimen/dip10"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/dip15"
+                android:id="@+id/tv_cargo_weight_unit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="吨" />
+        </RelativeLayout>
+
+        <View
+            android:layout_marginLeft="@dimen/dip10"
+            android:layout_marginRight="@dimen/dip10"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/line_color" />
+
+        <!--当前油价-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dip50"
+            android:background="@color/white">
+
+            <TextView
+                android:layout_marginLeft="@dimen/dip15"
+                android:layout_centerVertical="true"
+                android:id="@+id/tv_oil_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="当前油价"
+                android:textColor="@color/app_title_text_color_normal"
+                android:textSize="@dimen/font15" />
+
+            <EditText
+                android:layout_centerVertical="true"
+                android:id="@+id/et_oil_price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/tv_oil_price_unit"
+                android:layout_toRightOf="@+id/tv_oil_price"
+                android:background="@color/white"
+                android:inputType="number|numberDecimal"
+                android:maxLength="6"
+                android:hint="请输入当前油价"
+                android:paddingLeft="@dimen/dip10"
+                android:paddingRight="@dimen/dip10"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/dip15"
+                android:id="@+id/tv_oil_price_unit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="元/升" />
+        </RelativeLayout>
+
+        <View
+            android:layout_marginLeft="@dimen/dip10"
+            android:layout_marginRight="@dimen/dip10"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/line_color" />
+
+        <!--车辆油耗-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dip50"
+            android:background="@color/white">
+
+            <TextView
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dip15"
+                android:id="@+id/tv_oil_consumption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="车辆油耗"
+                android:textColor="@color/app_title_text_color_normal"
+                android:textSize="@dimen/font15" />
+
+            <EditText
+                android:layout_centerVertical="true"
+                android:id="@+id/et_oil_consumption"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/tv_oil_consumption_unit"
+                android:layout_toRightOf="@+id/tv_oil_consumption"
+                android:background="@color/white"
+                android:inputType="number|numberDecimal"
+                android:hint="请输入车辆油耗"
+                android:maxLength="6"
+                android:paddingLeft="@dimen/dip10"
+                android:paddingRight="@dimen/dip10"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/dip15"
+                android:id="@+id/tv_oil_consumption_unit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="升/百公里" />
+        </RelativeLayout>
+
+        <View
+            android:layout_marginLeft="@dimen/dip10"
+            android:layout_marginRight="@dimen/dip10"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/line_color" />
+
+        <!--信息费-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dip50"
+            android:background="@color/white">
+
+            <TextView
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dip15"
+                android:id="@+id/tv_information_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="信息费    "
+                android:textColor="@color/app_title_text_color_normal"
+                android:textSize="@dimen/font15" />
+
+            <EditText
+                android:layout_centerVertical="true"
+                android:id="@+id/et_information_price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/tv_information_price_unit"
+                android:layout_toRightOf="@+id/tv_information_price"
+                android:background="@color/white"
+                android:hint="未填写"
+                android:maxLength="5"
+                android:inputType="number"
+                android:paddingLeft="@dimen/dip10"
+                android:paddingRight="@dimen/dip10"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/dip15"
+                android:id="@+id/tv_information_price_unit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="元" />
+        </RelativeLayout>
+
+        <View
+            android:layout_marginLeft="@dimen/dip10"
+            android:layout_marginRight="@dimen/dip10"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/line_color" />
+
+        <!--装车费-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dip50"
+            android:background="@color/white">
+
+            <TextView
+                android:layout_marginLeft="@dimen/dip15"
+                android:layout_centerVertical="true"
+                android:id="@+id/tv_load_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="装车费    "
+                android:textColor="@color/app_title_text_color_normal"
+                android:textSize="@dimen/font15" />
+
+            <EditText
+                android:layout_centerVertical="true"
+                android:id="@+id/et_load_price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/tv_load_price_unit"
+                android:layout_toRightOf="@+id/tv_load_price"
+                android:background="@color/white"
+                android:hint="未填写"
+                android:maxLength="5"
+                android:inputType="number"
+                android:paddingLeft="@dimen/dip10"
+                android:paddingRight="@dimen/dip10"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/dip15"
+                android:id="@+id/tv_load_price_unit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="元" />
+        </RelativeLayout>
+
+        <View
+            android:layout_marginLeft="@dimen/dip10"
+            android:layout_marginRight="@dimen/dip10"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/line_color" />
+
+        <!--卸车费-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dip50"
+            android:background="@color/white">
+
+            <TextView
+                android:layout_marginLeft="@dimen/dip15"
+                android:layout_centerVertical="true"
+                android:id="@+id/tv_unload_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="卸车费    "
+                android:textColor="@color/app_title_text_color_normal"
+                android:textSize="@dimen/font15" />
+
+            <EditText
+                android:layout_centerVertical="true"
+                android:id="@+id/et_unload_price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/tv_unload_price_unit"
+                android:layout_toRightOf="@+id/tv_unload_price"
+                android:background="@color/white"
+                android:hint="未填写"
+                android:maxLength="5"
+                android:inputType="number"
+                android:paddingLeft="@dimen/dip10"
+                android:paddingRight="@dimen/dip10"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_marginRight="@dimen/dip15"
+                android:layout_centerVertical="true"
+                android:id="@+id/tv_unload_price_unit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="元" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/layout_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dip55"
+        android:layout_alignParentBottom="true"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/btn_calculate"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dip40"
+            android:layout_marginLeft="@dimen/dip20"
+            android:layout_marginRight="@dimen/dip20"
+            android:background="@drawable/button_shape"
+            android:gravity="center"
+            android:text="运费计算"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font18" />
+
+    </LinearLayout>
+
+</RelativeLayout>

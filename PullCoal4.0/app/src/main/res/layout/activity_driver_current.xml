@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include android:id="@+id/title_bar" layout="@layout/layout_main_header" />
+
+    <FrameLayout
+        android:background="@drawable/item_bt_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/title_bar">
+
+
+        <RelativeLayout
+            android:layout_marginLeft="@dimen/dip30"
+            android:layout_marginRight="@dimen/dip30"
+            android:background="@mipmap/driver_current_bg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/be_busy"
+                android:clickable="true"
+                android:focusable="true"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/driver_status_bs" />
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="@dimen/dip60"
+            android:layout_gravity="bottom|right"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/noth"
+            android:src="@drawable/driver_status_noth" />
+
+        <ImageView
+            android:layout_marginLeft="20dp"
+            android:layout_marginBottom="@dimen/dip120"
+            android:layout_gravity="bottom|left"
+            android:src="@drawable/driver_status_idle"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/idle" />
+
+    </FrameLayout>
+
+
+
+
+</RelativeLayout>

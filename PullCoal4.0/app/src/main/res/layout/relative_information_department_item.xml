@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/item_bt_bg"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dip15"
+        android:layout_marginLeft="@dimen/dip20">
+
+        <TextView
+            android:id="@+id/tv_inormation_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:textColor="@color/app_title_text_color_normal"
+            android:textSize="@dimen/font16" />
+
+        <ImageView
+            android:id="@+id/iv_status"
+            android:layout_width="wrap_content"
+            android:layout_height="15dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/tv_inormation_name"
+            android:src="@mipmap/do_business_status" />
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dip5"
+            android:layout_toEndOf="@+id/iv_status"
+            android:layout_toRightOf="@+id/iv_status"
+            android:gravity="center_vertical"
+            android:textColor="@color/gary"
+            android:textSize="@dimen/dip14"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dip10"
+        android:layout_marginLeft="@dimen/dip20"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:text="信用等级："
+            android:textColor="@color/actionsheet_gray"
+            android:textSize="@dimen/font13" />
+
+        <com.sxhalo.PullCoal.ui.ResetRatingBar xmlns:hedgehog="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/reset_rating_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:isIndicator="true"
+            android:numStars="5"
+            android:rating="2"
+            hedgehog:starCount="5"
+            hedgehog:starEmpty="@mipmap/ratingbar_normal"
+            hedgehog:starFill="@mipmap/ratingbar_pressed"
+            hedgehog:starImageSize="12dp"></com.sxhalo.PullCoal.ui.ResetRatingBar>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dip5"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="煤炭"
+                android:textColor="@color/actionsheet_gray"
+                android:textSize="@dimen/font13" />
+
+            <TextView
+                android:id="@+id/tv_coal_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:lines="1"
+                android:text="5条"
+                android:textColor="@color/route_navi_text"
+                android:textSize="@dimen/font13" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dip5"
+                android:text="货运"
+                android:textColor="@color/actionsheet_gray"
+                android:textSize="@dimen/font13" />
+
+            <TextView
+                android:id="@+id/tv_freight_size"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:lines="1"
+                android:text="5条"
+                android:textColor="@color/route_navi_text"
+                android:textSize="@dimen/font13" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_marginTop="@dimen/dip15"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/line_color" />
+
+</LinearLayout>

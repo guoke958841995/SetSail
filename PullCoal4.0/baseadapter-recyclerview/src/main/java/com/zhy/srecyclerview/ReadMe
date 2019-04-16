@@ -1,0 +1,5 @@
+用于RecyclerView 刷新 可在头部和尾部自定义多个布局添加
+
+参考：
+https://blog.csdn.net/hzwailll/article/details/75285924
+https://github.com/HzwSunshine/SRecyclerView

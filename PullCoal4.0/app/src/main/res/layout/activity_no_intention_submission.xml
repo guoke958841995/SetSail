@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/scrollview_background">
+
+    <include
+        android:id="@+id/title_bar"
+        layout="@layout/layout_main_header" />
+
+    <RelativeLayout
+        android:background="@color/white"
+        android:paddingLeft="@dimen/dip15"
+        android:paddingRight="@dimen/dip15"
+        android:paddingTop="@dimen/dip10"
+        android:paddingBottom="@dimen/dip10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_marginTop="@dimen/dip3"
+            android:src="@mipmap/checkbox_normal"
+            android:id="@+id/iv_reach"
+            android:layout_width="20dp"
+            android:layout_height="20dp" />
+
+        <TextView
+            android:textSize="@dimen/font16"
+            android:layout_marginLeft="@dimen/dip10"
+            android:layout_toRightOf="@+id/iv_reach"
+            android:text="申请退款"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:textColor="@color/gray"
+            android:layout_alignParentRight="true"
+            android:text="双方沟通后确认"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:background="@color/line_color"/>
+
+    <LinearLayout
+        android:paddingLeft="@dimen/dip5"
+        android:paddingRight="@dimen/dip5"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:textSize="@dimen/dip15"
+            android:padding="@dimen/dip10"
+            android:text="备注"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+
+        <EditText
+            android:id="@+id/et_automatic_refund"
+            android:inputType="text"
+            android:gravity="top"
+            android:lines="4"
+            android:textSize="@dimen/dip15"
+            android:hint="请填入信息"
+            android:textColorHint="@color/gray"
+            android:background="@color/white"
+            android:padding="@dimen/dip10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_marginTop="@dimen/dip15"
+        android:background="@color/white"
+        android:paddingLeft="@dimen/dip15"
+        android:paddingRight="@dimen/dip15"
+        android:paddingTop="@dimen/dip10"
+        android:paddingBottom="@dimen/dip10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <ImageView
+            android:layout_marginTop="@dimen/dip3"
+            android:src="@mipmap/checkbox_normal"
+            android:id="@+id/iv_no_reach"
+            android:layout_width="20dp"
+            android:layout_height="20dp" />
+
+        <TextView
+            android:textSize="@dimen/font16"
+            android:layout_marginLeft="@dimen/dip10"
+            android:layout_toRightOf="@+id/iv_no_reach"
+            android:text="申请平台介入"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:textColor="@color/gray"
+            android:layout_alignParentRight="true"
+            android:text="双方沟通后无果"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:background="@color/line_color"/>
+
+    <LinearLayout
+        android:paddingLeft="@dimen/dip5"
+        android:paddingRight="@dimen/dip5"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:textSize="@dimen/dip15"
+            android:padding="@dimen/dip10"
+            android:text="介入原因"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/et_refunds"
+            android:inputType="text"
+            android:gravity="top"
+            android:lines="4"
+            android:textSize="@dimen/dip15"
+            android:background="@color/white"
+            android:hint="请输入介入原因"
+            android:textColorHint="@color/gray"
+            android:padding="@dimen/dip10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:background="@color/line_color"/>
+
+    <LinearLayout
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:gravity="bottom"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2px"
+            android:background="@color/line_color"/>
+
+        <LinearLayout
+            android:padding="@dimen/dip15"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_cancel"
+                android:layout_marginRight="7.5dp"
+                android:gravity="center_horizontal"
+                android:layout_weight="1"
+                android:textColor="@color/white"
+                android:background="@drawable/button_shape"
+                android:padding="@dimen/dip10"
+                android:text="取消"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tv_determine"
+                android:layout_marginLeft="7.5dp"
+                android:gravity="center_horizontal"
+                android:layout_weight="1"
+                android:textColor="@color/white"
+                android:background="@drawable/button_shape"
+                android:padding="@dimen/dip10"
+                android:text="确定"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        style="@style/title_bar_style"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/iv_bak"
+            android:layout_width="@dimen/dip40"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:gravity="center_vertical"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="5dp"
+            android:paddingTop="5dp"
+            android:src="@drawable/btn_back" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true">
+
+            <TextView
+                android:id="@+id/tv_pull_coal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/offlinearrow_tab1_pressed"
+                android:paddingBottom="5dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingTop="5dp"
+                android:text="我要拉煤"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font15" />
+
+            <TextView
+                android:id="@+id/tv_my_release"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/offlinearrow_tab2_normal"
+                android:paddingBottom="5dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingTop="5dp"
+                android:text="我的发布"
+                android:textColor="@color/app_title_text_color"
+                android:textSize="@dimen/font15" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_release"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/dip10"
+            android:gravity="center_vertical"
+            android:text="发布"
+            android:textColor="@color/app_title_text_color"
+            android:textSize="@dimen/font16" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dip10"
+        android:background="@color/white"
+        android:gravity="center_vertical">
+
+        <EditText
+            android:textCursorDrawable="@drawable/shape_textcursor"
+            android:id="@+id/et_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dip10"
+            android:layout_toLeftOf="@+id/layout_filter"
+            android:background="@drawable/search_shape_gray_background"
+            android:gravity="center_vertical"
+            android:hint="搜索"
+            android:imeOptions="actionSearch"
+            android:inputType="text"
+            android:maxLines="1"
+            android:paddingLeft="40dp"
+            android:textColorHint="@color/province_line_border"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:layout_width="@dimen/dip15"
+            android:layout_height="@dimen/dip15"
+            android:layout_alignLeft="@id/et_search"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dip15"
+            android:src="@mipmap/search_icon" />
+
+        <LinearLayout
+            android:id="@+id/layout_filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/dip3"
+                android:text="筛选"
+                android:textColor="@color/actionsheet_blue" />
+
+            <ImageView
+                android:layout_width="@dimen/dip14"
+                android:layout_height="@dimen/dip14"
+                android:layout_marginLeft="@dimen/dip3"
+                android:src="@drawable/icon_filter" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px_line"
+        android:background="@color/line_color"/>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

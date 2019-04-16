@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:id="@+id/layout1"
+        style="@style/title_bar_style">
+
+        <ImageView
+            android:id="@+id/title_bar_left"
+            android:layout_width="@dimen/dip40"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="5dp"
+            android:paddingTop="5dp"
+            android:src="@drawable/btn_back" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/mode_type_layout"
+            android:layout_toRightOf="@+id/title_bar_left"
+            android:padding="@dimen/dip5">
+
+            <EditText
+                android:id="@+id/et_search"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/dip5"
+                android:layout_marginTop="@dimen/dip5"
+                android:background="@drawable/search_shape_gray_background"
+                android:gravity="center_vertical"
+                android:hint="让买煤更快捷"
+                android:imeOptions="actionDone"
+                android:inputType="text"
+                android:maxLines="1"
+                android:paddingLeft="40dp"
+                android:textColorHint="@color/province_line_border"
+                android:textCursorDrawable="@drawable/shape_textcursor"
+                android:textSize="@dimen/font14" />
+
+            <ImageView
+                android:layout_width="@dimen/dip15"
+                android:layout_height="@dimen/dip15"
+                android:layout_alignLeft="@id/et_search"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dip15"
+                android:src="@mipmap/search_icon" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_marginLeft="@dimen/dip10"
+            android:layout_marginRight="@dimen/dip15"
+            android:gravity="center"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/mode_type_layout">
+
+            <LinearLayout
+                android:padding="@dimen/dip2"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/iv_map_type"
+                    android:src="@mipmap/icon_buy_coal_model"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_margin="@dimen/dip2"
+                    android:ems="1"
+                    android:id="@+id/tv_map_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="信息部"
+                    android:textSize="@dimen/font6"
+                    android:textColor="@color/app_title_text_color" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="查看方式"
+                    android:textSize="@dimen/font8" />
+
+                <ImageView
+                    android:layout_marginLeft="@dimen/dip2"
+                    android:id="@+id/arrow"
+                    android:rotation="90"
+                    android:layout_width="8dp"
+                    android:layout_height="8dp"
+                    android:src="@mipmap/icon_arrow_down" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View
+            android:layout_gravity="right"
+            android:orientation="vertical"
+            android:layout_marginRight="@dimen/dip15"
+            android:layout_alignParentRight="true"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/mode_type_anchor"/>
+
+    </RelativeLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px_line"
+        android:background="@color/line_color"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.zhy.srecyclerview.SRecyclerView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/mRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:splitMotionEvents="false"
+            android:background="#F0F0F0"
+            app:dividerHeight="0.8dp"
+            app:dividerRightMargin="0dp"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" >
+
+        </com.zhy.srecyclerview.SRecyclerView>
+
+
+        <include layout="@layout/screening_suspension_item_group" android:id="@+id/sticky_header_view" android:visibility="gone"/>
+
+        <com.sxhalo.PullCoal.ui.addrightview.LayoutContrastView
+            android:visibility="gone"
+            android:id="@+id/ll_contrast"
+            android:layout_gravity="bottom"
+            android:layout_width="match_parent"
+            android:layout_height="51dp"/>
+
+    </FrameLayout>
+
+</LinearLayout>

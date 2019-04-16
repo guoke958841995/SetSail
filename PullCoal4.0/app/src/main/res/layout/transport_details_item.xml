@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:background="@drawable/item_bt_bg"
+        android:padding="@dimen/dip15"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:text="孙师傅"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/name"
+                    android:textSize="16sp"
+                    android:textColor="@color/app_title_text_color_normal" />
+
+                <TextView
+                    android:layout_marginLeft="@dimen/dip10"
+                    android:text="153-9523-5120"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/phoneNumber"
+                    android:textColor="@color/actionsheet_gray"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:layout_marginLeft="@dimen/dip15"
+                    android:text="15年驾龄"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/driving_time"
+                    android:textColor="@color/app_title_text_color"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="@dimen/dip5"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:text="类别 : "
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:textColor="@color/app_title_text_color_normal" />
+
+                <TextView
+                    android:text="应邀接单"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/type"
+                    android:textSize="16sp"
+                    android:textColor="@color/app_title_text_color_normal" />
+
+                <TextView
+                    android:layout_marginLeft="@dimen/dip10"
+                    android:paddingLeft="@dimen/dip5"
+                    android:paddingRight="@dimen/dip5"
+                    android:paddingTop="@dimen/dip1"
+                    android:paddingBottom="@dimen/dip1"
+                    android:text="已认证"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:background="@android:color/holo_green_dark"
+                    android:id="@+id/ａlready＿certified"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:layout_marginLeft="@dimen/dip10"
+                    android:text="累计:130单"
+                    android:paddingLeft="@dimen/dip5"
+                    android:paddingRight="@dimen/dip5"
+                    android:paddingTop="@dimen/dip1"
+                    android:paddingBottom="@dimen/dip1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ｃumulative＿singular"
+                    android:textColor="@color/white"
+                    android:background="@color/actionsheet_red"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="@dimen/dip5"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:text="运单编号 : "
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:textColor="@color/app_title_text_color_normal" />
+
+                <TextView
+                    android:text="TextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ｗaybill_number"
+                    android:textSize="13sp"
+                    android:textColor="@color/actionsheet_red" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:paddingLeft="@dimen/dip10"
+            android:gravity="center"
+            android:layout_weight="4"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:gravity="center"
+                android:text="已应邀"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/State_of_invitation"
+                android:textColor="@color/app_title_text_color" />
+
+            <TextView
+                android:gravity="center"
+                android:text="接受"
+                android:padding="@dimen/dip5"
+                android:layout_marginBottom="@dimen/dip5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/accept"
+                android:textColor="@color/white"
+                android:background="@color/app_title_text_color" />
+
+            <TextView
+                android:layout_marginTop="@dimen/dip5"
+                android:text="拒绝"
+                android:padding="@dimen/dip5"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/refuse"
+                android:background="@color/action_comment_bg"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/line_color"/>
+</LinearLayout>

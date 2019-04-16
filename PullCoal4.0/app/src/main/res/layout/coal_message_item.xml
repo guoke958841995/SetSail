@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_push_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@color/background_color"
+        android:textColor="@color/gray"
+        android:gravity="center_horizontal" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dip10"
+        android:layout_marginRight="@dimen/dip10"
+        android:layout_marginTop="@dimen/dip10"
+        android:background="@drawable/background_shape_white"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dip10"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font18" />
+
+        <TextView
+            android:id="@+id/tv_reservation_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dip10"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/font14" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dip10"
+            android:gravity="center_horizontal"
+            android:textColor="@color/gray"
+            android:text="审核状态"
+            android:textSize="@dimen/font14" />
+
+        <TextView
+            android:id="@+id/tv_processing_mark"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dip10"
+            android:gravity="center_horizontal"
+            android:textColor="@color/red"
+            android:textSize="@dimen/font22" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/line_color" />
+        <!--审核时间-->
+        <LinearLayout
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dip10"
+                android:text="审核时间："
+                android:textColor="@color/gray"
+                android:textSize="@dimen/font14" />
+
+            <TextView
+                android:id="@+id/tv_accept_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dip10"
+                android:textColor="@color/black"
+                android:textSize="@dimen/font14" />
+
+        </LinearLayout>
+        <!--煤炭名称-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dip10"
+                android:text="煤炭名称："
+                android:textColor="@color/gray"
+                android:textSize="@dimen/font14" />
+
+            <TextView
+                android:id="@+id/tv_coal_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dip10"
+                android:textColor="@color/black"
+                android:textSize="@dimen/font14" />
+
+        </LinearLayout>
+        <!--矿口名称-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dip10"
+                android:text="矿口名称："
+                android:textColor="@color/gray"
+                android:textSize="@dimen/font14" />
+
+            <TextView
+                android:id="@+id/tv_mine_mouth_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dip10"
+                android:textColor="@color/black"
+                android:textSize="@dimen/font14" />
+
+        </LinearLayout>
+        <!--信息部-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dip10"
+                android:text="信  息  部："
+                android:textColor="@color/gray"
+                android:textSize="@dimen/font14" />
+
+            <TextView
+                android:id="@+id/tv_company_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dip10"
+                android:textColor="@color/black"
+                android:textSize="@dimen/font14" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/line_color" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dip50">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/dip10"
+                android:gravity="center_vertical"
+                android:textColor="@color/black"
+                android:text="查看详情" />
+
+            <ImageView
+                style="@style/setting_arrow"
+                android:layout_width="@dimen/dip30"
+                android:layout_height="@dimen/dip30"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:scaleType="centerInside" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

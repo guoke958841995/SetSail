@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/background_color"
+    android:layout_height="match_parent">
+    
+    
+    <ImageView
+        android:id="@+id/iv_status"
+        android:layout_width="@dimen/dip30"
+        android:layout_height="@dimen/dip30"
+        android:src="@drawable/icon_time_line_blue"
+        android:scaleType="centerInside"/>
+
+    <View
+        android:layout_below="@+id/iv_status"
+        android:layout_width="5px"
+        android:background="@color/lighter_gray"
+        android:layout_marginLeft="@dimen/dip15"
+        android:layout_height="@dimen/dip130"/>
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_toRightOf="@+id/iv_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dip5" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:layout_below="@+id/tv_time"
+        android:layout_margin="@dimen/dip5"
+        android:layout_alignLeft="@+id/tv_time">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dip40"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/dip5"
+                android:gravity="center"
+                android:text="单号："
+                android:textColor="@color/text_color_gray" />
+
+            <TextView
+                android:id="@+id/tv_my_freight_order_num"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_marginLeft="@dimen/dip5"
+                android:textColor="@color/short_red" />
+
+            <TextView
+                android:id="@+id/tv_status"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:gravity="right|center_vertical"
+                android:layout_marginRight="@dimen/dip5"
+                android:textColor="@color/actionsheet_blue"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/line_color" />
+
+        <LinearLayout
+            android:id="@+id/layout_from"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dip40"
+            android:layout_toLeftOf="@+id/iv_phone"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:padding="@dimen/dip5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="centerInside"
+                android:src="@drawable/icon_cargo_start"/>
+
+
+            <TextView
+                android:id="@+id/tv_start"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="@dimen/dip5"
+                android:gravity="center_vertical"
+                android:maxLines="2" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dip40"
+            android:layout_below="@+id/layout_from"
+            android:layout_toLeftOf="@+id/iv_phone"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:padding="@dimen/dip5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="centerInside"
+                android:src="@drawable/icon_cargo_destination"/>
+
+
+            <TextView
+                android:id="@+id/tv_destination"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:padding="@dimen/dip5"
+                android:maxLines="2" />
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

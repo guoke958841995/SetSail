@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/detail_activity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activity_bg_color"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/title_bar"
+        layout="@layout/layout_main_header" />
+
+    <TextView
+        android:text="您的耐心描述对于我们快速的回复很有帮助！"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dip15"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/line_color" />
+
+    <EditText
+        android:textCursorDrawable="@drawable/shape_textcursor"
+        android:id="@+id/et_content"
+        android:padding="@dimen/dip15"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxLines="10"
+        android:minLines="5"
+        android:maxLength="500"
+        android:gravity="start"
+        android:textSize="@dimen/font14"
+        android:hint="请描述您所面临的问题"
+        android:background="@color/white"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/line_color" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btn_submit"
+            style="@style/SmsButton"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dip40"
+            android:layout_marginTop="@dimen/dip30"
+            android:layout_marginBottom="@dimen/dip20"
+            android:layout_marginLeft="@dimen/dip60"
+            android:layout_marginRight="@dimen/dip60"
+            android:text="提     交" />
+
+    </LinearLayout>
+
+</LinearLayout>

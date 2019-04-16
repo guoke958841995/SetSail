@@ -1,0 +1,1 @@
+include ':weibosdk', ':selectimagepicker', ':bottomdialog', ':hightlight', ':baseadapter-recyclerview', ':scrollablepanellibrary', ':pulltorefresh', ':app'

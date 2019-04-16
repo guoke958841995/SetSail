@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#f4f5f6</color>
+    <color name="colorPrimaryDark">#ffffff</color>
+    <color name="colorAccent">#1e7aea</color>
+
+    <!-- 设计规范颜色值 begin -->
+    <color name="btn_cancel_color">#999999</color>
+    <color name="btn_cancel_color_hell">#72a9d8</color>
+    <color name="btn_confirm_color">#303F9F</color>
+
+    <!-- 主背景色值 -->
+    <color name="background_color">#f4f5f6</color>
+    <color name="status_bar_bg">#ffaaaaaa</color>
+    <!--<color name="main_footer_bg">#f5f5f5</color>-->
+    <color name="main_footer_bg">#ffffffff</color>
+    <color name="main_header_bg">#f4f5f6</color>
+    <color name="toast">#626363</color>
+    <color name="search_history_color">#EFEFF4</color>
+
+    <color name="divider">#ffd2d2d2</color>
+
+    <color name="app_title_text_color">#1e7aea</color>
+    <color name="app_title_text_color_normal">#333333</color>
+    <color name="list_item_background_day">#fff</color>
+    <color name="list_item_text_color_day">#002F45</color>
+    <color name="list_item_quote_text_color_day">#f46300</color>
+    <color name="color_grel_withe">#F8FAFD</color>
+    <color name="light_yellow">#f5bf20</color>
+    <color name="dark_yellow">#E7A277</color>
+
+    <!-- 底栏字体颜色 -->
+    <color name="footer_text_color_normal">#343434</color>
+    <color name="footer_text_color_selected">#1e7aea</color>
+
+    <!-- 字体颜色值 -->
+    <color name="text_color_blue">#0081e1</color>
+    <color name="text_color_search">#c2c2c2</color>
+    <color name="text_color_black">#323232</color>
+    <color name="text_color_white">#ffffff</color>
+    <color name="text_color_gray">#888888</color>
+    <color name="text_color_gray_light">#A8A8A8</color>
+    <color name="text_color_red">#ff5b46</color>
+    <color name="text_color_hint">#ffaaaaaa</color>
+    <color name="text_color_input">#ff111111</color>
+    <color name="text_purchase_input">#72a8d7</color>
+
+    <color name="btn_blue_normal">#0081e1</color>
+    <color name="btn_blue_pressed">#0066ff</color>
+
+    <!-- 分割线色值 -->
+    <color name="short_blue">#48B7FF</color>
+    <color name="short_red">#ff5b46</color>
+    <color name="short_orange">#f3b720</color>
+    <color name="split_color">#D9D9D9</color>
+    <color name="border_color">#a8a8a8</color>
+
+    <!--竖分割线-->
+    <color name="vertical_line_color">#b5b5b5</color>
+
+    <!-- 透明半透明色值 -->
+    <color name="transparent">#00000000</color>
+    <color name="transparent_half">#e0000000</color>
+
+    <!-- 设计规范颜色值 end-->
+
+
+    <!-- 圆角按钮实现的颜色 -->
+    <color name="button_normal">#a5a5a5</color>
+    <color name="shape_gray">#A7ABB6</color>
+    <color name="button_light">#1e7aea</color>
+    <color name="lighter_gray">#d3d3d3</color>
+    <color name="activity_bg_color">#f5f5f5</color>
+    <color name="subscribe_bg">#f5f5f5</color>
+    <color name="subscribe_tip_text">#2e2e2e</color>
+    <color name="fragment_bg_color">#f5f5f5</color>
+    <color name="father_group_light_background">#f2f2f2</color>
+    <color name="father_group_text_color">#ff909090</color>
+    <color name="left_drawer_item_line">#ff393939</color>
+    <color name="white">#ffffff</color>
+    <color name="transparent_background_button">#11000000</color>
+    <color name="transparent_background">#ffffff</color>
+    <color name="dislike_bg_pressed">#ff2b2b2b</color>
+    <color name="title_color">#333333</color>
+    <color name="list_notify_text">#ffffff</color>
+    <color name="list_notify_text_night">#ffb1b1b1</color>
+    <color name="notify_view_divider">#66ffffff</color>
+    <color name="notify_view_divider_night">#99b1b1b1</color>
+    <color name="notify_count_text">#ffcc3131</color>
+    <color name="notify_count_text_night">#651414</color>
+    <color name="detail_activity_bg_color1">#E4E3E4</color>
+    <color name="detail_title_text_color">#999999</color>
+    <color name="title_text_color">#ffffff</color>
+    <color name="action_comment_bg">#cc3131</color>
+    <color name="first_table_layout_bg">#e2e2e2</color>
+    <color name="first_table_bg">#fafafa</color>
+    <color name="editText">#aaaaaa</color>
+    <color name="blue">#008dff</color>
+    <color name="gray">#bbbbbb</color>
+    <color name="gray_search_background">#E6E8EA</color>
+    <color name="text_bt_blue">#1E79EB</color>
+    <color name="text_grey">#747474</color>
+    <color name="offline_down_size">#777777</color>
+    <color name="route_navi_text">#abcaf6</color>
+    <color name="route_navi_bg">#559bef</color>
+
+    <item name="action_comment_text" type="color">@color/title_text_color</item>
+
+    <color name="detail_divider">#ffb4b4b4</color>
+    <color name="details_layout_bg">#e2e2e2</color>
+    <color name="details_but_text">#4a4a4a</color>
+    <color name="details_but_bg">#fafafa</color>
+    <color name="setting_alt_text_normal">#666666</color>
+    <color name="setting_alt_text_selected">#ff0000</color>
+    <color name="subscribe_item_pressed_bg">#f9f9f9</color>
+    <color name="subscribe_item_pressed_stroke">#cdcdcd</color>
+    <color name="subscribe_item_normal_bg">#f5f5f5</color>
+    <color name="subscribe_item_normal_stroke">#cdcdcd</color>
+    <color name="subscribe_item_selected_bg">#ffffff</color>
+    <color name="subscribe_item_selected_stroke">#cc3131</color>
+    <color name="subscribe_item_disabled_bg">#efefef</color>
+    <color name="subscribe_item_disabled_stroke">#d9d9d9</color>
+    <color name="subscribe_item_focused_stroke">#d9d9d9</color>
+    <color name="subscribe_item_drag_stroke">#d2d2d2</color>
+    <color name="subscribe_item_drag_bg">#f5f5f5</color>
+
+    <item name="subscribe_item_text_color_normal" type="color">@color/default_text</item>
+
+    <color name="default_text">#454545</color>
+    <color name="shape_garen_right_color">#54a1fd</color>
+    <color name="subscribe_item_text_color_pressed">#b9b9b9</color>
+    <color name="subscribe_seperate_line">#cdcdcd</color>
+    <color name="subscribe_activity_bg">#efefef</color>
+    <color name="first_fargment_text_gray">#a5a5a5</color>
+    <color name="first_fargment_text_grays">#c7c7c7</color>
+    <color name="line_color">#e0e0e0</color>
+    <color name="text_chose">#1e7aea</color>
+    <color name="text_normal">#636363</color>
+    <color name="text_money">#e55f48</color>
+    <color name="text_address">#c9c9c9</color>
+    <color name="citylist_title_bar">#f4f5f6</color>
+    <color name="citylist_title">#ebebeb</color>
+    <color name="citylist_city_bg">#f4f4f4</color>
+    <color name="text_red">#cc0000</color>
+    <color name="text_subtitle">#747474</color>
+    <color name="item_color">#5fe0e0e0</color>
+    <color name="item_divider_color">#f2f3f7</color>
+
+    <!-- material design black font color -->
+    <color name="font_black_0">#212121</color>
+    <color name="font_black_1">#424242</color>
+    <color name="font_black_2">#616161</color>
+    <color name="font_black_3">#757575</color>
+    <color name="font_black_4">#9e9e9e</color>
+    <color name="font_black_5">#bdbdbd</color>
+    <color name="font_black_6">#e0e0e0</color>
+    <color name="trans">#00000000</color>
+    <color name="black">#000000</color>
+    <color name="alertdialog_line">#c6c6c6</color>
+    <color name="actionsheet_blue">#037bff</color>
+    <color name="actionsheet_red">#fd4a2e</color>
+    <color name="actionsheet_gray">#8f8f8f</color>
+    <color name="province_line_border">#c7c7c7</color>
+
+    <color name="default_text_color">#737373</color>
+    <color name="gary">#898989</color>
+    <color name="red">#be002f</color>
+    <color name="scrollview_background">#F2F3F7</color>
+    <color name="search_text_color_green">#34b829</color>
+
+    <color name="label_one_background">#58ACEC</color>
+    <color name="label_two_background">#93C0FB</color>
+    <color name="label_three_background">#64D9BF</color>
+    <color name="label_four_background">#A6D3E0</color>
+
+    <color name="bg_border">#E7C176</color>
+    <color name="bg_text">#BF8718</color>
+
+    <color name="button_golden_lg">#fc980c</color>
+    <color name="coal_fine_golden_lg">#eff8ff</color>
+    <color name="coal_fine_title_lg">#6699e0</color>
+    <color name="coal_fine_bg_lg">#6382c5</color>
+
+    <!--地址管理中标签背景色-->
+    <color name="bg_is_addresss">#e9be7a</color>
+    <!--好友背景色-->
+    <color name="bg_is_friend">#e7c077</color>
+    <!--专线背景色-->
+    <color name="bg_is_specil_line">#34b829</color>
+    <!--车牌字体颜色-->
+    <color name="text_color_plate_number">#6a728a</color>
+    <!--认证进度绿色-->
+    <color name="percent_progress_green">#61bf82</color>
+    <color name="text_color_pay_num">#fe970f</color>
+
+    <!--煤炭列表中，煤炭背景颜色-->
+    <color name="coal_list_bg_0">#f2f3f6</color>
+    <color name="coal_list_bg_1">#fafafa</color>
+
+</resources>

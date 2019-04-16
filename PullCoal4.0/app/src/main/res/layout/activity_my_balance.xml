@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/detail_activity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activity_bg_color"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:background="@mipmap/bg_my_balance_layout"
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
+
+        <RelativeLayout
+            android:id="@+id/layout_header"
+            android:padding="@dimen/dip5"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dip50">
+
+            <ImageView
+                android:id="@+id/title_bar_left"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:src="@mipmap/icon_back_whrat"
+                android:paddingBottom="8dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="5dp"
+                android:paddingTop="8dp"
+                android:visibility="visible" />
+
+            <TextView
+                android:textSize="@dimen/font18"
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:textColor="@color/white"/>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_marginTop="@dimen/dip50"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dip20"
+            android:orientation="vertical">
+
+            <TextView
+                android:textSize="@dimen/font14"
+                android:textColor="@color/gray_search_background"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="余额账户(元)"/>
+
+            <TextView
+                android:id="@+id/tv_balance"
+                android:textColor="@color/white"
+                android:layout_marginTop="@dimen/dip20"
+                android:textSize="@dimen/font50"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5.77"/>
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/line_color"/>
+
+    <!--提现-->
+    <RelativeLayout
+        android:id="@+id/layout_top_up"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dip50"
+        android:background="@drawable/item_bt_bg">
+
+        <ImageView
+            android:id="@+id/iv_top_up"
+            android:layout_width="@dimen/dip40"
+            android:layout_height="@dimen/dip40"
+            android:layout_margin="@dimen/dip10"
+            android:scaleType="centerInside"
+            android:src="@mipmap/icon_withdrawals" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/iv_top_up"
+            android:text="提现" />
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/dip20"
+            android:src="@mipmap/arrow_listpage" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/line_color"/>
+
+    <!--流水-->
+    <RelativeLayout
+        android:id="@+id/layout_transaction"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dip50"
+        android:background="@drawable/item_bt_bg">
+
+        <ImageView
+            android:id="@+id/iv_transaction"
+            android:layout_width="@dimen/dip40"
+            android:layout_height="@dimen/dip40"
+            android:layout_margin="@dimen/dip10"
+            android:scaleType="centerInside"
+            android:src="@mipmap/icon_detailed" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/iv_transaction"
+            android:text="明细" />
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/dip20"
+            android:src="@mipmap/arrow_listpage" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/line_color"/>
+
+</LinearLayout>

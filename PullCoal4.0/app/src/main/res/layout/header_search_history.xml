@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/layout_search_history"
+        android:visibility="gone"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:id="@+id/clear_view"
+            android:layout_marginRight="@dimen/dip30"
+            android:layout_marginTop="@dimen/dip10"
+            android:layout_gravity="right"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_marginRight="@dimen/dip5"
+                android:src="@mipmap/clean_message"
+                android:layout_width="18dp"
+                android:layout_height="18dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:gravity="center"
+                android:text="清空"
+                android:textColor="@color/gray" />
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_below="@+id/clear_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="@color/gray"
+            android:text="您搜过的" />
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_below="@+id/title"
+            android:layout_marginTop="@dimen/dip10"
+            android:layout_marginRight="@dimen/dip30"
+            android:layout_marginLeft="@dimen/dip30"
+            android:layout_marginBottom="@dimen/dip10"
+            android:id="@+id/recycler_search_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

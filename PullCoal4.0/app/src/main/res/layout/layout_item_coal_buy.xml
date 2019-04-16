@@ -1,0 +1,563 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <!--信息部或矿口头部-->
+    <LinearLayout
+        android:visibility="gone"
+        android:orientation="vertical"
+        android:id="@+id/layout_mode_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <View
+            android:id="@+id/item_line"
+            android:layout_marginTop="@dimen/dip10"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px_line"
+            android:background="@color/line_color"/>
+
+        <RelativeLayout
+            android:paddingLeft="@dimen/dip15"
+            android:gravity="center_vertical"
+            android:id="@+id/more_send"
+            android:background="@drawable/item_bt_bg"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dip45">
+
+            <TextView
+                android:textSize="@dimen/font16"
+                android:textColor="@color/app_title_text_color"
+                android:id="@+id/mode_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginTop="@dimen/dip5"
+                android:textColor="@color/button_normal"
+                android:textSize="@dimen/font10"
+                android:id="@+id/mode_count"
+                android:layout_toRightOf="@+id/mode_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px_line"
+            android:background="@color/line_color"/>
+
+        <com.sxhalo.PullCoal.ui.CustomListView
+            android:background="@color/white"
+            android:id="@+id/mode_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="@drawable/shape"
+            android:dividerHeight="@dimen/px_line"/>
+
+        <RelativeLayout
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/dip15"
+            android:paddingRight="@dimen/dip15"
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dip45">
+
+            <TextView
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"
+                android:textColor="@color/actionsheet_blue"
+                android:id="@+id/coal_person"
+                android:textSize="@dimen/font14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_centerInParent="true"
+                android:background="@drawable/item_bt_bg"
+                android:textColor="@color/actionsheet_blue"
+                android:textSize="@dimen/font14"
+                android:id="@+id/coal_tel"
+                android:layout_toRightOf="@+id/coal_person"
+                android:layout_margin="@dimen/dip5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+
+
+            <LinearLayout
+                android:layout_centerInParent="true"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+
+                <LinearLayout
+                    android:visibility="invisible"
+                    android:padding="@dimen/dip5"
+                    android:id="@+id/layout_hidden"
+                    android:background="@drawable/item_bt_bg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:layout_marginRight="-7dp"
+                        android:textSize="@dimen/font15"
+                        android:text="收起"
+                        android:textColor="@color/gray" />
+
+                    <ImageView
+                        android:layout_marginLeft="@dimen/dip3"
+                        android:rotation="-90"
+                        android:layout_width="30dp"
+                        android:layout_height="20dp"
+                        android:layout_marginRight="-5dp"
+                        android:src="@drawable/icon_right_arrow" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:padding="@dimen/dip5"
+                    android:background="@drawable/item_bt_bg"
+                    android:layout_marginLeft="@dimen/dip5"
+                    android:id="@+id/layout_unfold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:layout_marginRight="-7dp"
+                        android:textSize="@dimen/font15"
+                        android:text="展开"
+                        android:textColor="@color/gray" />
+
+                    <ImageView
+                        android:layout_marginLeft="@dimen/dip3"
+                        android:rotation="90"
+                        android:layout_width="30dp"
+                        android:layout_height="20dp"
+                        android:layout_marginRight="-5dp"
+                        android:src="@drawable/icon_right_arrow" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <!--列表形式煤炭布局-->
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/layout_mode_2"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:paddingBottom="@dimen/px_line"
+            android:background="@color/line_color"
+            android:orientation="vertical"
+            android:id="@+id/layout_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/dip15"
+                android:paddingRight="@dimen/dip15">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="名称"
+                    android:textSize="@dimen/font14"
+                    android:textColor="@color/actionsheet_blue" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="发热量"
+                    android:textSize="@dimen/font14"
+                    android:textColor="@color/actionsheet_blue" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="含硫量"
+                    android:textSize="@dimen/font14"
+                    android:textColor="@color/actionsheet_blue" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="一票价"
+                    android:textSize="@dimen/font14"
+                    android:textColor="@color/actionsheet_blue" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:text="更新时间"
+                    android:textSize="@dimen/font14"
+                    android:textColor="@color/actionsheet_blue" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_coal_list_bg"
+            android:paddingTop="@dimen/dip7"
+            android:paddingBottom="@dimen/dip7"
+            android:paddingLeft="@dimen/dip15"
+            android:paddingRight="@dimen/dip15"
+            android:layout_gravity="center_vertical"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:gravity="right|center_vertical"
+                android:id="@+id/if_fell_layout2"
+                android:background="@mipmap/icon_bug_coal_toll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_marginRight="@dimen/dip1"
+                    android:layout_marginBottom="@dimen/dip1"
+                    android:id="@+id/if_fell_layout2_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="right|top"
+                    android:includeFontPadding="false"
+                    android:lines="1"
+                    android:padding="@dimen/dip0"
+                    android:textColor="@color/text_money"
+                    android:textSize="@dimen/font8" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:weightSum="5"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_weight="1"
+                    android:lines="1"
+                    android:maxEms="5"
+                    android:id="@+id/coal_item_name_layout2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:textColor="@color/app_title_text_color_normal"
+                    android:textSize="@dimen/font14" />
+
+                <TextView
+                    android:lines="1"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:id="@+id/tv_com_calorificvalue_layout2"
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="0dp"
+                    android:textSize="@dimen/font14"
+                    android:textColor="@color/app_title_text_color_normal"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:textColor="@color/gray"
+                    android:lines="1"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:id="@+id/tv_com_sulfur_layout2"
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="0dp"
+                    android:textSize="@dimen/font14"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:ems="4"
+                    android:lines="1"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:id="@+id/coal_price_layout2"
+                    android:textColor="@color/text_money"
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="0dp"
+                    android:textSize="@dimen/font14"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:visibility="gone"
+                    android:textStyle="italic"
+                    android:ems="4"
+                    android:lines="1"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:id="@+id/coal_price_layout2_1"
+                    android:textColor="@color/text_money"
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="0dp"
+                    android:textSize="@dimen/font13"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:lines="1"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:id="@+id/coal_time_layoyt2"
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="0dp"
+                    android:textSize="@dimen/font13"
+                    android:textColor="@color/gray"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_marginTop="-2dp"
+                android:lines="1"
+                android:id="@+id/mine_mouth_name_layout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/font10" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px_line"
+            android:background="@mipmap/bug_coal_item_line"/>
+
+    </LinearLayout>
+
+    <!--带图片的煤炭列表布局-->
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/layout_mode_3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/coal_information"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dip40"
+            android:background="@drawable/item_bt_bg"
+            android:orientation="horizontal"
+            android:padding="@dimen/dip10">
+
+            <TextView
+                android:id="@+id/information_name"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:gravity="center_vertical|left"
+                android:lines="1"
+                android:text="" />
+
+            <TextView
+                android:id="@+id/information_free"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical|right"
+                android:text="" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/line_color" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/item_bt_bg"
+            android:padding="@dimen/dip10">
+
+            <ImageView
+                android:id="@+id/iv_com_head"
+                android:layout_width="@dimen/dip80"
+                android:layout_height="63dp"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/icon" />
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="63dp"
+                android:layout_marginLeft="@dimen/dip20">
+
+                <TextView
+                    android:id="@+id/coal_item_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="-2dp"
+                    android:textColor="@color/app_title_text_color_normal"
+                    android:textSize="@dimen/font15"/>
+
+                <ImageView
+                    android:layout_marginTop="@dimen/dip2"
+                    android:id="@+id/iv_test"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dip5"
+                    android:src="@mipmap/icon_test"
+                    android:layout_toRightOf="@+id/coal_item_name"
+                    android:visibility="gone"/>
+
+                <TextView
+                    android:id="@+id/coal_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:textColor="@color/actionsheet_red"
+                    android:textSize="@dimen/font18" />
+
+                <TextView
+                    android:id="@+id/coal_price_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/coal_price"
+                    android:layout_marginBottom="@dimen/dip2"
+                    android:layout_toLeftOf="@+id/coal_price"
+                    android:layout_toStartOf="@+id/coal_price"
+                    android:drawableLeft="@mipmap/icon_rmb" />
+
+                <TextView
+                    android:id="@+id/contrast_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/coal_price_image"
+                    android:background="@drawable/bull_send_car"
+                    android:textColor="@color/actionsheet_blue"
+                    android:paddingLeft="@dimen/dip5"
+                    android:paddingRight="@dimen/dip5"
+                    android:paddingTop="@dimen/dip2"
+                    android:paddingBottom="@dimen/dip2"
+                    android:textSize="@dimen/font12"
+                    android:text="+对比" />
+
+                <TextView
+                    android:id="@+id/tv_com_calorificvalue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:drawableLeft="@mipmap/info_depart_coal_hot"
+                    android:drawablePadding="@dimen/dip3"
+                    android:textColor="@color/first_fargment_text_gray"
+                    android:textSize="11sp" />
+
+                <TextView
+                    android:id="@+id/tv_com_storagerate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignTop="@+id/tv_com_calorificvalue"
+                    android:layout_marginLeft="@dimen/dip20"
+                    android:layout_toRightOf="@+id/tv_com_calorificvalue"
+                    android:drawableLeft="@mipmap/info_depart_coal_minerall"
+                    android:drawablePadding="@dimen/dip3"
+                    android:textColor="@color/first_fargment_text_gray"
+                    android:textSize="11sp" />
+
+                <View
+                    android:id="@+id/coal_line"
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/dip20" />
+                <!--android:background="@color/line_color"-->
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="@dimen/dip10"
+            android:layout_marginRight="@dimen/dip10"
+            android:background="@color/line_color" />
+
+        <LinearLayout
+            android:id="@+id/push_time_ll"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dip40"
+            android:background="@drawable/item_bt_bg"
+            android:orientation="horizontal"
+            android:padding="@dimen/dip10">
+
+            <LinearLayout
+                android:layout_weight="3"
+                android:gravity="center_vertical|left"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/free_type_image"
+                    android:layout_width="@dimen/dip15"
+                    android:layout_height="@dimen/dip15" />
+
+                <TextView
+                    android:layout_marginLeft="@dimen/dip5"
+                    android:id="@+id/free_type"
+                    android:textColor="@color/actionsheet_gray"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:lines="1" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/push_time"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical|right"
+                android:text="" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/line_color" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:background="@color/transparent" />
+    </LinearLayout>
+
+</LinearLayout>

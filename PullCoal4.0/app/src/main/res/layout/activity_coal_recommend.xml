@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/title_bar"
+        layout="@layout/layout_main_header" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.zhy.srecyclerview.SRecyclerView
+            android:layout_marginTop="@dimen/dip10"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/mRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:splitMotionEvents="false"
+            android:background="#F0F0F0"
+            app:dividerColor="#BEBEBE"
+            app:dividerHeight="0.8dp"
+            app:dividerLeftMargin="10dp"
+            app:dividerRightMargin="0dp"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" >
+
+        </com.zhy.srecyclerview.SRecyclerView>
+
+        <include layout="@layout/screening_suspension_item_group" android:id="@+id/sticky_header_view" android:visibility="gone"/>
+
+        <com.sxhalo.PullCoal.ui.addrightview.LayoutContrastView
+            android:visibility="gone"
+            android:id="@+id/ll_contrast"
+            android:layout_gravity="bottom"
+            android:layout_width="match_parent"
+            android:layout_height="51dp"/>
+    </FrameLayout>
+
+</LinearLayout>

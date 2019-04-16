@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    android:orientation="vertical">
+    <TextView
+        android:background="@color/white"
+        android:id="@+id/tv_title"
+        style="@style/title_text_style"
+        android:layout_width="match_parent"
+        android:layout_height="50.5dp"
+        android:gravity="center"
+        android:text="订单"
+        android:textColor="@color/app_title_text_color_normal" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_below="@+id/tv_title"
+        android:background="@color/line_color" />
+
+    <LinearLayout
+        android:id="@+id/layout_login"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/divider"
+        android:orientation="vertical">
+
+        <com.sxhalo.PullCoal.ui.order.SyncHorizontalScrollView
+            android:id="@+id/all_mHsv"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            android:background="@color/fragment_bg_color"
+            android:fadingEdge="none"
+            android:scrollbars="none">
+
+            <RelativeLayout
+                android:id="@+id/all_rl_nav"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="top">
+
+                <RadioGroup
+                    android:id="@+id/all_rg_nav_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_alignParentTop="true"
+                    android:orientation="horizontal"></RadioGroup>
+
+                <ImageView
+                    android:id="@+id/all_iv_nav_indicator"
+                    android:layout_width="1dp"
+                    android:layout_height="1dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="#5AB0EB"
+                    android:contentDescription="@string/nav_desc"
+                    android:scaleType="matrix"
+                    android:visibility="gone" />
+            </RelativeLayout>
+        </com.sxhalo.PullCoal.ui.order.SyncHorizontalScrollView>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_below="@+id/tv_title"
+            android:background="@color/line_color" />
+
+        <androidx.viewpager.widget.ViewPager
+            android:layout_marginTop="@dimen/dp_1"
+            android:id="@+id/viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+</RelativeLayout>

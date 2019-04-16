@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <!--没有订阅路线-->
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/layout_no_route"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_300"
+        android:layout_gravity="center"
+        android:background="@color/white">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/tv_no_data"
+            android:layout_centerHorizontal="true"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/icon_no_route" />
+
+        <TextView
+            android:id="@+id/tv_no_data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="@dimen/dp_20"
+            android:drawablePadding="@dimen/dp_5"
+            android:text="暂无订阅路线"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/tv1"
+            android:layout_below="@+id/tv_no_data"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/gray"
+            android:gravity="center"
+            android:text="立即添加关注路线"/>
+        <TextView
+            android:id="@+id/tv2"
+            android:layout_below="@+id/tv1"
+            android:layout_marginTop="@dimen/dp_5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/gray"
+            android:gravity="center"
+            android:text="随时获取每一条最新货运信息"/>
+
+        <Button
+            android:id="@+id/btn_add_immediately"
+            android:layout_marginTop="@dimen/dp_20"
+            android:layout_below="@+id/tv2"
+            android:layout_width="@dimen/dp_120"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/white"
+            android:layout_height="@dimen/dp_40"
+            android:text="立刻添加路线"
+            android:background="@drawable/button_shape_pressed"/>
+
+    </RelativeLayout>
+
+    <!--自己添加的订阅路线-->
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/book_freight_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <View
+            android:id="@+id/book_freight_devider"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/line_color" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/dp_20"
+            android:paddingLeft="@dimen/dp_10"
+            android:paddingRight="@dimen/dp_10"
+            android:paddingTop="@dimen/dp_20">
+
+            <TextView
+                android:id="@+id/book_freight_tv_start"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <ImageView
+                android:id="@+id/book_freight_view"
+                android:layout_toRightOf="@+id/book_freight_tv_start"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_5"
+                android:src="@mipmap/icon_start_and_end"/>
+
+            <TextView
+                android:id="@+id/book_freight_tv_end"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:layout_marginLeft="@dimen/dp_5"
+                android:layout_marginRight="@dimen/dp_5"
+                android:layout_toRightOf="@+id/book_freight_view" />
+
+            <ImageView
+                android:id="@+id/book_freight_iv_arrow"
+                android:layout_alignParentRight="true"
+                android:layout_width="@dimen/dp_20"
+                android:layout_height="@dimen/dp_20"
+                android:src="@mipmap/icon_right_arrow"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <!--自己的分割线分割线-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_40"
+        android:orientation="vertical">
+
+        <TextView
+            android:textColor="@color/gray"
+            android:text="------你可能需要------"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:textColorHighlight="@color/transparent"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+    <!--推荐的订阅路线路线-->
+    <LinearLayout
+        android:id="@+id/recommend_book_freight_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <View
+            android:id="@+id/recommend_book_freight_devider"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/line_color" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_55">
+
+            <TextView
+                android:layout_marginLeft="@dimen/dp_10"
+                android:id="@+id/recommend_book_freight_tv_start"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+
+            <ImageView
+                android:id="@+id/recommend_book_freight_view"
+                android:layout_toRightOf="@+id/recommend_book_freight_tv_start"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dp_5"
+                android:src="@mipmap/icon_start_and_end"/>
+
+            <TextView
+                android:id="@+id/recommend_book_freight_tv_end"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:layout_marginLeft="@dimen/dp_5"
+                android:layout_marginRight="@dimen/dp_5"
+                android:layout_toRightOf="@+id/recommend_book_freight_view" />
+
+            <View
+                android:layout_marginTop="@dimen/dp_5"
+                android:layout_marginBottom="@dimen/dp_5"
+                android:background="@color/line_color"
+                android:layout_toLeftOf="@+id/recommend_book_freight_layout_add"
+                android:layout_width="@dimen/dp_1"
+                android:layout_height="match_parent"/>
+
+            <LinearLayout
+                android:layout_alignParentRight="true"
+                android:id="@+id/recommend_book_freight_layout_add"
+                android:layout_width="wrap_content"
+                android:gravity="center"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scaleType="centerInside"
+                    android:background="@color/transparent"
+                    android:src="@mipmap/icon_add"/>
+
+                <TextView
+                    android:layout_alignParentBottom="true"
+                    android:id="@+id/recommend_book_freight_tv_add"
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="添加"
+                    android:ems="4"
+                    android:textColor="@color/actionsheet_blue"/>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

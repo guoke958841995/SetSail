@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/PullCoal4.0.iml" filepath="$PROJECT_DIR$/PullCoal4.0.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/baseadapter-recyclerview/baseadapter-recyclerview.iml" filepath="$PROJECT_DIR$/baseadapter-recyclerview/baseadapter-recyclerview.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bottomdialog/bottomdialog.iml" filepath="$PROJECT_DIR$/bottomdialog/bottomdialog.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hightlight/hightlight.iml" filepath="$PROJECT_DIR$/hightlight/hightlight.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pulltorefresh/pulltorefresh.iml" filepath="$PROJECT_DIR$/pulltorefresh/pulltorefresh.iml" />
+      <module fileurl="file://$PROJECT_DIR$/scrollablepanellibrary/scrollablepanellibrary.iml" filepath="$PROJECT_DIR$/scrollablepanellibrary/scrollablepanellibrary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/selectImagePicker/selectimagepicker.iml" filepath="$PROJECT_DIR$/selectImagePicker/selectimagepicker.iml" />
+      <module fileurl="file://$PROJECT_DIR$/weiboSDK/weibosdk.iml" filepath="$PROJECT_DIR$/weiboSDK/weibosdk.iml" />
+    </modules>
+  </component>
+</project>

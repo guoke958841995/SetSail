@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_main_header" />
+
+    <LinearLayout
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/layout_qq_service"
+            android:layout_width="@dimen/dip0"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="@dimen/dip20"
+            android:orientation="vertical">
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="centerInside"
+                android:layout_marginBottom="@dimen/dip3"
+                android:src="@mipmap/icon_service"/>
+
+            <TextView
+                android:layout_marginTop="@dimen/dip3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="在线客服"/>
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="1px"
+            android:layout_height="match_parent"
+            android:background="@color/line_color" />
+
+        <LinearLayout
+            android:id="@+id/layout_hot_line"
+            android:layout_width="@dimen/dip0"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="@dimen/dip20"
+            android:orientation="vertical">
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="centerInside"
+                android:layout_marginBottom="@dimen/dip3"
+                android:src="@mipmap/icon_hot_line"/>
+
+            <TextView
+                android:layout_marginTop="@dimen/dip3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="客服热线"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/line_color" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <!--常见问题-->
+        <RelativeLayout
+            android:id="@+id/layout_question_other"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dip50"
+            android:background="@color/white">
+
+            <ImageView
+                android:layout_width="@dimen/dip25"
+                android:layout_height="@dimen/dip25"
+                android:layout_alignParentRight="true"
+                android:layout_margin="@dimen/dip10"
+                android:scaleType="centerInside"
+                android:src="@drawable/icon_right_arrow" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/dip10"
+                android:text="常见问题" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/line_color" />
+
+        <!--针对运营人员-->
+        <LinearLayout
+            android:id="@+id/layout_registration"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <!--司机登记-->
+            <RelativeLayout
+                android:id="@+id/layout_register_driver"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dip50"
+                android:layout_gravity="center_vertical"
+                android:background="@color/white">
+
+                <ImageView
+                    android:layout_width="@dimen/dip25"
+                    android:layout_height="@dimen/dip25"
+                    android:layout_alignParentRight="true"
+                    android:layout_margin="@dimen/dip10"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/icon_right_arrow" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:padding="@dimen/dip10"
+                    android:text="司机登记" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/line_color" />
+
+            <!--来客登记-->
+            <RelativeLayout
+                android:id="@+id/layout_guest_registration"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dip50"
+                android:background="@color/white">
+
+                <ImageView
+                    android:visibility="gone"
+                    android:id="@+id/iv_guest_registration"
+                    android:layout_width="@dimen/dip40"
+                    android:layout_height="@dimen/dip40"
+                    android:layout_margin="@dimen/dip10"
+                    android:scaleType="centerInside"
+                    android:src="@mipmap/icon_guest_registration" />
+
+                <TextView
+                    android:padding="@dimen/dip10"
+                    android:id="@+id/tv_guest_registration"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/iv_guest_registration"
+                    android:text="来客登记" />
+
+                <ImageView
+                    android:layout_centerVertical="true"
+                    android:layout_width="@dimen/dip25"
+                    android:layout_height="@dimen/dip25"
+                    android:layout_margin="@dimen/dip10"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/icon_right_arrow" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/line_color" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

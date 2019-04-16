@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/scrollview_background"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_progress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black"
+        android:orientation="vertical">
+
+        <com.sxhalo.PullCoal.ui.MyProgressView
+            android:id="@+id/my_progress_view"
+            android:layout_width="@dimen/dip100"
+            android:layout_height="@dimen/dip100"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/dip20"
+            app:borderWidth="8dp"
+            app:bottomTextColor="@color/actionsheet_blue"
+            app:bottomTextSize="12sp"
+            app:innerColor="@color/actionsheet_blue"
+            app:outerColor="@color/gray"
+            app:topTextColor="@color/actionsheet_blue"
+            app:topTextSize="16sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dip10"
+            android:gravity="center"
+            android:text="完成司机认证，即可轻松接单拉货！"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font16" />
+
+        <TextView
+            android:id="@+id/vehicle_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dip10"
+            android:layout_marginTop="@dimen/dip5"
+            android:gravity="center"
+            android:text="驾驶员和车辆信息尚不完善"
+            android:textColor="@color/list_notify_text_night" />
+
+    </LinearLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginTop="@dimen/dip10"
+        android:background="@color/line_color" />
+
+    <RelativeLayout
+        android:id="@+id/rl_driver_information"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="@dimen/dip15">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="驾驶员资料" />
+
+        <ImageView
+            android:id="@+id/iv_driver_info_status"
+            android:layout_width="@dimen/dip13"
+            android:layout_height="@dimen/dip13"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dip5"
+            android:layout_toLeftOf="@+id/tv_driver_info_status" />
+
+        <TextView
+            android:id="@+id/tv_driver_info_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:textColor="@color/search_text_color_green" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/line_color" />
+
+    <RelativeLayout
+        android:id="@+id/rl_real_name_information"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="@dimen/dip15">
+
+        <TextView
+            android:id="@+id/real_name_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="实名资料" />
+
+        <ImageView
+            android:id="@+id/iv_real_name_info_status"
+            android:layout_width="@dimen/dip13"
+            android:layout_height="@dimen/dip13"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dip5"
+            android:layout_toLeftOf="@+id/tv_real_name_info_status" />
+
+        <TextView
+            android:id="@+id/tv_real_name_info_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:textColor="@color/search_text_color_green" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/line_color" />
+
+    <RelativeLayout
+        android:id="@+id/rl_car_information"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="@dimen/dip15">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="车辆资料" />
+
+        <ImageView
+            android:id="@+id/iv_car_info_status"
+            android:layout_width="@dimen/dip13"
+            android:layout_height="@dimen/dip13"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dip5"
+            android:layout_toLeftOf="@+id/tv_car_info_status" />
+
+        <TextView
+            android:id="@+id/tv_car_info_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:textColor="@color/search_text_color_green" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/line_color" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginTop="@dimen/dip10"
+        android:background="@color/line_color" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="@dimen/dip15">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="车辆管理" />
+
+        <TextView
+            android:id="@+id/tv_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="添加"
+            android:textColor="@color/actionsheet_blue" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/line_color" />
+
+
+</LinearLayout>

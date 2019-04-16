@@ -1,0 +1,491 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <ScrollView
+        android:fadingEdge="none"
+        android:scrollbars="none"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!--司机信息-->
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/vehicle_audit"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <View
+                    android:layout_marginTop="@dimen/dip10"
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/line_color"/>
+
+                <!--司机姓名-->
+                <LinearLayout
+                    android:background="@drawable/item_bt_bg"
+                    android:padding="@dimen/dip15"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text="司机姓名"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        android:textColor="@color/app_title_text_color_normal" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/drivar_name"
+                        android:layout_marginLeft="@dimen/dip15"
+                        android:textColor="@color/actionsheet_gray"
+                        android:textSize="16sp" />
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/line_color"/>
+                <!--驾驶证号-->
+                <LinearLayout
+                    android:background="@drawable/item_bt_bg"
+                    android:padding="@dimen/dip15"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text="驾驶证号"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        android:textColor="@color/app_title_text_color_normal" />
+
+                    <TextView
+                        android:layout_marginLeft="@dimen/dip15"
+                        android:textColor="@color/actionsheet_gray"
+                        android:textSize="16sp"
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/driver_license_number" />
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/line_color"/>
+                <!--驾驶证类型-->
+                <LinearLayout
+                    android:background="@drawable/item_bt_bg"
+                    android:padding="@dimen/dip15"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text="驾驶证类型"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        android:textColor="@color/app_title_text_color_normal" />
+
+                    <TextView
+                        android:layout_marginLeft="@dimen/dip15"
+                        android:textColor="@color/actionsheet_gray"
+                        android:textSize="16sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/driver_type"/>
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/line_color"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="15dp"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/line_color"/>
+                <!--品牌-->
+                <LinearLayout
+                    android:background="@drawable/item_bt_bg"
+                    android:padding="@dimen/dip15"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text="品    牌"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        android:textColor="@color/app_title_text_color_normal" />
+
+                    <TextView
+                        android:layout_marginLeft="@dimen/dip15"
+                        android:textColor="@color/actionsheet_gray"
+                        android:textSize="16sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/brand_name"/>
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/line_color"/>
+                <!--车牌号-->
+                <LinearLayout
+                    android:background="@drawable/item_bt_bg"
+                    android:padding="@dimen/dip15"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text="车牌号"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        android:textColor="@color/app_title_text_color_normal" />
+
+                    <TextView
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/car_num"
+                        android:layout_marginLeft="@dimen/dip15"
+                        android:textColor="@color/actionsheet_gray"
+                        android:textSize="16sp" />
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/line_color"/>
+                <!--车型-->
+                <LinearLayout
+                    android:background="@drawable/item_bt_bg"
+                    android:padding="@dimen/dip15"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text="车    型"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        android:textColor="@color/app_title_text_color_normal" />
+
+                    <TextView
+                        android:id="@+id/car_mode"
+                        android:layout_marginLeft="@dimen/dip15"
+                        android:textColor="@color/actionsheet_gray"
+                        android:textSize="16sp"
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/line_color"/>
+                <!--车长-->
+                <LinearLayout
+                    android:background="@drawable/item_bt_bg"
+                    android:padding="@dimen/dip15"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text="车    长"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        android:textColor="@color/app_title_text_color_normal" />
+
+                    <TextView
+                        android:layout_marginLeft="@dimen/dip15"
+                        android:textColor="@color/actionsheet_gray"
+                        android:textSize="16sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/car_length"/>
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/line_color"/>
+                <!--载重-->
+                <LinearLayout
+                    android:padding="@dimen/dip15"
+                    android:background="@drawable/item_bt_bg"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text="载    重"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        android:textColor="@color/app_title_text_color_normal" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/vehicle_load"
+                        android:layout_marginLeft="@dimen/dip15"
+                        android:textColor="@color/actionsheet_gray"
+                        android:textSize="16sp" />
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/line_color"/>
+                <!--行驶证号-->
+                <LinearLayout
+                    android:background="@drawable/item_bt_bg"
+                    android:padding="@dimen/dip15"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text="行驶证号"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        android:textColor="@color/app_title_text_color_normal" />
+
+                    <TextView
+                        android:layout_marginLeft="@dimen/dip15"
+                        android:textColor="@color/actionsheet_gray"
+                        android:textSize="16sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/driving_license_number" />
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/line_color"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="15px"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/line_color"/>
+                <!--认证时间和审核时间-->
+                <LinearLayout
+                    android:background="@drawable/item_bt_bg"
+                    android:padding="@dimen/dip15"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:orientation="horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:text="认证时间"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="16sp"
+                            android:textColor="@color/app_title_text_color_normal" />
+
+                        <TextView
+                            android:layout_marginLeft="@dimen/dip15"
+                            android:text=""
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/status_time"
+                            android:textSize="16sp"
+                            android:textColor="@color/actionsheet_gray" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:orientation="horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:text="更新于"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="16sp"
+                            android:textColor="@color/app_title_text_color_normal" />
+
+                        <TextView
+                            android:layout_marginLeft="@dimen/dip15"
+                            android:text=""
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/update"
+                            android:textSize="16sp"
+                            android:textColor="@color/actionsheet_gray" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/line_color"/>
+
+            </LinearLayout>
+
+            <!--买家信息-->
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/individual_audit"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:background="@drawable/item_bt_bg"
+                    android:padding="@dimen/dip15"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text="姓    名"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        android:textColor="@color/app_title_text_color_normal" />
+
+                    <TextView
+                        android:id="@+id/individual_name"
+                        android:layout_marginLeft="@dimen/dip15"
+                        android:textColor="@color/actionsheet_gray"
+                        android:textSize="16sp"
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/line_color"/>
+
+                <LinearLayout
+                    android:background="@drawable/item_bt_bg"
+                    android:padding="@dimen/dip15"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text="证件号码"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        android:textColor="@color/app_title_text_color_normal" />
+
+                    <TextView
+                        android:layout_marginLeft="@dimen/dip15"
+                        android:textColor="@color/actionsheet_gray"
+                        android:textSize="16sp"
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/individual_number" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/line_color"/>
+
+                <LinearLayout
+                    android:background="@drawable/item_bt_bg"
+                    android:padding="@dimen/dip15"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:orientation="horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:text="认证时间"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="16sp"
+                            android:textColor="@color/app_title_text_color_normal" />
+
+                        <TextView
+                            android:layout_marginLeft="@dimen/dip15"
+                            android:text=""
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/individual_status_time"
+                            android:textSize="16sp"
+                            android:textColor="@color/actionsheet_gray" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:orientation="horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:text="更新于"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="16sp"
+                            android:textColor="@color/app_title_text_color_normal" />
+
+                        <TextView
+                            android:layout_marginLeft="@dimen/dip15"
+                            android:text=""
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/individual_update"
+                            android:textSize="16sp"
+                            android:textColor="@color/actionsheet_gray" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/line_color"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

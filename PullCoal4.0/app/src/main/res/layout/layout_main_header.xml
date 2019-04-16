@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/title_bar_style"
+    android:background="@color/white">
+
+
+    <ImageView
+        android:id="@+id/title_bar_left"
+        android:layout_width="40dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:background="@null"
+        android:gravity="center_vertical"
+        android:src="@drawable/btn_back"
+        android:paddingBottom="5dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="5dp"
+        android:paddingTop="5dp"
+        android:visibility="visible" />
+
+    <TextView
+        android:layout_marginLeft="@dimen/dip10"
+        android:padding="@dimen/dip5"
+        android:gravity="center"
+        android:id="@+id/left_button"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/title_bar_left"
+        android:layout_toRightOf="@+id/title_bar_left"
+        android:textColor="@color/app_title_text_color"
+        android:textSize="@dimen/dip16"
+        android:text="" />
+
+    <TextView
+        android:id="@+id/title"
+        style="@style/title_text_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:textColor="@color/app_title_text_color_normal"/>
+
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/tv_ll_screen"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_toRightOf="@+id/title_bar_left"
+        android:layout_toEndOf="@+id/title_bar_left">
+
+        <TextView
+            android:layout_weight="1.5"
+            android:layout_gravity="center"
+            android:id="@+id/tv_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="@dimen/dip20"
+            android:layout_marginRight="@dimen/dip20"
+            android:background="@drawable/search_shape_background"
+            android:drawableLeft="@mipmap/search_icon"
+            android:drawablePadding="@dimen/dip5"
+            android:gravity="center_vertical"
+            android:padding="@dimen/dip5"
+            android:text="让买煤更快捷"
+            android:textColor="@color/text_color_gray" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="15dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/map_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dip5"
+            android:text="地图模式"
+            android:textColor="@color/app_title_text_color"
+            android:gravity="center"
+            android:textSize="@dimen/dip16"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/invitation"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:padding="@dimen/dip5"
+            android:background="@mipmap/clean_message"
+            android:gravity="center"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/title_bar_right_imageview"
+            android:layout_width="35dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/dip10"
+            android:background="@null"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="5dp"
+            android:paddingTop="5dp"
+            android:src="@mipmap/share"
+            android:visibility="gone" />
+
+
+        <ImageButton
+            android:id="@+id/title_bar_search"
+            style="@style/title_base_button"
+            android:layout_marginLeft="@dimen/dip10"
+            android:background="@null"
+            android:padding="@dimen/dip7"
+            android:src="@mipmap/search"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/ss_htmlprogessbar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="4dip"
+        android:layout_alignParentBottom="true"
+        android:indeterminateOnly="false"
+        android:max="100"
+        android:progressDrawable="@drawable/progress_bar_states"
+        android:visibility="gone"></ProgressBar>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_alignParentBottom="true"
+        android:background="@color/line_color" />
+
+
+</RelativeLayout>
